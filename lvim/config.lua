@@ -1,1 +1,0 @@
-/home/jb/.config/defaults/lvim/config.lua

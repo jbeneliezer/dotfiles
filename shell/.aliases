@@ -18,5 +18,5 @@ alias tka='tmux kill-server'
 # Git Aliases
 alias gcl='git clone '
 alias gch='git checkout '
-alias ga='git add .'
+alias ga='git add '
 alias gc='git commit -m '

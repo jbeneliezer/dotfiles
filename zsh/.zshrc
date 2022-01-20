@@ -43,6 +43,3 @@ export NVM_DIR="$HOME/.nvm"
 
 # Set vi mode
 bindkey -v
-
-# Go to home directory
-# cd ~
