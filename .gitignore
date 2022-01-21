@@ -1,6 +1,7 @@
 */
 zsh/.zsh_history
 
+!*/*/
 !defaults/
 !shell/
 !lvim/
