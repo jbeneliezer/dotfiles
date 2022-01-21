@@ -10,7 +10,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "nightfox"
+lvim.colorscheme = "OceanicNext"
 lvim.leader = "space"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
@@ -378,16 +378,15 @@ lvim.plugins = {
 	{'morhetz/gruvbox'},
 	{'tomasr/molokai'},
 	{'sainnhe/sonokai'},
-	{'altercation/vim-colors-solarized'},
+	{'sainnhe/everforest'},
 	{'jnurmine/Zenburn'},
-	{'gosukiwi/vim-atom-dark'},
 	{'jacoborus/tender.vim'},
-	{'sjl/badwolf'},
 	{'mhartington/oceanic-next'},
 	{'AlessandroYorba/Alduin'},
-	{'fcpg/vim-fahrenheit'},
+	{'savq/melange'},
 	{'fcpg/vim-farout'},
 	{'Mangeshrex/uwu.vim'},
+	{'Mofiqul/dracula.nvim'},
 	{'bluz71/vim-nightfly-guicolors'},
 	{'EdenEast/nightfox.nvim'},
 
@@ -401,7 +400,7 @@ lvim.plugins = {
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- lvim.autocommands.custom_groups = {
-	-- { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
-	-- { "BufWinEnter", "*.lua", ":normal G=gg" },
+-- { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
+-- { "BufWinEnter", "*.lua", ":normal G=gg" },
 -- }
 
