@@ -1,32 +1,4 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
  
-@jbeneliezer 
-jbeneliezer
-/
-dotfiles
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-dotfiles/zsh/git-prompt.sh
-@jbeneliezer
-jbeneliezer first commit
-Latest commit 62db2bc 9 hours ago
- History
- 1 contributor
-Executable File  586 lines (549 sloc)  17.4 KB
-  
 # bash/zsh git prompt support
 #
 # Copyright (C) 2006,2007 Shawn O. Pearce <spearce@spearce.org>
