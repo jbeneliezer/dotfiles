@@ -211,3 +211,7 @@ bar {
 
 # launch polybar
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+assign [class="Chromium"] $ws1
+assign [class="Alacritty"] $ws7
+assign [class="Spotify"] $ws8
