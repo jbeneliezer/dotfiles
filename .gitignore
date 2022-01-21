@@ -1,7 +1,9 @@
 */
 zsh/.zsh_history
 
+!*/*/
 !defaults/
+!i3/
 !shell/
 !lvim/
 !tmux/
