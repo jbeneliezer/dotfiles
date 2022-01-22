@@ -1,0 +1,11 @@
+font:
+  normal:
+    family: DejaVuSansMono Nerd Font
+  size: 10
+window.opacity: 1.0
+key_bindings:
+  - { key: V, mods: Alt, action: Paste }
+  - { key: C, mods: Alt, action: Copy }
+  - { key: Comma, mods: Alt, action: IncreaseFontSize }
+  - { key: Period, mods: Alt|Shift, action: DecreaseFontSize }
+
