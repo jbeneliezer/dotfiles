@@ -1,8 +1,5 @@
 --[[
-lvim is the global options object
-Linters should be
-filled in as strings with either
-a global executable or a path to
+lvim is the global options object Linters should be filled in as strings with either a global executable or a path to
 an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
@@ -14,7 +11,6 @@ lvim.colorscheme = "nightfox"
 lvim.leader = "space"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
--- add your own keymapping
 -- lvim.keys.normal_mode["<c-s>"] = ":w<cr>"
 -- unmap a default keymapping
 -- lvim.keys.normal_mode["<c-Up>"] = false
