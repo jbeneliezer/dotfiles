@@ -3,9 +3,29 @@ source ~/.config/shell/.aliases
 source ~/.config/shell/.profile
 source ~/.config/zsh/git-prompt.sh
 
-# # Set up the prompt
+# Colors from Xresources
+BG=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+DARKRED=$(xrdb -query | grep '*color1' | awk '{print $NF}')
+DARKGREEN=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+DARKYELLOW=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+DARKBLUE=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+DARKPURPLE=$(xrdb -query | grep '*color5' | awk '{print $NF}')
+DARKCYAN=$(xrdb -query | grep '*color6' | awk '{print $NF}')
+DARKGRAY=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+GRAY=$(xrdb -query | grep '*color8' | awk '{print $NF}')
+RED=$(xrdb -query | grep '*color9' | awk '{print $NF}')
+GREEN=$(xrdb -query | grep '*color10' | awk '{print $NF}')
+YELLOW=$(xrdb -query | grep '*color11' | awk '{print $NF}')
+BLUE=$(xrdb -query | grep '*color12' | awk '{print $NF}')
+PURPLE=$(xrdb -query | grep '*color13' | awk '{print $NF}')
+CYAN=$(xrdb -query | grep '*color14' | awk '{print $NF}')
+FG=$(xrdb -query | grep '*color15' | awk '{print $NF}')
+SUCCESS=#05ff44
+ERROR=#ff052b
+
+# Set up the prompt
 setopt PROMPT_SUBST
-prompt='%F{#458588}[%n@%m]%f%F{#d79921}$(__git_ps1 " (%s)")%f %F{#689d6a}%~%f %F{#b16286}%(!.#.$)%f '
+prompt='%B%(?.%F{$SUCCESS}.%F{$ERROR})%f%b%F{$DARKYELLOW}$(__git_ps1 " (%s)")%f %F{$DARKBLUE}(%~%)%f %F{$DARKPURPLE}%(!.#.$)%f '
 
 setopt histignorealldups sharehistory auto_cd
 
