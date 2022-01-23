@@ -1,0 +1,64 @@
+# source profile, aliases, git prompt
+source ~/.config/shell/.aliases
+source ~/.config/shell/.profile
+source ~/.config/zsh/git-prompt.sh
+
+# Colors from Xresources
+BG=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+DARKRED=$(xrdb -query | grep '*color1' | awk '{print $NF}')
+DARKGREEN=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+DARKYELLOW=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+DARKBLUE=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+DARKPURPLE=$(xrdb -query | grep '*color5' | awk '{print $NF}')
+DARKCYAN=$(xrdb -query | grep '*color6' | awk '{print $NF}')
+DARKGRAY=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+GRAY=$(xrdb -query | grep '*color8' | awk '{print $NF}')
+RED=$(xrdb -query | grep '*color9' | awk '{print $NF}')
+GREEN=$(xrdb -query | grep '*color10' | awk '{print $NF}')
+YELLOW=$(xrdb -query | grep '*color11' | awk '{print $NF}')
+BLUE=$(xrdb -query | grep '*color12' | awk '{print $NF}')
+PURPLE=$(xrdb -query | grep '*color13' | awk '{print $NF}')
+CYAN=$(xrdb -query | grep '*color14' | awk '{print $NF}')
+FG=$(xrdb -query | grep '*color15' | awk '{print $NF}')
+SUCCESS=#05ff44
+ERROR=#ff052b
+
+# Set up the prompt
+setopt PROMPT_SUBST
+prompt='%B%(?.%F{$SUCCESS}.%F{$ERROR})%f%b%F{$DARKYELLOW}$(__git_ps1 " (%s)")%f %F{$DARKBLUE}(%~%)%f %F{$DARKPURPLE}%(!.#.$)%f '
+
+setopt histignorealldups sharehistory auto_cd
+
+# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.config/zsh/zsh_history
+
+# Use modern completion system
+autoload -Uz compinit
+compinit
+
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' menu select=2
+eval "$(dircolors -b)"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' menu select=long
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
+
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Set vi mode
+bindkey -v
