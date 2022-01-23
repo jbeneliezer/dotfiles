@@ -1,0 +1,165 @@
+cd themes
+ln -s nord ~/.Xresources
+~
+chsh -s $(which zsh)
+cd .config/zsh/zshrc
+cd .config/zsh/
+cd ..
+rm .config
+rm -rf .config
+cd /opt/dotfiles
+git checkout arch
+ln -s /opt/dotfiles .config
+rm .zshrc
+ln -s .config/zsh/zshrc .zshrc
+zsh
+source cd ~
+source .zshrc
+ln -s .config/shell/.profile .profile
+vim .profile
+source .profile
+cat .Xresources
+ls -alt
+rm .Xresources
+ln -s .config/themes/nord .Xresources
+cd alacritty
+vim alacritty.yml
+sudo pacman -S yay-bin
+cd /opt
+git clone https://aur.archlinux.org/yay-git.git
+cd yay
+cd yay-git
+makepkg -si
+yay -Syu nerd-fonts-dejavu-complete
+cd ~
+ln -sf .config/themes/gruvbox ~/.Xresources
+cd .config
+git pull
+ls
+ip a
+clear
+neofetch
+\
+\
+exit
+: 1642918096:0;cd /opt
+: 1642918106:0;git clone git@github.com:neovim/neovim
+: 1642918122:0;git clone https://github.com/neovim/neovim
+: 1642918151:0;cd neovim
+: 1642918158:0;git checkout release-0.6
+: 1642918265:0;make CMAKE_BUILD_TYPE=RelWithDebInfo && sudo make install
+: 1642918271:0;make CMAKE_BUILD_TYPE=RelWithDebInfo
+: 1642918328:0;sudo pacman -S cmake
+: 1642918338:0;make CMAKE_BUILD_TYPE=RelWithDebInfo
+: 1642918443:0;sudo pacman -S unzip
+: 1642918447:0;make CMAKE_BUILD_TYPE=RelWithDebInfo
+: 1642918620:0;LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)\
+
+: 1642918628:0;ls
+: 1642918637:0;ll
+: 1642918656:0;which $(neovim)
+: 1642918678:0;sudo make install
+: 1642918687:0;which $(neovim)
+: 1642918700:0;ll
+: 1642918725:0;which $(nvim)
+: 1642918737:0;LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)\
+
+: 1642918748:0;sudo pacman -S yarn npm
+: 1642918753:0;LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)\
+
+: 1642918779:0;sudo pacman -S rustup
+: 1642918784:0;LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)\
+
+: 1642918805:0;rustup 
+: 1642918838:0;rustup install cargo
+: 1642918842:0;cargo
+: 1642918848:0;sudo pacman -S cargo
+: 1642918852:0;cargo
+: 1642918861:0;cd ~/.cargo
+: 1642918866:0;rustup update
+: 1642918869:0;rustup
+: 1642918883:0;rustup show
+: 1642918892:0;cd ~/.rustup
+: 1642918893:0;ls
+: 1642918899:0;vim settings.toml
+: 1642918919:0;yay -S cargo
+: 1642918951:0;cd ..
+: 1642918961:0;sudo pacman -R rustup
+: 1642918966:0;curl https://sh.rustup.rs -sSf | sh\
+
+: 1642919023:0;source $HOME/.cargo/env
+: 1642919032:0;LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)\
+
+: 1642919260:0;lvim
+: 1642919271:0;echo $PATH
+: 1642919296:0;source .profile
+: 1642919298:0;echo $PATH
+: 1642919302:0;lvim
+: 1642919348:0;setxkbmap caps:escape
+: 1642919404:0;e .Xmodmap
+: 1642919462:0;e
+: 1642919475:0;cd .config/lvim
+: 1642919476:0;l
+: 1642919478:0;./install.sh
+: 1642919481:0;e
+: 1642919499:0;v config.lua
+: 1642919509:0;./install.sh
+: 1642919516:0;v install.sh
+: 1642919532:0;git pull
+: 1642919599:0;v config.lua
+: 1642919705:0;clear
+: 1642919711:0;`\
+`
+: 1642919713:0;clear
+: 1642919719:0;~
+: 1642919723:0;t
+: 1642919729:0;sudo pacman -S tmux
+: 1642919737:0;t
+: 1642919745:0;clear
+: 1642919749:0;neofetch
+: 1642919787:0;cd .config/alacritt
+: 1642919791:0;cd .config
+: 1642919795:0;cd alacritty
+: 1642919795:0;l
+: 1642919798:0;v alacritty.yml
+: 1642919935:0;cd .config/alacritty
+: 1642919938:0;v alacritty.yml
+: 1642919954:0;clear
+: 1642919962:0;git add .
+: 1642919972:0;gc 'updated alcritty'
+: 1642919986:0;git config --global user.email "judahbeneliezer@gmail.com"
+: 1642919998:0;git config --global user.name "Judah Ben-Eliezer"
+: 1642920034:0;cat ~/.ssh/id_ed25519.pub
+: 1642920106:0;ls
+: 1642920112:0;gp
+: 1642920117:0;..
+: 1642920121:0;ga .
+: 1642920128:0;gc 'updated alacritty'
+: 1642920130:0;gp
+: 1642920156:0;cd .config
+: 1642920157:0;ga .
+: 1642920165:0;gc 'updated alacritty'
+: 1642920168:0;gp
+: 1642920240:0;git remote set-url git@github.com:jbeneliezer/dotfiles
+: 1642920279:0;git remote set-url origin git@github.com:jbeneliezer/dotfiles
+: 1642920281:0;gp
+: 1642920283:0;clear
+: 1642920286:0;neofetch
+: 1642920363:0;poweroff
+: 1642920366:0;sudo poweroff
+: 1642947856:0;startx
+: 1642947875:0;lsusb
+: 1642947877:0;lspci
+: 1642947883:0;df -h
+: 1642947889:0;sudo pacman -S htop
+: 1642947896:0;htop
+: 1642947970:0;clear
+: 1642948272:0;cd .config
+: 1642948274:0;git pull
+: 1642948623:0;cd i3
+: 1642948625:0;e .
+: 1642948636:0;sudo pacman -S feh
+: 1642948702:0;cd .config
+: 1642948706:0;git checkout master
+: 1642948714:0;git checkout -b laptop
+: 1642948739:0;ga .
