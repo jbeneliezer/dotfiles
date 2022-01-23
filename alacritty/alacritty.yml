@@ -8,4 +8,8 @@ key_bindings:
   - { key: C, mods: Alt, action: Copy }
   - { key: Comma, mods: Alt, action: IncreaseFontSize }
   - { key: Period, mods: Alt|Shift, action: DecreaseFontSize }
+shell:
+  program: /usr/bin/zsh
+  args:
+    - --login
 
