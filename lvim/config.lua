@@ -400,3 +400,4 @@ lvim.plugins = {
 -- { "BufWinEnter", "*.lua", ":normal G=gg" },
 -- }
 
+
