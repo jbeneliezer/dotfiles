@@ -1,10 +1,7 @@
-cd themes
 ln -s nord ~/.Xresources
-~
 chsh -s $(which zsh)
 cd .config/zsh/zshrc
 cd .config/zsh/
-cd ..
 rm .config
 rm -rf .config
 cd /opt/dotfiles
@@ -17,15 +14,12 @@ source cd ~
 source .zshrc
 ln -s .config/shell/.profile .profile
 vim .profile
-source .profile
 cat .Xresources
 ls -alt
 rm .Xresources
 ln -s .config/themes/nord .Xresources
-cd alacritty
 vim alacritty.yml
 sudo pacman -S yay-bin
-cd /opt
 git clone https://aur.archlinux.org/yay-git.git
 cd yay
 cd yay-git
@@ -33,133 +27,422 @@ makepkg -si
 yay -Syu nerd-fonts-dejavu-complete
 cd ~
 ln -sf .config/themes/gruvbox ~/.Xresources
-cd .config
-git pull
-ls
-ip a
-clear
-neofetch
-\
-\
-exit
-: 1642918096:0;cd /opt
-: 1642918106:0;git clone git@github.com:neovim/neovim
-: 1642918122:0;git clone https://github.com/neovim/neovim
-: 1642918151:0;cd neovim
-: 1642918158:0;git checkout release-0.6
-: 1642918265:0;make CMAKE_BUILD_TYPE=RelWithDebInfo && sudo make install
-: 1642918271:0;make CMAKE_BUILD_TYPE=RelWithDebInfo
-: 1642918328:0;sudo pacman -S cmake
-: 1642918338:0;make CMAKE_BUILD_TYPE=RelWithDebInfo
-: 1642918443:0;sudo pacman -S unzip
-: 1642918447:0;make CMAKE_BUILD_TYPE=RelWithDebInfo
-: 1642918620:0;LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)\
+cd /opt
+git clone git@github.com:neovim/neovim
+git clone https://github.com/neovim/neovim
+cd neovim
+git checkout release-0.6
+make CMAKE_BUILD_TYPE=RelWithDebInfo && sudo make install
+sudo pacman -S cmake
+sudo pacman -S unzip
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+sudo make install
+which $(neovim)
+which $(nvim)
+sudo pacman -S yarn npm
+sudo pacman -S rustup
+rustup 
+rustup install cargo
+sudo pacman -S cargo
+cargo
+cd ~/.cargo
+rustup update
+rustup
+rustup show
+cd ~/.rustup
+vim settings.toml
+yay -S cargo
+cd ..
+sudo pacman -R rustup
+curl https://sh.rustup.rs -sSf | sh\
 
-: 1642918628:0;ls
-: 1642918637:0;ll
-: 1642918656:0;which $(neovim)
-: 1642918678:0;sudo make install
-: 1642918687:0;which $(neovim)
-: 1642918700:0;ll
-: 1642918725:0;which $(nvim)
-: 1642918737:0;LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)\
+source $HOME/.cargo/env
+LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)\
 
-: 1642918748:0;sudo pacman -S yarn npm
-: 1642918753:0;LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)\
-
-: 1642918779:0;sudo pacman -S rustup
-: 1642918784:0;LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)\
-
-: 1642918805:0;rustup 
-: 1642918838:0;rustup install cargo
-: 1642918842:0;cargo
-: 1642918848:0;sudo pacman -S cargo
-: 1642918852:0;cargo
-: 1642918861:0;cd ~/.cargo
-: 1642918866:0;rustup update
-: 1642918869:0;rustup
-: 1642918883:0;rustup show
-: 1642918892:0;cd ~/.rustup
-: 1642918893:0;ls
-: 1642918899:0;vim settings.toml
-: 1642918919:0;yay -S cargo
-: 1642918951:0;cd ..
-: 1642918961:0;sudo pacman -R rustup
-: 1642918966:0;curl https://sh.rustup.rs -sSf | sh\
-
-: 1642919023:0;source $HOME/.cargo/env
-: 1642919032:0;LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)\
-
-: 1642919260:0;lvim
-: 1642919271:0;echo $PATH
-: 1642919296:0;source .profile
-: 1642919298:0;echo $PATH
-: 1642919302:0;lvim
-: 1642919348:0;setxkbmap caps:escape
-: 1642919404:0;e .Xmodmap
-: 1642919462:0;e
-: 1642919475:0;cd .config/lvim
-: 1642919476:0;l
-: 1642919478:0;./install.sh
-: 1642919481:0;e
-: 1642919499:0;v config.lua
-: 1642919509:0;./install.sh
-: 1642919516:0;v install.sh
-: 1642919532:0;git pull
-: 1642919599:0;v config.lua
-: 1642919705:0;clear
-: 1642919711:0;`\
+source .profile
+echo $PATH
+lvim
+setxkbmap caps:escape
+e .Xmodmap
+cd .config/lvim
+./install.sh
+v install.sh
+v config.lua
+`\
 `
-: 1642919713:0;clear
-: 1642919719:0;~
-: 1642919723:0;t
-: 1642919729:0;sudo pacman -S tmux
-: 1642919737:0;t
-: 1642919745:0;clear
-: 1642919749:0;neofetch
-: 1642919787:0;cd .config/alacritt
-: 1642919791:0;cd .config
-: 1642919795:0;cd alacritty
-: 1642919795:0;l
-: 1642919798:0;v alacritty.yml
-: 1642919935:0;cd .config/alacritty
-: 1642919938:0;v alacritty.yml
-: 1642919954:0;clear
-: 1642919962:0;git add .
-: 1642919972:0;gc 'updated alcritty'
-: 1642919986:0;git config --global user.email "judahbeneliezer@gmail.com"
-: 1642919998:0;git config --global user.name "Judah Ben-Eliezer"
-: 1642920034:0;cat ~/.ssh/id_ed25519.pub
-: 1642920106:0;ls
-: 1642920112:0;gp
-: 1642920117:0;..
-: 1642920121:0;ga .
-: 1642920128:0;gc 'updated alacritty'
-: 1642920130:0;gp
-: 1642920156:0;cd .config
-: 1642920157:0;ga .
-: 1642920165:0;gc 'updated alacritty'
-: 1642920168:0;gp
-: 1642920240:0;git remote set-url git@github.com:jbeneliezer/dotfiles
-: 1642920279:0;git remote set-url origin git@github.com:jbeneliezer/dotfiles
-: 1642920281:0;gp
-: 1642920283:0;clear
-: 1642920286:0;neofetch
-: 1642920363:0;poweroff
-: 1642920366:0;sudo poweroff
-: 1642947856:0;startx
-: 1642947875:0;lsusb
-: 1642947877:0;lspci
-: 1642947883:0;df -h
-: 1642947889:0;sudo pacman -S htop
-: 1642947896:0;htop
-: 1642947970:0;clear
-: 1642948272:0;cd .config
-: 1642948274:0;git pull
-: 1642948623:0;cd i3
-: 1642948625:0;e .
-: 1642948636:0;sudo pacman -S feh
-: 1642948702:0;cd .config
-: 1642948706:0;git checkout master
-: 1642948714:0;git checkout -b laptop
-: 1642948739:0;ga .
+sudo pacman -S tmux
+t
+cd .config/alacritt
+cd alacritty
+git add .
+gc 'updated alcritty'
+git config --global user.email "judahbeneliezer@gmail.com"
+git config --global user.name "Judah Ben-Eliezer"
+cat ~/.ssh/id_ed25519.pub
+gc 'updated alacritty'
+git remote set-url git@github.com:jbeneliezer/dotfiles
+git remote set-url origin git@github.com:jbeneliezer/dotfiles
+poweroff
+sudo poweroff
+lsusb
+lspci
+df -h
+sudo pacman -S htop
+cd i3
+sudo pacman -S feh
+git checkout master
+git checkout -b laptop
+ga .
+gc 'new branch first commit'
+gp
+git push --set-upstream origin laptop
+git pull
+git config pull.rebase false
+git pull origin laptop
+v .Xresources
+cd .config/alacritty
+v alacritty.yml
+e gruvbox
+mv gruvbox gruvbox.Xresources
+mv nord nord.Xresources
+ln -sf gruvbox.Xresources ~/.Xresources
+e gruvbox.Xresources
+ln -sf nord.Xresources ~/.Xresources
+ln -sf ~/.config/themes/gruvbox.Xresources ~/.Xresources
+ld
+cd themes
+setfont DejaVuSansMono Nerd Font
+fc-list
+cd /usr/share/kbd/consolefonts
+ps $$
+which rc.conf
+cd /etc
+cd rc_keymaps
+cd /usr
+cd share
+ls
+sudo pacman -S pulseaudio alsa alsa-utils
+ip a
+alsa-mixer
+alsamixer
+systemctl status pulseaudio
+pulseaudio
+xrandr
+xrandr -q
+xrandr --output eDP-1 --brightness 1.0
+xrandr --output eDP-1 --brightness 0.8
+xrandr --output eDP-1 --brightness 0.99
+xrandr --output eDP-1 --brightness 1.1
+xrandr --output eDP-1 --brightness 1.2
+xrandr --output eDP-1 --brightness 1.5
+xrandr --output eDP-1 --brightness 3
+xrandr --output eDP-1 --brightness 4
+xrandr --output eDP-1 --brightness 2
+xrandr --output eDP-1 --brightness 1
+sudo e /etc/default/grub
+sudo vim /etc/default/grub
+sudo update-grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+reboot
+startx
+nmcli device wifi show
+nmtui
+ping google.com
+cd /etc/X11/xorg.conf.d
+..
+cd xinit
+ll
+e /etc/default/grub
+cd /sys
+class
+backlight
+cd amdgpu_bl0
+l
+cat actual_brightness
+cat max_brightness
+cat /etc/default/grub
+e .
+sudo lvim .
+~
+cd .config
+neofetch
+htop
+mkdir /mnt/usb
+sudo mkdir /mnt/usb
+mount /dev/sda /mnt/usb
+sudo mount /dev/sda /mnt/usb
+umount /mnt/usb
+sudo umount /mnt/usb
+cfdisk /dev/sda
+sudo cfdisk /dev/sda
+sudo pacman -Syyu mkfs
+sudo pacman -S util-linux
+sudo pacman -S dosfstools
+mkfs.fat -F 32 /dev/sda
+sudo mkfs.fat -F 32 /dev/sda
+sudo mkfs.fat -F 32 /dev/sda -I
+clear
+sudo umount /dev/sda
+lsblk
+e
+exit
+: 1643036533:0;cd /sys/class
+: 1643036534:0;ls
+: 1643036570:0;cd backlight
+: 1643036571:0;ls
+: 1643036574:0;cd amdgpu_bl0
+: 1643036575:0;ls
+: 1643036578:0;cat brightness
+: 1643036583:0;e .
+: 1643036639:0;sudo lvim .
+: 1643036699:0;clear
+: 1643036703:0;neofetch
+: 1643036711:0;nmtui
+: 1643036758:0;ping google.com
+: 1643036833:0;cd ~
+: 1643036836:0;cd Downloads
+: 1643036837:0;ls
+: 1643036840:0;./SecureW2_JoinNow.run
+: 1643036847:0;chmod +x SecureW2_JoinNow.run
+: 1643036850:0;./SecureW2_JoinNow.run
+: 1643036860:0;pip install dbus
+: 1643036892:0;nmtui
+: 1643036913:0;ping google.com
+: 1643037093:0;sudo pacman -Syyu python3-pip
+: 1643037110:0;sudo pacman -S python-pip
+: 1643037125:0;pip install dbus
+: 1643037142:0;~
+: 1643037149:0;cd Downloads
+: 1643037577:0;cd /opt/dotfiles
+: 1643037578:0;ls
+: 1643037608:0;mkdir misc
+: 1643037610:0;cd misc
+: 1643037613:0;e .
+: 1643037781:0;cd /sys/class/backlight/amdgpu_bl0
+: 1643037782:0;ls
+: 1643038120:0;chmod +x light_inc light_dec
+: 1643038122:0;ls
+: 1643038135:0;chmod +x light_inc.sh light_dec.sh
+: 1643038139:0;./light_inc
+: 1643038145:0;./light_inc.sh
+: 1643038150:0;sudo ./light_inc.sh
+: 1643038181:0;cat /sys/class/backlight/amdgpu_bl0/brightness
+: 1643038191:0;sudo ./light_dec.sh
+: 1643038207:0;e .
+: 1643038246:0;cd /opt/dotfiles/misc
+: 1643038255:0;sudo ./light_dec.sh
+: 1643038280:0;e .
+: 1643038338:0;sudo ./light_dec.sh
+: 1643038345:0;e .
+: 1643038366:0;sudo ./light_dec.sh
+: 1643038373:0;e .
+: 1643038393:0;sudo ./light_dec.sh
+: 1643038401:0;e .
+: 1643038542:0;sudo ./light_dec.sh
+: 1643038556:0;cat /sys/class/backlight/amdgpu_bl0/brightness
+: 1643038560:0;sudo ./light_dec.sh
+: 1643038563:0;cat /sys/class/backlight/amdgpu_bl0/brightness
+: 1643038569:0;sudo ./light_dec.sh
+: 1643038572:0;cat /sys/class/backlight/amdgpu_bl0/brightness
+: 1643038577:0;sudo ./light_dec.sh
+: 1643038579:0;cat /sys/class/backlight/amdgpu_bl0/brightness
+: 1643038581:0;sudo ./light_dec.sh
+: 1643038584:0;cat /sys/class/backlight/amdgpu_bl0/brightness
+: 1643038586:0;sudo ./light_dec.sh
+: 1643038588:0;cat /sys/class/backlight/amdgpu_bl0/brightness
+: 1643038591:0;sudo ./light_dec.sh
+: 1643038593:0;cat /sys/class/backlight/amdgpu_bl0/brightness
+: 1643038595:0;sudo ./light_dec.sh
+: 1643038597:0;cat /sys/class/backlight/amdgpu_bl0/brightness
+: 1643038604:0;sudo ./light_inc.sh
+: 1643038607:0;cat /sys/class/backlight/amdgpu_bl0/brightness
+: 1643038610:0;sudo ./light_inc.sh
+: 1643038611:0;cat /sys/class/backlight/amdgpu_bl0/brightness
+: 1643038613:0;sudo ./light_inc.sh
+: 1643038614:0;cat /sys/class/backlight/amdgpu_bl0/brightness
+: 1643038616:0;sudo ./light_inc.sh
+: 1643038618:0;cat /sys/class/backlight/amdgpu_bl0/brightness
+: 1643038619:0;sudo ./light_inc.sh
+: 1643038621:0;cat /sys/class/backlight/amdgpu_bl0/brightness
+: 1643038623:0;sudo ./light_inc.sh
+: 1643038633:0;cd ..
+: 1643038634:0;ls
+: 1643038640:0;cd alacritty
+: 1643038641:0;ls
+: 1643038643:0;e .
+: 1643038879:0;cd ../misc
+: 1643038880:0;ls
+: 1643038884:0;ll
+: 1643038894:0;rm 235
+: 1643038898:0;./light_inc.sh
+: 1643038901:0;sudo ./light_inc.sh
+: 1643038919:0;cp * /usr/local/bin
+: 1643038922:0;sudo cp * /usr/local/bin
+: 1643038986:0;sudo chmod jb+w /sys/class/backlight/amdgpu_bl0/brightness
+: 1643038996:0;sudo chmod wheel+w /sys/class/backlight/amdgpu_bl0/brightness
+: 1643039052:0;sudo chmod u+w /sys/class/backlight/amdgpu_bl0/brightness
+: 1643039068:0;light_dec.sh
+: 1643039091:0;ll /sys/class/backlight/amdgpu_bl0/brightness
+: 1643039107:0;sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
+: 1643039111:0;ll /sys/class/backlight/amdgpu_bl0/brightness
+: 1643039117:0;light_dec.sh
+: 1643039134:0;light_inc.sh
+: 1643039143:0;../i3
+: 1643039145:0;e .
+: 1643039652:0;~
+: 1643039655:0;sudo pacman -S dbus
+: 1643039667:0;pip install dbus-python
+: 1643039792:0;cd Downloads
+: 1643039793:0;./SecureW2_JoinNow.run
+: 1643039819:0;nmtui
+: 1643039851:0;./SecureW2_JoinNow.run
+: 1643039900:0;nmtui
+: 1643039984:0;e .
+: 1643040053:0;nmtui
+: 1643040106:0;ls
+: 1643040121:0;rm 'SecureW2_JoinNow (1).run' 'SecureW2_JoinNow (2).run'
+: 1643040122:0;ls
+: 1643040160:0;./SecureW2_JoinNow.run
+: 1643040198:0;nmtui
+: 1643040351:0;nmcli device wifi connect WolfieNet-Guest
+: 1643040569:0;clear
+: 1643040738:0;cd /opt/dotfiles/i3
+: 1643040739:0;l
+: 1643040742:0;v config
+: 1643040786:0;e config
+: 1643040859:0;startx
+: 1643040870:0;cd .config/i3
+: 1643040872:0;e .
+: 1643040943:0;reboot
+: 1643040965:0;startx
+: 1643040985:0;cd .config
+: 1643040987:0;cd i3
+: 1643040988:0;e config
+: 1643041010:0;light_dec.sh
+: 1643041046:0;chmd a+w /sys/class/backlight/amdgpu_bl0
+: 1643041063:0;chmod a+w /sys/class/backlight/amdgpu_bl0
+: 1643041068:0;sudo chmod a+w /sys/class/backlight/amdgpu_bl0
+: 1643041085:0;light_dec.sh
+: 1643041110:0;sudo chmdo a+w /sys/class/backlight/amdgpu_bl0/brightness
+: 1643041123:0;sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
+: 1643041127:0;light_dec.sh
+: 1643041148:0;ll
+: 1643041192:0;~
+: 1643041193:0;clear
+: 1643041195:0;neofetch
+: 1643041198:0;clear
+: 1643041635:0; nmtui
+: 1643041705:0;cd Downloads
+: 1643041706:0;l
+: 1643041712:0;./SecureW2_JoinNow.run
+: 1643041742:0;l
+: 1643041754:0;chmod +x 'SecureW2_JoinNow (1).run'
+: 1643041758:0;./SecureW2_JoinNow
+: 1643041765:0;./SecureW2_JoinNow\ \(1\).run
+: 1643041832:0;nmtui
+: 1643042345:0;nmcli device wifi connect WolfieNet-Secure
+: 1643042445:0;cd /usr/share/doc/wpa_supplicant
+: 1643042447:0;e .
+: 1643042607:0;sudo lvim .
+: 1643042911:0;cd Downloads
+: 1643042911:0;ls
+: 1643042920:0;chmod +x eduroam-linux-BNL-BNL_users.py
+: 1643042930:0;rm 'SecureW2_JoinNow (1).run'
+: 1643042934:0;./eduroam-linux-BNL-BNL_users.py
+: 1643043109:0;nmcli con add type wifi con-name 'WolfieNet-Secure' ifname jbeneliezer ssid 'WolfieNet-Secure'
+: 1643043138:0;ip a
+: 1643043159:0;nmcli con add type wifi con-name 'WolfieNet-Secure' ifname wlo1 ssid 'WolfieNet-Secure'
+: 1643043220:0;nmcli con remove type wife con-name 'WolfieNet-Secure'
+: 1643043229:0;nmcli con help
+: 1643043253:0;nmcli con delete WolfieNet-Secure
+: 1643043260:0;nmcli con add type wifi con-name 'WolfieNet-Secure' ifname wlo1 ssid 'WolfieNet-Secure'
+: 1643043333:0;nmcli con modify WolfieNet-Secure 802-1x.phase2-auth mschapv2 802-1x.identity 'jbeneliezer' 802-1x.password 'ASolutionforyou!!'
+: 1643043376:0;nmcli con modify WolfieNet-Secure 802-1x.eap peap 802-1x.phase2-auth mschapv2 802-1x.identity 'jbeneliezer' 802-1x.password 'ASolutionforyou!!'
+: 1643043403:0;nmcli con modify WolfieNet-Secure wifi-sec.key-mgmt wpa-eap
+: 1643043406:0;clear
+: 1643043422:0;nmcli device wifi connect WolfieNet-Secure
+: 1643043428:0;nmtui
+: 1643043452:0;systemctl restart NetworkManager
+: 1643043465:0;systemctl restart wpa_supplicant
+: 1643043471:0;nmtui
+: 1643043485:0;reboot
+: 1643043512:0;startx
+: 1643043519:0;nmtui
+: 1643043545:0;ping google.com
+: 1643044014:0;nmtui
+: 1643044019:0;clear
+: 1643044043:0;cd .config
+: 1643044045:0;cd i3
+: 1643044045:0;l
+: 1643044047:0;e config
+: 1643044131:0;git add .
+: 1643044139:0;gc 'fixed sbu wifi'
+: 1643044140:0;gp
+: 1643044150:0;git push --set-upstream origin laptop
+: 1643044155:0;clear
+: 1643044156:0;neofetch
+: 1643044159:0;clear
+: 1643044634:0;gs
+: 1643044639:0;ga .
+: 1643044922:0;clear
+: 1643044925:0;ip a
+: 1643044927:0;clear
+: 1643045146:0;hwclock show
+: 1643045153:0;hwclock --show
+: 1643045160:0;sudo hwclock --show
+: 1643045178:0;clear
+: 1643045208:0;sudo pacman -S dmenu
+: 1643045263:0;yay -S brave-nightly-bin
+: 1643045296:0;clear
+: 1643045308:0;cd ../alacritty
+: 1643045308:0;l
+: 1643045310:0;v .
+: 1643045332:0;neofetch
+: 1643045335:0;clear
+: 1643045468:0;reboot
+: 1643045529:0;startx
+: 1643045648:0;sudo pacman -Syyu mutt
+: 1643045665:0;mutt
+: 1643045798:0;sudo pacman -R mutt
+: 1643045800:0;clear
+: 1643045856:0;sudo pacman -S thunderbird
+: 1643046366:0;xinput list
+: 1643046447:0;xinput list-props 'SynPS/2 Synaptics TouchPad'
+: 1643046463:0;xinput list-props 'SynPS/2 Synaptics TouchPad' | gre Deceleration
+: 1643046470:0;xinput list-props 'SynPS/2 Synaptics TouchPad' | grep Deceleration
+: 1643046684:0;xinput set-prop 'SynPS/2 Syanptics TouchPad' 'Natural Scrolling Enabled' 1
+: 1643046714:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'Natural Scrolling Enabled' 1
+: 1643046754:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled' 1
+: 1643046766:0;xinput list-props 'SynPS/2 Synaptics TouchPad'
+: 1643046786:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled Default' 1
+: 1643046833:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Middle Emulation Enabled' 1
+: 1643046886:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Middle Emulation Enabled' 0
+: 1643046909:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
+: 1643046975:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 30
+: 1643046997:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 15
+: 1643047032:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Accel Speed' 1
+: 1643047051:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Accel Speed' 0
+: 1643047058:0;xinput list-props 'SynPS/2 Synaptics TouchPad'
+: 1643047099:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Drag Lock Enabled' 1
+: 1643047166:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Drag Lock Enabled' 0
+: 1643047170:0;xinput list-props 'SynPS/2 Synaptics TouchPad'
+: 1643047254:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 50
+: 1643047270:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 100
+: 1643047277:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 10
+: 1643047285:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 5
+: 1643047297:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 50
+: 1643047302:0;xinput list-props 'SynPS/2 Synaptics TouchPad'
+: 1643047330:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 15
+: 1643047354:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Accel Speed' 0.5
+: 1643047396:0;clear
+: 1643047404:0;l
+: 1643047408:0;mkdir repos
+: 1643047408:0;l
+: 1643047413:0;rmdir repos
+: 1643047414:0;cd /opt
+: 1643047415:0;l
+: 1643047619:0;cd dotfile
+: 1643047620:0;gs
+: 1643047625:0;dotfiles
+: 1643047627:0;gs
+: 1643047630:0;ga .

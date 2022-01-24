@@ -1,7 +1,7 @@
 font:
   normal:
     family: DejaVuSansMono Nerd Font
-  size: 9 
+  size: 8 
 window.opacity: 1.0
 key_bindings:
   - { key: V, mods: Alt, action: Paste }
