@@ -53,13 +53,17 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty; workspace $ws7 focus
+bindsym $mod+Return exec alacritty
 
 # open browser
-bindsym $mod+w exec chromium; workspace $ws1 focus
+bindsym $mod+w exec chromium
 
 # kill focused window
 bindsym $mod+q kill
+
+# set brightness
+bindsym $mod+i exec light_inc.sh
+bindsym $mod+o exec light_dec.sh
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
@@ -212,6 +216,6 @@ status_command i3status
 # launch polybar
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-assign [class="Chromium"] $ws1
-assign [class="Alacritty"] $ws7
-assign [class="Spotify"] $ws8
+# assign [class="Chromium"] $ws1
+# assign [class="Alacritty"] $ws7
+# assign [class="Spotify"] $ws8
