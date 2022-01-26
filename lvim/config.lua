@@ -7,7 +7,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "nightfox"
+lvim.colorscheme = "nightfly"
 lvim.leader = "space"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
@@ -77,7 +77,7 @@ lvim.builtin.which_key.mappings = {
 	["!"] = { "<cmd>q!<cr>", "Force Quit" },
 	["c"] = { "<cmd>BufferClose!<cr>", "Close Buffer" },
 	["s"] = { ":w ", "Save as" },
-	["n"] = { "<cmd>ene ", "New File" },
+	["n"] = { ":ene ", "New File" },
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["o"] = { "<c-w>o", "Fullscreen" },
 	["a"] = { "G=gg2<c-o>zz", "Style" },
@@ -374,7 +374,7 @@ lvim.plugins = {
 	{'morhetz/gruvbox'},
 	{'tomasr/molokai'},
 	{'sainnhe/sonokai'},
-	{'sainnhe/everforest'},
+	-- {'sainnhe/everforest'}, -- currently creating errors
 	{'jnurmine/Zenburn'},
 	{'jacoborus/tender.vim'},
 	{'mhartington/oceanic-next'},
