@@ -47,6 +47,7 @@ set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym $mod+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -66,7 +67,7 @@ bindsym $mod+i exec light_inc.sh
 bindsym $mod+o exec light_dec.sh
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+space exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -112,10 +113,10 @@ bindsym $mod+y layout stacking
 bindsym $mod+u layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+p floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+p focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -212,10 +213,3 @@ bar {
 position top
 status_command i3status
 }
-
-# launch polybar
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-# assign [class="Chromium"] $ws1
-# assign [class="Alacritty"] $ws7
-# assign [class="Spotify"] $ws8

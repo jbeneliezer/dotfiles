@@ -4,7 +4,6 @@ cd .config/zsh/zshrc
 cd .config/zsh/
 rm .config
 rm -rf .config
-cd /opt/dotfiles
 git checkout arch
 ln -s /opt/dotfiles .config
 rm .zshrc
@@ -25,9 +24,7 @@ cd yay
 cd yay-git
 makepkg -si
 yay -Syu nerd-fonts-dejavu-complete
-cd ~
 ln -sf .config/themes/gruvbox ~/.Xresources
-cd /opt
 git clone git@github.com:neovim/neovim
 git clone https://github.com/neovim/neovim
 cd neovim
@@ -52,7 +49,6 @@ rustup show
 cd ~/.rustup
 vim settings.toml
 yay -S cargo
-cd ..
 sudo pacman -R rustup
 curl https://sh.rustup.rs -sSf | sh\
 
@@ -73,29 +69,19 @@ v config.lua
 sudo pacman -S tmux
 t
 cd .config/alacritt
-cd alacritty
-git add .
 gc 'updated alcritty'
 git config --global user.email "judahbeneliezer@gmail.com"
 git config --global user.name "Judah Ben-Eliezer"
 cat ~/.ssh/id_ed25519.pub
-gc 'updated alacritty'
 git remote set-url git@github.com:jbeneliezer/dotfiles
 git remote set-url origin git@github.com:jbeneliezer/dotfiles
-poweroff
 sudo poweroff
-lsusb
-lspci
 df -h
 sudo pacman -S htop
-cd i3
 sudo pacman -S feh
 git checkout master
 git checkout -b laptop
-ga .
 gc 'new branch first commit'
-gp
-git push --set-upstream origin laptop
 git pull
 git config pull.rebase false
 git pull origin laptop
@@ -120,11 +106,8 @@ cd /etc
 cd rc_keymaps
 cd /usr
 cd share
-ls
 sudo pacman -S pulseaudio alsa alsa-utils
-ip a
 alsa-mixer
-alsamixer
 systemctl status pulseaudio
 pulseaudio
 xrandr
@@ -143,29 +126,17 @@ sudo e /etc/default/grub
 sudo vim /etc/default/grub
 sudo update-grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
-reboot
-startx
 nmcli device wifi show
-nmtui
-ping google.com
 cd /etc/X11/xorg.conf.d
 ..
 cd xinit
-ll
 e /etc/default/grub
 cd /sys
 class
 backlight
-cd amdgpu_bl0
-l
 cat actual_brightness
 cat max_brightness
 cat /etc/default/grub
-e .
-sudo lvim .
-~
-cd .config
-neofetch
 htop
 mkdir /mnt/usb
 sudo mkdir /mnt/usb
@@ -181,268 +152,296 @@ sudo pacman -S dosfstools
 mkfs.fat -F 32 /dev/sda
 sudo mkfs.fat -F 32 /dev/sda
 sudo mkfs.fat -F 32 /dev/sda -I
-clear
 sudo umount /dev/sda
 lsblk
-e
 exit
-: 1643036533:0;cd /sys/class
-: 1643036534:0;ls
-: 1643036570:0;cd backlight
-: 1643036571:0;ls
-: 1643036574:0;cd amdgpu_bl0
-: 1643036575:0;ls
-: 1643036578:0;cat brightness
-: 1643036583:0;e .
-: 1643036639:0;sudo lvim .
-: 1643036699:0;clear
-: 1643036703:0;neofetch
-: 1643036711:0;nmtui
-: 1643036758:0;ping google.com
-: 1643036833:0;cd ~
-: 1643036836:0;cd Downloads
-: 1643036837:0;ls
-: 1643036840:0;./SecureW2_JoinNow.run
-: 1643036847:0;chmod +x SecureW2_JoinNow.run
-: 1643036850:0;./SecureW2_JoinNow.run
-: 1643036860:0;pip install dbus
-: 1643036892:0;nmtui
-: 1643036913:0;ping google.com
-: 1643037093:0;sudo pacman -Syyu python3-pip
-: 1643037110:0;sudo pacman -S python-pip
-: 1643037125:0;pip install dbus
-: 1643037142:0;~
-: 1643037149:0;cd Downloads
-: 1643037577:0;cd /opt/dotfiles
-: 1643037578:0;ls
-: 1643037608:0;mkdir misc
-: 1643037610:0;cd misc
-: 1643037613:0;e .
-: 1643037781:0;cd /sys/class/backlight/amdgpu_bl0
-: 1643037782:0;ls
-: 1643038120:0;chmod +x light_inc light_dec
-: 1643038122:0;ls
-: 1643038135:0;chmod +x light_inc.sh light_dec.sh
-: 1643038139:0;./light_inc
-: 1643038145:0;./light_inc.sh
-: 1643038150:0;sudo ./light_inc.sh
-: 1643038181:0;cat /sys/class/backlight/amdgpu_bl0/brightness
-: 1643038191:0;sudo ./light_dec.sh
-: 1643038207:0;e .
-: 1643038246:0;cd /opt/dotfiles/misc
-: 1643038255:0;sudo ./light_dec.sh
-: 1643038280:0;e .
-: 1643038338:0;sudo ./light_dec.sh
-: 1643038345:0;e .
-: 1643038366:0;sudo ./light_dec.sh
-: 1643038373:0;e .
-: 1643038393:0;sudo ./light_dec.sh
-: 1643038401:0;e .
-: 1643038542:0;sudo ./light_dec.sh
-: 1643038556:0;cat /sys/class/backlight/amdgpu_bl0/brightness
-: 1643038560:0;sudo ./light_dec.sh
-: 1643038563:0;cat /sys/class/backlight/amdgpu_bl0/brightness
-: 1643038569:0;sudo ./light_dec.sh
-: 1643038572:0;cat /sys/class/backlight/amdgpu_bl0/brightness
-: 1643038577:0;sudo ./light_dec.sh
-: 1643038579:0;cat /sys/class/backlight/amdgpu_bl0/brightness
-: 1643038581:0;sudo ./light_dec.sh
-: 1643038584:0;cat /sys/class/backlight/amdgpu_bl0/brightness
-: 1643038586:0;sudo ./light_dec.sh
-: 1643038588:0;cat /sys/class/backlight/amdgpu_bl0/brightness
-: 1643038591:0;sudo ./light_dec.sh
-: 1643038593:0;cat /sys/class/backlight/amdgpu_bl0/brightness
-: 1643038595:0;sudo ./light_dec.sh
-: 1643038597:0;cat /sys/class/backlight/amdgpu_bl0/brightness
-: 1643038604:0;sudo ./light_inc.sh
-: 1643038607:0;cat /sys/class/backlight/amdgpu_bl0/brightness
-: 1643038610:0;sudo ./light_inc.sh
-: 1643038611:0;cat /sys/class/backlight/amdgpu_bl0/brightness
-: 1643038613:0;sudo ./light_inc.sh
-: 1643038614:0;cat /sys/class/backlight/amdgpu_bl0/brightness
-: 1643038616:0;sudo ./light_inc.sh
-: 1643038618:0;cat /sys/class/backlight/amdgpu_bl0/brightness
-: 1643038619:0;sudo ./light_inc.sh
-: 1643038621:0;cat /sys/class/backlight/amdgpu_bl0/brightness
-: 1643038623:0;sudo ./light_inc.sh
-: 1643038633:0;cd ..
-: 1643038634:0;ls
-: 1643038640:0;cd alacritty
-: 1643038641:0;ls
-: 1643038643:0;e .
-: 1643038879:0;cd ../misc
-: 1643038880:0;ls
-: 1643038884:0;ll
-: 1643038894:0;rm 235
-: 1643038898:0;./light_inc.sh
-: 1643038901:0;sudo ./light_inc.sh
-: 1643038919:0;cp * /usr/local/bin
-: 1643038922:0;sudo cp * /usr/local/bin
-: 1643038986:0;sudo chmod jb+w /sys/class/backlight/amdgpu_bl0/brightness
-: 1643038996:0;sudo chmod wheel+w /sys/class/backlight/amdgpu_bl0/brightness
-: 1643039052:0;sudo chmod u+w /sys/class/backlight/amdgpu_bl0/brightness
-: 1643039068:0;light_dec.sh
-: 1643039091:0;ll /sys/class/backlight/amdgpu_bl0/brightness
-: 1643039107:0;sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
-: 1643039111:0;ll /sys/class/backlight/amdgpu_bl0/brightness
-: 1643039117:0;light_dec.sh
-: 1643039134:0;light_inc.sh
-: 1643039143:0;../i3
-: 1643039145:0;e .
-: 1643039652:0;~
-: 1643039655:0;sudo pacman -S dbus
-: 1643039667:0;pip install dbus-python
-: 1643039792:0;cd Downloads
-: 1643039793:0;./SecureW2_JoinNow.run
-: 1643039819:0;nmtui
-: 1643039851:0;./SecureW2_JoinNow.run
-: 1643039900:0;nmtui
-: 1643039984:0;e .
-: 1643040053:0;nmtui
-: 1643040106:0;ls
-: 1643040121:0;rm 'SecureW2_JoinNow (1).run' 'SecureW2_JoinNow (2).run'
-: 1643040122:0;ls
-: 1643040160:0;./SecureW2_JoinNow.run
-: 1643040198:0;nmtui
-: 1643040351:0;nmcli device wifi connect WolfieNet-Guest
-: 1643040569:0;clear
-: 1643040738:0;cd /opt/dotfiles/i3
-: 1643040739:0;l
-: 1643040742:0;v config
-: 1643040786:0;e config
-: 1643040859:0;startx
-: 1643040870:0;cd .config/i3
-: 1643040872:0;e .
-: 1643040943:0;reboot
-: 1643040965:0;startx
-: 1643040985:0;cd .config
-: 1643040987:0;cd i3
-: 1643040988:0;e config
-: 1643041010:0;light_dec.sh
-: 1643041046:0;chmd a+w /sys/class/backlight/amdgpu_bl0
-: 1643041063:0;chmod a+w /sys/class/backlight/amdgpu_bl0
-: 1643041068:0;sudo chmod a+w /sys/class/backlight/amdgpu_bl0
-: 1643041085:0;light_dec.sh
-: 1643041110:0;sudo chmdo a+w /sys/class/backlight/amdgpu_bl0/brightness
-: 1643041123:0;sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
-: 1643041127:0;light_dec.sh
-: 1643041148:0;ll
-: 1643041192:0;~
-: 1643041193:0;clear
-: 1643041195:0;neofetch
-: 1643041198:0;clear
-: 1643041635:0; nmtui
-: 1643041705:0;cd Downloads
-: 1643041706:0;l
-: 1643041712:0;./SecureW2_JoinNow.run
-: 1643041742:0;l
-: 1643041754:0;chmod +x 'SecureW2_JoinNow (1).run'
-: 1643041758:0;./SecureW2_JoinNow
-: 1643041765:0;./SecureW2_JoinNow\ \(1\).run
-: 1643041832:0;nmtui
-: 1643042345:0;nmcli device wifi connect WolfieNet-Secure
-: 1643042445:0;cd /usr/share/doc/wpa_supplicant
-: 1643042447:0;e .
-: 1643042607:0;sudo lvim .
-: 1643042911:0;cd Downloads
-: 1643042911:0;ls
-: 1643042920:0;chmod +x eduroam-linux-BNL-BNL_users.py
-: 1643042930:0;rm 'SecureW2_JoinNow (1).run'
-: 1643042934:0;./eduroam-linux-BNL-BNL_users.py
-: 1643043109:0;nmcli con add type wifi con-name 'WolfieNet-Secure' ifname jbeneliezer ssid 'WolfieNet-Secure'
-: 1643043138:0;ip a
-: 1643043159:0;nmcli con add type wifi con-name 'WolfieNet-Secure' ifname wlo1 ssid 'WolfieNet-Secure'
-: 1643043220:0;nmcli con remove type wife con-name 'WolfieNet-Secure'
-: 1643043229:0;nmcli con help
-: 1643043253:0;nmcli con delete WolfieNet-Secure
-: 1643043260:0;nmcli con add type wifi con-name 'WolfieNet-Secure' ifname wlo1 ssid 'WolfieNet-Secure'
-: 1643043333:0;nmcli con modify WolfieNet-Secure 802-1x.phase2-auth mschapv2 802-1x.identity 'jbeneliezer' 802-1x.password 'ASolutionforyou!!'
-: 1643043376:0;nmcli con modify WolfieNet-Secure 802-1x.eap peap 802-1x.phase2-auth mschapv2 802-1x.identity 'jbeneliezer' 802-1x.password 'ASolutionforyou!!'
-: 1643043403:0;nmcli con modify WolfieNet-Secure wifi-sec.key-mgmt wpa-eap
-: 1643043406:0;clear
-: 1643043422:0;nmcli device wifi connect WolfieNet-Secure
-: 1643043428:0;nmtui
-: 1643043452:0;systemctl restart NetworkManager
-: 1643043465:0;systemctl restart wpa_supplicant
-: 1643043471:0;nmtui
-: 1643043485:0;reboot
-: 1643043512:0;startx
-: 1643043519:0;nmtui
-: 1643043545:0;ping google.com
-: 1643044014:0;nmtui
-: 1643044019:0;clear
-: 1643044043:0;cd .config
-: 1643044045:0;cd i3
-: 1643044045:0;l
-: 1643044047:0;e config
-: 1643044131:0;git add .
-: 1643044139:0;gc 'fixed sbu wifi'
-: 1643044140:0;gp
-: 1643044150:0;git push --set-upstream origin laptop
-: 1643044155:0;clear
-: 1643044156:0;neofetch
-: 1643044159:0;clear
-: 1643044634:0;gs
-: 1643044639:0;ga .
-: 1643044922:0;clear
-: 1643044925:0;ip a
-: 1643044927:0;clear
-: 1643045146:0;hwclock show
-: 1643045153:0;hwclock --show
-: 1643045160:0;sudo hwclock --show
-: 1643045178:0;clear
-: 1643045208:0;sudo pacman -S dmenu
-: 1643045263:0;yay -S brave-nightly-bin
-: 1643045296:0;clear
-: 1643045308:0;cd ../alacritty
-: 1643045308:0;l
-: 1643045310:0;v .
-: 1643045332:0;neofetch
-: 1643045335:0;clear
-: 1643045468:0;reboot
-: 1643045529:0;startx
-: 1643045648:0;sudo pacman -Syyu mutt
-: 1643045665:0;mutt
-: 1643045798:0;sudo pacman -R mutt
-: 1643045800:0;clear
-: 1643045856:0;sudo pacman -S thunderbird
-: 1643046366:0;xinput list
-: 1643046447:0;xinput list-props 'SynPS/2 Synaptics TouchPad'
-: 1643046463:0;xinput list-props 'SynPS/2 Synaptics TouchPad' | gre Deceleration
-: 1643046470:0;xinput list-props 'SynPS/2 Synaptics TouchPad' | grep Deceleration
-: 1643046684:0;xinput set-prop 'SynPS/2 Syanptics TouchPad' 'Natural Scrolling Enabled' 1
-: 1643046714:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'Natural Scrolling Enabled' 1
-: 1643046754:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled' 1
-: 1643046766:0;xinput list-props 'SynPS/2 Synaptics TouchPad'
-: 1643046786:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled Default' 1
-: 1643046833:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Middle Emulation Enabled' 1
-: 1643046886:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Middle Emulation Enabled' 0
-: 1643046909:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
-: 1643046975:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 30
-: 1643046997:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 15
-: 1643047032:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Accel Speed' 1
-: 1643047051:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Accel Speed' 0
-: 1643047058:0;xinput list-props 'SynPS/2 Synaptics TouchPad'
-: 1643047099:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Drag Lock Enabled' 1
-: 1643047166:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Drag Lock Enabled' 0
-: 1643047170:0;xinput list-props 'SynPS/2 Synaptics TouchPad'
-: 1643047254:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 50
-: 1643047270:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 100
-: 1643047277:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 10
-: 1643047285:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 5
-: 1643047297:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 50
-: 1643047302:0;xinput list-props 'SynPS/2 Synaptics TouchPad'
-: 1643047330:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 15
-: 1643047354:0;xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Accel Speed' 0.5
-: 1643047396:0;clear
-: 1643047404:0;l
-: 1643047408:0;mkdir repos
-: 1643047408:0;l
-: 1643047413:0;rmdir repos
-: 1643047414:0;cd /opt
-: 1643047415:0;l
-: 1643047619:0;cd dotfile
-: 1643047620:0;gs
-: 1643047625:0;dotfiles
-: 1643047627:0;gs
-: 1643047630:0;ga .
+cd /sys/class
+cd backlight
+cd amdgpu_bl0
+cat brightness
+cd ~
+chmod +x SecureW2_JoinNow.run
+sudo pacman -Syyu python3-pip
+sudo pacman -S python-pip
+pip install dbus
+cd /opt/dotfiles
+mkdir misc
+cd misc
+cd /sys/class/backlight/amdgpu_bl0
+chmod +x light_inc light_dec
+chmod +x light_inc.sh light_dec.sh
+./light_inc
+cd /opt/dotfiles/misc
+sudo ./light_dec.sh
+cat /sys/class/backlight/amdgpu_bl0/brightness
+cd ..
+cd alacritty
+cd ../misc
+rm 235
+./light_inc.sh
+sudo ./light_inc.sh
+cp * /usr/local/bin
+sudo cp * /usr/local/bin
+sudo chmod jb+w /sys/class/backlight/amdgpu_bl0/brightness
+sudo chmod wheel+w /sys/class/backlight/amdgpu_bl0/brightness
+ll /sys/class/backlight/amdgpu_bl0/brightness
+../i3
+pip install dbus-python
+rm 'SecureW2_JoinNow (1).run' 'SecureW2_JoinNow (2).run'
+nmcli device wifi connect WolfieNet-Guest
+cd /opt/dotfiles/i3
+v config
+cd .config/i3
+chmd a+w /sys/class/backlight/amdgpu_bl0
+chmod a+w /sys/class/backlight/amdgpu_bl0
+sudo chmod a+w /sys/class/backlight/amdgpu_bl0
+sudo chmdo a+w /sys/class/backlight/amdgpu_bl0/brightness
+light_dec.sh
+ll
+~
+./SecureW2_JoinNow.run
+chmod +x 'SecureW2_JoinNow (1).run'
+./SecureW2_JoinNow
+./SecureW2_JoinNow\ \(1\).run
+cd /usr/share/doc/wpa_supplicant
+cd Downloads
+ls
+chmod +x eduroam-linux-BNL-BNL_users.py
+rm 'SecureW2_JoinNow (1).run'
+./eduroam-linux-BNL-BNL_users.py
+nmcli con add type wifi con-name 'WolfieNet-Secure' ifname jbeneliezer ssid 'WolfieNet-Secure'
+nmcli con remove type wife con-name 'WolfieNet-Secure'
+nmcli con help
+nmcli con delete WolfieNet-Secure
+nmcli con add type wifi con-name 'WolfieNet-Secure' ifname wlo1 ssid 'WolfieNet-Secure'
+nmcli con modify WolfieNet-Secure 802-1x.phase2-auth mschapv2 802-1x.identity 'jbeneliezer' 802-1x.password 'ASolutionforyou!!'
+nmcli con modify WolfieNet-Secure 802-1x.eap peap 802-1x.phase2-auth mschapv2 802-1x.identity 'jbeneliezer' 802-1x.password 'ASolutionforyou!!'
+nmcli con modify WolfieNet-Secure wifi-sec.key-mgmt wpa-eap
+nmcli device wifi connect WolfieNet-Secure
+systemctl restart NetworkManager
+systemctl restart wpa_supplicant
+ping google.com
+nmtui
+cd i3
+e config
+git add .
+gc 'fixed sbu wifi'
+git push --set-upstream origin laptop
+ip a
+hwclock show
+hwclock --show
+sudo hwclock --show
+sudo pacman -S dmenu
+yay -S brave-nightly-bin
+cd ../alacritty
+v .
+sudo pacman -Syyu mutt
+mutt
+sudo pacman -R mutt
+sudo pacman -S thunderbird
+xinput list
+xinput list-props 'SynPS/2 Synaptics TouchPad' | gre Deceleration
+xinput list-props 'SynPS/2 Synaptics TouchPad' | grep Deceleration
+xinput set-prop 'SynPS/2 Syanptics TouchPad' 'Natural Scrolling Enabled' 1
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'Natural Scrolling Enabled' 1
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled' 1
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Natural Scrolling Enabled Default' 1
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Middle Emulation Enabled' 1
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Middle Emulation Enabled' 0
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 30
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Accel Speed' 1
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Accel Speed' 0
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Drag Lock Enabled' 1
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Drag Lock Enabled' 0
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 100
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 10
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 5
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 50
+xinput list-props 'SynPS/2 Synaptics TouchPad'
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 15
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Accel Speed' 0.5
+mkdir repos
+rmdir repos
+cd /opt
+cd dotfile
+dotfiles
+gs
+ga .
+gc 'updated alacritty'
+gp
+clear
+poweroff
+sudo pacman -R pulseaudio alsa alsa-utils
+sudo pacman -S pulseaudio
+sudo pacman -S alsa alsa-utils
+pactl
+sudo pacman -S pamixer
+sudo pacman -S pavucontrol
+sudo pacman -S pulseaudio-alsa pulseaudio-bluetooth
+sudo pacman -Q | grep alsa
+sudo pacman -R alsa-lib alsa-plugins alsa-topology.conf alsa-utils pulseaudio-alsa python-pyalsa pulseaudio pulseaudio-bluetooth
+sudo pacman -R alsa-lib alsa-plugins alsa-topology-conf alsa-utils pulseaudio-alsa python-pyalsa pulseaudio pulseaudio-bluetooth
+sudo pacman -S spotify
+yay -S spotify
+pacman -Q 
+pacman -Q | grep pipewire
+pacman -Q | grep jack
+sudo pacman -R jack2
+systemctl --user stop pulseaudio.service
+sudo pacman -S dbus
+sudo systemctl stop pulseaudio.socket
+sudo systemctl stop pulseaudio
+l .config
+l .config/
+cd .config/pulse
+rm *
+systemctl stop pulseaudio.socket
+systemctl stop pulseaudio.service
+systemctl status dbus-org.bluez
+sudo pacman -S dbus-org.bluez
+sudo pacman -S pulseaudio-bluetooth
+systemctl enable bluetooth
+systemctl status pulseaudio.socket
+systemctl --user status pulseaudio.socket
+systemctl --user stop pulseaudio.socket
+systemctl --user stop pulseaudio
+pulseaudio -v
+alsamixer
+sudo pacman -S alsa-tools-gui
+sudo pacman -S alsa-tools
+systemctl --user status pulseaudio
+pulseaudio -k
+pulseaudio -D
+sudo pacman -S bluez bluez-utils
+btusb
+lsusb
+lspci
+lsmod
+lsmod | grep bt
+modinfo btusb
+systemctl restart bluetooth
+sudo pacman -S blueman
+reboot
+cd /etc/X11/xinit
+l
+e .
+sudo lvim .
+sudo chmod +w /sys/class/backlight/amdgpu_bl0/brightness
+sudo chmod u+w /sys/class/backlight/amdgpu_bl0/brightness
+sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
+light_inc.sh
+startx
+neofetch
+cd .config
+v i3/config
+xinput
+xinput --list-props 14
+e
+sudo lvim
+xinput set-prop 296 1
+xinput set-prop 14 296 1
+xinput list-props 14
+: 1643148388:0;sudo pacman -Syyu
+: 1643148520:0;sudo pacman -S libreoffice-still
+: 1643148779:0;clear
+: 1643148785:0;e
+: 1643148826:0;cd Downloads
+: 1643148832:0;tar -xvf *.tgz
+: 1643148834:0;l
+: 1643148847:0;tar -xvf android-studio-2021.1.1.20-linux.tar.gz
+: 1643148866:0;l
+: 1643148875:0;rm android-studio-2021.1.1.20-linux.tar.gz
+: 1643148878:0;cd android-studio
+: 1643148878:0;l
+: 1643148890:0;less Install-Linux-tar.txt
+: 1643148928:0;rm -rf .
+: 1643148930:0;..
+: 1643148933:0;rm -rf android-studio
+: 1643148948:0;cd ~
+: 1643148952:0;cd .local
+: 1643148953:0;l
+: 1643148959:0;cd share
+: 1643148959:0;l
+: 1643149000:0;mv ~/Downloads/android-studio-2021.1.1.20-linux.tar.gz .
+: 1643149006:0;tar -xvf android-studio-2021.1.1.20-linux.tar.gz
+: 1643149064:0;cd android-studio
+: 1643149065:0;l
+: 1643149068:0;cd bin
+: 1643149069:0;l
+: 1643149084:0;..
+: 1643149084:0;l
+: 1643149094:0;cat Install-Linux-tar.txt
+: 1643149130:0;cd bin
+: 1643149131:0;l
+: 1643149135:0;./studio.sh
+: 1643149427:0;~
+: 1643149436:0;e .ideavimrc
+: 1643149511:0;curl -fLo ~/.vim/autoload/plug.vim --create-dirs \\
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+: 1643149544:0;e .ideavimrc
+: 1643149615:0;e
+: 1643150139:0;mv Downloads/zoom_x86_64.pkg.tar.xz .local/share
+: 1643150144:0;cd .local/share
+: 1643150144:0;l
+: 1643150145:0;ll
+: 1643150149:0;rm android-studio-2021.1.1.20-linux.tar.gz
+: 1643150155:0;tar xvf zoom_x86_64.pkg.tar.xz
+: 1643150175:0;l
+: 1643150200:0;cd opt
+: 1643150201:0;l
+: 1643150202:0;..
+: 1643150214:0;rm -rf opt usr xorg
+: 1643150215:0;l
+: 1643150247:0;mkdir zoom
+: 1643150253:0;mv zoom_x86_64.pkg.tar.xz zoom
+: 1643150255:0;cd zoom
+: 1643150256:0;l
+: 1643150261:0;tar -xvf *
+: 1643150269:0;l
+: 1643150275:0;cd usr
+: 1643150275:0;l
+: 1643150277:0;cd bin
+: 1643150278:0;l
+: 1643150281:0;ll
+: 1643150284:0;zoom
+: 1643150287:0;./zoom
+: 1643150289:0;l
+: 1643150297:0;./zoom &
+: 1643150301:0;ll
+: 1643150311:0;cd ../opt/zoom/ZoomLauncher
+: 1643150317:0;cd ../opt/zoom/
+: 1643150318:0;l
+: 1643150327:0;cd ../../opt
+: 1643150327:0;l
+: 1643150329:0;cd zoom
+: 1643150330:0;l
+: 1643150336:0;./zoom
+: 1643150347:0;..
+: 1643150350:0;l
+: 1643150358:0;rm -rf zoom
+: 1643150471:0;startx
+: 1643150521:0;cd .local/share
+: 1643150521:0;l
+: 1643150529:0;..
+: 1643150535:0;cd Downloads
+: 1643150536:0;l
+: 1643150548:0;rm SecureW2_JoinNow.run
+: 1643150549:0;l
+: 1643150553:0;rm eduroam-linux-BNL-BNL_users.py
+: 1643150553:0;l
+: 1643150560:0;rm course\ schedule\ ese\ 343\ 543\ mobile\ cloud\ computing\ 2022.docx
+: 1643150561:0;l
+: 1643150572:0;yay -S zoom
+: 1643150918:0;systemctl enable bluez
+: 1643151016:0;sudo systemctl status bluetooth
+: 1643151029:0;reboot
+: 1643151056:0;startx
+: 1643170021:0;light_inc.sh
+: 1643170045:0;sudo chmod a+x /sys/class/backlight/amdgpu_bl0/brightness
+: 1643170063:0;light_inc.sh
+: 1643170073:0;sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
+: 1643170201:0;systemctl restart bluetooth
+: 1643170228:0;e .config/i3
+: 1643170279:0;cd .config
+: 1643170281:0;ga .
