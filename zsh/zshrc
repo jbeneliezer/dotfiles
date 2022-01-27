@@ -25,7 +25,7 @@ ERROR=#ff052b
 
 # Set up the prompt
 setopt PROMPT_SUBST
-prompt='%B%(?.%F{$SUCCESS}.%F{$ERROR})%f%b%F{$DARKYELLOW}$(__git_ps1 " (%s)")%f %F{$DARKBLUE}(%~%)%f %F{$DARKPURPLE}%(!.#.$)%f '
+prompt='%B%(?.%F{$SUCCESS}.%F{$ERROR})%f%b%F{$DARKYELLOW}$(__git_ps1 " (%s)")%f %F{$DARKBLUE}(%~%)%f %F{$DARKPURPLE}%(!.#.$)%f '
 
 setopt histignorealldups sharehistory auto_cd
 
