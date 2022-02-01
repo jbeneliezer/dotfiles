@@ -342,106 +342,393 @@ sudo lvim
 xinput set-prop 296 1
 xinput set-prop 14 296 1
 xinput list-props 14
-: 1643148388:0;sudo pacman -Syyu
-: 1643148520:0;sudo pacman -S libreoffice-still
-: 1643148779:0;clear
-: 1643148785:0;e
-: 1643148826:0;cd Downloads
-: 1643148832:0;tar -xvf *.tgz
-: 1643148834:0;l
-: 1643148847:0;tar -xvf android-studio-2021.1.1.20-linux.tar.gz
-: 1643148866:0;l
-: 1643148875:0;rm android-studio-2021.1.1.20-linux.tar.gz
-: 1643148878:0;cd android-studio
-: 1643148878:0;l
-: 1643148890:0;less Install-Linux-tar.txt
-: 1643148928:0;rm -rf .
-: 1643148930:0;..
-: 1643148933:0;rm -rf android-studio
-: 1643148948:0;cd ~
-: 1643148952:0;cd .local
-: 1643148953:0;l
-: 1643148959:0;cd share
-: 1643148959:0;l
-: 1643149000:0;mv ~/Downloads/android-studio-2021.1.1.20-linux.tar.gz .
-: 1643149006:0;tar -xvf android-studio-2021.1.1.20-linux.tar.gz
-: 1643149064:0;cd android-studio
-: 1643149065:0;l
-: 1643149068:0;cd bin
-: 1643149069:0;l
-: 1643149084:0;..
-: 1643149084:0;l
-: 1643149094:0;cat Install-Linux-tar.txt
-: 1643149130:0;cd bin
-: 1643149131:0;l
-: 1643149135:0;./studio.sh
-: 1643149427:0;~
-: 1643149436:0;e .ideavimrc
-: 1643149511:0;curl -fLo ~/.vim/autoload/plug.vim --create-dirs \\
+sudo pacman -Syyu
+sudo pacman -S libreoffice-still
+clear
+e
+cd Downloads
+tar -xvf *.tgz
+l
+tar -xvf android-studio-2021.1.1.20-linux.tar.gz
+l
+rm android-studio-2021.1.1.20-linux.tar.gz
+cd android-studio
+l
+less Install-Linux-tar.txt
+rm -rf .
+..
+rm -rf android-studio
+cd ~
+cd .local
+l
+cd share
+l
+mv ~/Downloads/android-studio-2021.1.1.20-linux.tar.gz .
+tar -xvf android-studio-2021.1.1.20-linux.tar.gz
+cd android-studio
+l
+cd bin
+l
+..
+l
+cat Install-Linux-tar.txt
+cd bin
+l
+./studio.sh
+~
+e .ideavimrc
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \\
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-: 1643149544:0;e .ideavimrc
-: 1643149615:0;e
-: 1643150139:0;mv Downloads/zoom_x86_64.pkg.tar.xz .local/share
-: 1643150144:0;cd .local/share
-: 1643150144:0;l
-: 1643150145:0;ll
-: 1643150149:0;rm android-studio-2021.1.1.20-linux.tar.gz
-: 1643150155:0;tar xvf zoom_x86_64.pkg.tar.xz
-: 1643150175:0;l
-: 1643150200:0;cd opt
-: 1643150201:0;l
-: 1643150202:0;..
-: 1643150214:0;rm -rf opt usr xorg
-: 1643150215:0;l
-: 1643150247:0;mkdir zoom
-: 1643150253:0;mv zoom_x86_64.pkg.tar.xz zoom
-: 1643150255:0;cd zoom
-: 1643150256:0;l
-: 1643150261:0;tar -xvf *
-: 1643150269:0;l
-: 1643150275:0;cd usr
-: 1643150275:0;l
-: 1643150277:0;cd bin
-: 1643150278:0;l
-: 1643150281:0;ll
-: 1643150284:0;zoom
-: 1643150287:0;./zoom
-: 1643150289:0;l
-: 1643150297:0;./zoom &
-: 1643150301:0;ll
-: 1643150311:0;cd ../opt/zoom/ZoomLauncher
-: 1643150317:0;cd ../opt/zoom/
-: 1643150318:0;l
-: 1643150327:0;cd ../../opt
-: 1643150327:0;l
-: 1643150329:0;cd zoom
-: 1643150330:0;l
-: 1643150336:0;./zoom
-: 1643150347:0;..
-: 1643150350:0;l
-: 1643150358:0;rm -rf zoom
-: 1643150471:0;startx
-: 1643150521:0;cd .local/share
-: 1643150521:0;l
-: 1643150529:0;..
-: 1643150535:0;cd Downloads
-: 1643150536:0;l
-: 1643150548:0;rm SecureW2_JoinNow.run
-: 1643150549:0;l
-: 1643150553:0;rm eduroam-linux-BNL-BNL_users.py
-: 1643150553:0;l
-: 1643150560:0;rm course\ schedule\ ese\ 343\ 543\ mobile\ cloud\ computing\ 2022.docx
-: 1643150561:0;l
-: 1643150572:0;yay -S zoom
-: 1643150918:0;systemctl enable bluez
-: 1643151016:0;sudo systemctl status bluetooth
-: 1643151029:0;reboot
-: 1643151056:0;startx
-: 1643170021:0;light_inc.sh
-: 1643170045:0;sudo chmod a+x /sys/class/backlight/amdgpu_bl0/brightness
-: 1643170063:0;light_inc.sh
-: 1643170073:0;sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
-: 1643170201:0;systemctl restart bluetooth
-: 1643170228:0;e .config/i3
-: 1643170279:0;cd .config
-: 1643170281:0;ga .
+e .ideavimrc
+e
+mv Downloads/zoom_x86_64.pkg.tar.xz .local/share
+cd .local/share
+l
+ll
+rm android-studio-2021.1.1.20-linux.tar.gz
+tar xvf zoom_x86_64.pkg.tar.xz
+l
+cd opt
+l
+..
+rm -rf opt usr xorg
+l
+mkdir zoom
+mv zoom_x86_64.pkg.tar.xz zoom
+cd zoom
+l
+tar -xvf *
+l
+cd usr
+l
+cd bin
+l
+ll
+zoom
+./zoom
+l
+./zoom &
+ll
+cd ../opt/zoom/ZoomLauncher
+cd ../opt/zoom/
+l
+cd ../../opt
+l
+cd zoom
+l
+./zoom
+..
+l
+rm -rf zoom
+startx
+cd .local/share
+l
+..
+cd Downloads
+l
+rm SecureW2_JoinNow.run
+l
+rm eduroam-linux-BNL-BNL_users.py
+l
+rm course\ schedule\ ese\ 343\ 543\ mobile\ cloud\ computing\ 2022.docx
+l
+yay -S zoom
+systemctl enable bluez
+sudo systemctl status bluetooth
+reboot
+startx
+light_inc.sh
+sudo chmod a+x /sys/class/backlight/amdgpu_bl0/brightness
+light_inc.sh
+sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
+systemctl restart bluetooth
+e .config/i3
+cd .config
+ga .
+gc 'updated i3 bindings'
+gp
+cd i3
+e config
+..
+git pull
+git branch
+v config
+cd i3
+e config
+htop
+neofetch
+sudo pacman -S cmatrix
+cmatrix
+clear
+neofetch
+yay -S discord
+ps aux | grep discord
+killall -r discord
+killall -q discord
+l
+ps aux | grep discord
+killall
+killall -r Discord
+ps aux 
+ps aux | grep Discord
+kill 19568
+kill 281188
+kill 51864
+clear
+neofetch
+clear
+sudo pacman -S qemu virt-manager libvirt
+sudo usermod -G libvirt -a jb
+sudo systemctl enable libvirtd
+sudo systemctl start libvirtd
+sudo pacman -S virt-v2v
+paru virt-v2v
+/opt
+l
+~
+sudo pacman -S paru
+/opt
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+paru -S androidstudio
+paru -S android-studio
+paru -S simplicitystudio
+sudo pacman -Syyu
+paru -S simplicitystudio
+cd Downloads
+l
+cd .config/i3
+e .
+paru -S simplicitystudio5-bin
+cd Downloads
+unzip *.zip
+l
+rm 'Galaxy_S21_FE (1).zip'
+unzip Galaxy_S21_FE.zip
+l
+rm Galaxy_S21_FE.zip
+cd Galaxy_S21_FE
+l
+sudo pacman -S webkit2gtk
+paru -S simplicitystudio5-bin
+clear
+~
+echo $PATH
+l
+cd AndroidStudioProjects
+l
+ll
+../
+Android
+l
+cd Sdk
+l
+cd emulator
+l
+export PATH="${PATH}:$HOME/Android/Sdk/emulator"
+echo $PATH
+./emulator
+./emulator 'Pixel 4 API 31'
+l
+cd qemu
+l
+cd linux-x86_64
+l
+export PATH=/home/jb/.cargo/bin:/home/jb/.local/bin:/home/jb/.cargo/bin:/home/jb/.local/bin:/home/jb/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/jb/Android/Sdk/emulator:/home/jb/Android/Sdk/emulator/qemu/linux-x86_64"\
+"
+echo $PATH
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
+cd Downloads
+l
+cd ../repos
+l
+cd ..
+mkdir repos
+l
+cd repos
+mkdir ubuntu
+cp ~/Downloads/Ubuntu.ova ubuntu
+cd ubuntu
+tar xvf *
+qemu-img convert -O qcow2 Ubuntu-disk001.vmdk Ubuntu.qcow2
+groups libvirt
+groups jb
+usermod -G audio, video, libvirtd -a jb
+usermod -G libvirtd -a jb
+LC_ALL=C lscpu | grep Virtualization
+sudo systemctl enable libvirtd
+sudo systemctl start libvirtd
+~
+e /etc/libvirt/libvirt.conf
+newgrp libvirt
+cd /etc/libvirt
+l
+e .
+sudo lvim .
+sudo systemctl restart libvirtd
+groups jb
+sudo lvim .
+sudo virsh net-start default
+sudo pacman -S dnsmasq
+sudo virsh net-start default
+~
+.config/i3
+e .
+alsamixer
+reboot
+startx
+cd .config/i3
+e config
+clear
+~
+clear
+startx
+lsmod
+lsmod | grep snd
+startx
+sudo pacman -Syu
+virsh -h
+sudo virsh net-autostart default
+sudo virsh net-start default
+start
+startx
+cd repos
+l
+cd ubuntu
+l
+rm *
+cd ../../Downloads
+l
+mv Ubuntu.ova ../repos
+cd ../repos
+l
+cp Ubuntu.ova ../Downloads
+mv Ubuntu.ova ubuntu
+cd ubuntu
+tar xvf Ubuntu.ova
+qemu-img convert -O qcow2 Ubuntu.vmdk Ubuntu.qcow2
+l
+qemu-img convert -O Ubuntu-disk001.vmdk Ubuntu.qcow2
+l
+qemu-img convert -O Ubuntu-disk001.vmdk Ubuntu.qcow2
+sudo pacman -S ova4kvm
+qemu-img convert -O Ubuntu-disk001.vmdk ubuntu.qcow2
+ll
+file Ubuntu-disk001.vmdk
+qemu-img convert -O qcow2 Ubuntu-disk001.vmdk ubuntu.qcow2
+cd /etc/libvirt/
+l
+e .
+sudo lvim .
+zgrep CONFIG_KVM /proc/config.gz
+sudo modprobe kvm-amd
+egrep '(vmx|svm)' --color=always /proc/cpuinfo\
+
+lsmod | grep virt
+lsmod | grep AMD
+lsmod
+lsmod | grep kvm
+sudo modprobe kvm
+lsmod | grep kvm
+modprobe -h
+sudo modprobe -v kvm-amd
+reboot
+startx
+chmod +w /sys/class/backlight/amdgpu_bl0/brightness
+sudo chmod +w /sys/class/backlight/amdgpu_bl0/brightness
+light_inc.sh
+sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
+cd .config
+cd zsh
+e zshrc
+source .zsrhc
+source .zshrc
+startx
+: 1643333285:0;reboot
+: 1643333346:0;startx
+: 1643338065:0;sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
+: 1643338082:0;clear
+: 1643338084:0;e
+: 1643389223:0;cat /proc/cpuinfo
+: 1643389231:0;cat /proc/cpuinfo | grep kvm
+: 1643391907:0;startx
+: 1643391932:0;cd /sys/class/backlight
+: 1643391933:0;ll
+: 1643391942:0;cd amdgpu_bl0
+: 1643391953:0;sudo chmod a+w brightness
+: 1643392016:0;htop
+: 1643394991:0;~
+: 1643394994:0;Downloads
+: 1643394994:0;l
+: 1643395011:0;e
+: 1643395118:0;..
+: 1643395119:0;l
+: 1643395125:0;repos
+: 1643395126:0;l
+: 1643395127:0;..
+: 1643395130:0;Mail
+: 1643395131:0;l
+: 1643395132:0;ll
+: 1643395203:0;clear
+: 1643395205:0;top
+: 1643395209:0;clear
+: 1643395210:0;vi
+: 1643395222:0;nvim
+: 1643395279:0;sudo pacman -S python2
+: 1643395291:0;nvim
+: 1643395310:0;pip install neovim
+: 1643395318:0;nvim
+: 1643395390:0;df -h
+: 1643395455:0;..
+: 1643395456:0;l
+: 1643395459:0;tmp
+: 1643395460:0;l
+: 1643395462:0;..
+: 1643395463:0;l
+: 1643395464:0;ll
+: 1643395493:0;rm .bash_logout .bash_profile .bashrc
+: 1643395495:0;l
+: 1643395496:0;ll
+: 1643395612:0;git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
+: 1643395618:0;nvim
+: 1643395675:0;nvim .config/nvim
+: 1643396120:0;nvim
+: 1643396273:0;e
+: 1643396602:0;nvim
+: 1643396659:0;cd .config
+: 1643396660:0;nvim .
+: 1643396707:0;cd nvim
+: 1643396709:0;nvim .
+: 1643396742:0;lvim .
+: 1643396844:0;nvim
+: 1643397123:0;nvim .
+: 1643397136:0;e 
+: 1643397278:0;nvim
+: 1643746056:0;clear
+: 1643746058:0;startx
+: 1643746105:0;sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
+: 1643746275:0;e
+: 1643746342:0;paru
+: 1643747045:0;clear
+: 1643747685:0;htop
+: 1643749064:0;clear
+: 1643749147:0;htop
+: 1643750415:0;df -h
+: 1643750817:0;clear
+: 1643750820:0;sudo pacman -Syu
+: 1643751795:0;clear
+: 1643752237:0;cd //
+: 1643752247:0;cd /
+: 1643752249:0;clear
+: 1643752253:0;~
+: 1643752257:0;clear
+: 1643752277:0;e
+: 1643752338:0;clear
+: 1643752614:0;paru
+: 1643752655:0;paru -Syu
+: 1643752659:0;clear
+: 1643752756:0;cd .config
+: 1643752758:0;gs
+: 1643752760:0;ga .
