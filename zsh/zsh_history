@@ -10,7 +10,6 @@ rm .zshrc
 ln -s .config/zsh/zshrc .zshrc
 zsh
 source cd ~
-source .zshrc
 ln -s .config/shell/.profile .profile
 vim .profile
 cat .Xresources
@@ -22,7 +21,6 @@ sudo pacman -S yay-bin
 git clone https://aur.archlinux.org/yay-git.git
 cd yay
 cd yay-git
-makepkg -si
 yay -Syu nerd-fonts-dejavu-complete
 ln -sf .config/themes/gruvbox ~/.Xresources
 git clone git@github.com:neovim/neovim
@@ -56,7 +54,6 @@ source $HOME/.cargo/env
 LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)\
 
 source .profile
-echo $PATH
 lvim
 setxkbmap caps:escape
 e .Xmodmap
@@ -64,8 +61,6 @@ cd .config/lvim
 ./install.sh
 v install.sh
 v config.lua
-`\
-`
 sudo pacman -S tmux
 t
 cd .config/alacritt
@@ -76,13 +71,11 @@ cat ~/.ssh/id_ed25519.pub
 git remote set-url git@github.com:jbeneliezer/dotfiles
 git remote set-url origin git@github.com:jbeneliezer/dotfiles
 sudo poweroff
-df -h
 sudo pacman -S htop
 sudo pacman -S feh
 git checkout master
 git checkout -b laptop
 gc 'new branch first commit'
-git pull
 git config pull.rebase false
 git pull origin laptop
 v .Xresources
@@ -105,7 +98,6 @@ which rc.conf
 cd /etc
 cd rc_keymaps
 cd /usr
-cd share
 sudo pacman -S pulseaudio alsa alsa-utils
 alsa-mixer
 systemctl status pulseaudio
@@ -128,7 +120,6 @@ sudo update-grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 nmcli device wifi show
 cd /etc/X11/xorg.conf.d
-..
 cd xinit
 e /etc/default/grub
 cd /sys
@@ -137,7 +128,6 @@ backlight
 cat actual_brightness
 cat max_brightness
 cat /etc/default/grub
-htop
 mkdir /mnt/usb
 sudo mkdir /mnt/usb
 mount /dev/sda /mnt/usb
@@ -154,12 +144,9 @@ sudo mkfs.fat -F 32 /dev/sda
 sudo mkfs.fat -F 32 /dev/sda -I
 sudo umount /dev/sda
 lsblk
-exit
 cd /sys/class
 cd backlight
-cd amdgpu_bl0
 cat brightness
-cd ~
 chmod +x SecureW2_JoinNow.run
 sudo pacman -Syyu python3-pip
 sudo pacman -S python-pip
@@ -174,7 +161,6 @@ chmod +x light_inc.sh light_dec.sh
 cd /opt/dotfiles/misc
 sudo ./light_dec.sh
 cat /sys/class/backlight/amdgpu_bl0/brightness
-cd ..
 cd alacritty
 cd ../misc
 rm 235
@@ -190,22 +176,16 @@ pip install dbus-python
 rm 'SecureW2_JoinNow (1).run' 'SecureW2_JoinNow (2).run'
 nmcli device wifi connect WolfieNet-Guest
 cd /opt/dotfiles/i3
-v config
-cd .config/i3
 chmd a+w /sys/class/backlight/amdgpu_bl0
 chmod a+w /sys/class/backlight/amdgpu_bl0
 sudo chmod a+w /sys/class/backlight/amdgpu_bl0
 sudo chmdo a+w /sys/class/backlight/amdgpu_bl0/brightness
 light_dec.sh
-ll
-~
 ./SecureW2_JoinNow.run
 chmod +x 'SecureW2_JoinNow (1).run'
 ./SecureW2_JoinNow
 ./SecureW2_JoinNow\ \(1\).run
 cd /usr/share/doc/wpa_supplicant
-cd Downloads
-ls
 chmod +x eduroam-linux-BNL-BNL_users.py
 rm 'SecureW2_JoinNow (1).run'
 ./eduroam-linux-BNL-BNL_users.py
@@ -222,8 +202,6 @@ systemctl restart NetworkManager
 systemctl restart wpa_supplicant
 ping google.com
 nmtui
-cd i3
-e config
 git add .
 gc 'fixed sbu wifi'
 git push --set-upstream origin laptop
@@ -261,16 +239,11 @@ xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance'
 xinput list-props 'SynPS/2 Synaptics TouchPad'
 xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 15
 xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Accel Speed' 0.5
-mkdir repos
 rmdir repos
 cd /opt
 cd dotfile
 dotfiles
-gs
-ga .
 gc 'updated alacritty'
-gp
-clear
 poweroff
 sudo pacman -R pulseaudio alsa alsa-utils
 sudo pacman -S pulseaudio
@@ -295,7 +268,6 @@ sudo systemctl stop pulseaudio
 l .config
 l .config/
 cd .config/pulse
-rm *
 systemctl stop pulseaudio.socket
 systemctl stop pulseaudio.service
 systemctl status dbus-org.bluez
@@ -307,7 +279,6 @@ systemctl --user status pulseaudio.socket
 systemctl --user stop pulseaudio.socket
 systemctl --user stop pulseaudio
 pulseaudio -v
-alsamixer
 sudo pacman -S alsa-tools-gui
 sudo pacman -S alsa-tools
 systemctl --user status pulseaudio
@@ -317,155 +288,71 @@ sudo pacman -S bluez bluez-utils
 btusb
 lsusb
 lspci
-lsmod
 lsmod | grep bt
 modinfo btusb
-systemctl restart bluetooth
 sudo pacman -S blueman
-reboot
 cd /etc/X11/xinit
-l
-e .
-sudo lvim .
-sudo chmod +w /sys/class/backlight/amdgpu_bl0/brightness
 sudo chmod u+w /sys/class/backlight/amdgpu_bl0/brightness
-sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
-light_inc.sh
-startx
-neofetch
-cd .config
 v i3/config
 xinput
 xinput --list-props 14
-e
 sudo lvim
 xinput set-prop 296 1
 xinput set-prop 14 296 1
 xinput list-props 14
-sudo pacman -Syyu
 sudo pacman -S libreoffice-still
-clear
-e
-cd Downloads
 tar -xvf *.tgz
-l
-tar -xvf android-studio-2021.1.1.20-linux.tar.gz
-l
-rm android-studio-2021.1.1.20-linux.tar.gz
-cd android-studio
-l
 less Install-Linux-tar.txt
 rm -rf .
-..
 rm -rf android-studio
 cd ~
 cd .local
-l
 cd share
-l
 mv ~/Downloads/android-studio-2021.1.1.20-linux.tar.gz .
 tar -xvf android-studio-2021.1.1.20-linux.tar.gz
 cd android-studio
-l
-cd bin
-l
-..
-l
 cat Install-Linux-tar.txt
-cd bin
-l
 ./studio.sh
-~
-e .ideavimrc
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \\
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 e .ideavimrc
-e
 mv Downloads/zoom_x86_64.pkg.tar.xz .local/share
-cd .local/share
-l
-ll
 rm android-studio-2021.1.1.20-linux.tar.gz
 tar xvf zoom_x86_64.pkg.tar.xz
-l
 cd opt
-l
-..
 rm -rf opt usr xorg
-l
 mkdir zoom
 mv zoom_x86_64.pkg.tar.xz zoom
-cd zoom
-l
 tar -xvf *
-l
 cd usr
-l
 cd bin
-l
-ll
 zoom
-./zoom
-l
 ./zoom &
-ll
 cd ../opt/zoom/ZoomLauncher
 cd ../opt/zoom/
-l
 cd ../../opt
-l
 cd zoom
-l
 ./zoom
-..
-l
 rm -rf zoom
-startx
 cd .local/share
-l
-..
-cd Downloads
-l
 rm SecureW2_JoinNow.run
-l
 rm eduroam-linux-BNL-BNL_users.py
-l
 rm course\ schedule\ ese\ 343\ 543\ mobile\ cloud\ computing\ 2022.docx
-l
 yay -S zoom
 systemctl enable bluez
 sudo systemctl status bluetooth
-reboot
-startx
-light_inc.sh
 sudo chmod a+x /sys/class/backlight/amdgpu_bl0/brightness
-light_inc.sh
-sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
 systemctl restart bluetooth
 e .config/i3
-cd .config
-ga .
 gc 'updated i3 bindings'
-gp
-cd i3
-e config
-..
 git pull
-git branch
 v config
 cd i3
-e config
-htop
-neofetch
 sudo pacman -S cmatrix
 cmatrix
-clear
-neofetch
 yay -S discord
-ps aux | grep discord
 killall -r discord
 killall -q discord
-l
 ps aux | grep discord
 killall
 killall -r Discord
@@ -474,18 +361,10 @@ ps aux | grep Discord
 kill 19568
 kill 281188
 kill 51864
-clear
-neofetch
-clear
 sudo pacman -S qemu virt-manager libvirt
 sudo usermod -G libvirt -a jb
-sudo systemctl enable libvirtd
-sudo systemctl start libvirtd
 sudo pacman -S virt-v2v
 paru virt-v2v
-/opt
-l
-~
 sudo pacman -S paru
 /opt
 git clone https://aur.archlinux.org/paru.git
@@ -493,134 +372,70 @@ cd paru
 makepkg -si
 paru -S androidstudio
 paru -S android-studio
-paru -S simplicitystudio
 sudo pacman -Syyu
 paru -S simplicitystudio
-cd Downloads
-l
-cd .config/i3
-e .
-paru -S simplicitystudio5-bin
-cd Downloads
 unzip *.zip
-l
 rm 'Galaxy_S21_FE (1).zip'
 unzip Galaxy_S21_FE.zip
-l
 rm Galaxy_S21_FE.zip
 cd Galaxy_S21_FE
-l
 sudo pacman -S webkit2gtk
 paru -S simplicitystudio5-bin
-clear
-~
-echo $PATH
-l
-cd AndroidStudioProjects
-l
-ll
 ../
 Android
-l
-cd Sdk
-l
 cd emulator
-l
 export PATH="${PATH}:$HOME/Android/Sdk/emulator"
-echo $PATH
 ./emulator
 ./emulator 'Pixel 4 API 31'
-l
 cd qemu
-l
 cd linux-x86_64
-l
 export PATH=/home/jb/.cargo/bin:/home/jb/.local/bin:/home/jb/.cargo/bin:/home/jb/.local/bin:/home/jb/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/jb/Android/Sdk/emulator:/home/jb/Android/Sdk/emulator/qemu/linux-x86_64"\
 "
 echo $PATH
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 cd Downloads
-l
-cd ../repos
-l
-cd ..
 mkdir repos
-l
-cd repos
 mkdir ubuntu
 cp ~/Downloads/Ubuntu.ova ubuntu
-cd ubuntu
 tar xvf *
 qemu-img convert -O qcow2 Ubuntu-disk001.vmdk Ubuntu.qcow2
 groups libvirt
-groups jb
 usermod -G audio, video, libvirtd -a jb
 usermod -G libvirtd -a jb
 LC_ALL=C lscpu | grep Virtualization
 sudo systemctl enable libvirtd
 sudo systemctl start libvirtd
-~
 e /etc/libvirt/libvirt.conf
 newgrp libvirt
 cd /etc/libvirt
-l
-e .
-sudo lvim .
 sudo systemctl restart libvirtd
 groups jb
-sudo lvim .
-sudo virsh net-start default
 sudo pacman -S dnsmasq
-sudo virsh net-start default
-~
 .config/i3
-e .
 alsamixer
-reboot
-startx
 cd .config/i3
 e config
-clear
-~
-clear
-startx
-lsmod
 lsmod | grep snd
-startx
-sudo pacman -Syu
 virsh -h
 sudo virsh net-autostart default
 sudo virsh net-start default
 start
-startx
-cd repos
-l
-cd ubuntu
-l
 rm *
 cd ../../Downloads
-l
 mv Ubuntu.ova ../repos
 cd ../repos
-l
 cp Ubuntu.ova ../Downloads
 mv Ubuntu.ova ubuntu
 cd ubuntu
 tar xvf Ubuntu.ova
 qemu-img convert -O qcow2 Ubuntu.vmdk Ubuntu.qcow2
-l
-qemu-img convert -O Ubuntu-disk001.vmdk Ubuntu.qcow2
-l
 qemu-img convert -O Ubuntu-disk001.vmdk Ubuntu.qcow2
 sudo pacman -S ova4kvm
 qemu-img convert -O Ubuntu-disk001.vmdk ubuntu.qcow2
-ll
 file Ubuntu-disk001.vmdk
 qemu-img convert -O qcow2 Ubuntu-disk001.vmdk ubuntu.qcow2
 cd /etc/libvirt/
-l
-e .
 sudo lvim .
 zgrep CONFIG_KVM /proc/config.gz
 sudo modprobe kvm-amd
@@ -629,106 +444,111 @@ egrep '(vmx|svm)' --color=always /proc/cpuinfo\
 lsmod | grep virt
 lsmod | grep AMD
 lsmod
-lsmod | grep kvm
 sudo modprobe kvm
 lsmod | grep kvm
 modprobe -h
 sudo modprobe -v kvm-amd
-reboot
-startx
 chmod +w /sys/class/backlight/amdgpu_bl0/brightness
 sudo chmod +w /sys/class/backlight/amdgpu_bl0/brightness
 light_inc.sh
-sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
-cd .config
 cd zsh
 e zshrc
 source .zsrhc
 source .zshrc
+reboot
+cat /proc/cpuinfo
+cat /proc/cpuinfo | grep kvm
+cd /sys/class/backlight
+cd amdgpu_bl0
+sudo chmod a+w brightness
+Downloads
+repos
+Mail
+top
+vi
+sudo pacman -S python2
+pip install neovim
+tmp
+rm .bash_logout .bash_profile .bashrc
+ll
+git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
+nvim .config/nvim
+cd nvim
+lvim .
+nvim .
+e 
+nvim
 startx
-: 1643333285:0;reboot
-: 1643333346:0;startx
-: 1643338065:0;sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
-: 1643338082:0;clear
-: 1643338084:0;e
-: 1643389223:0;cat /proc/cpuinfo
-: 1643389231:0;cat /proc/cpuinfo | grep kvm
-: 1643391907:0;startx
-: 1643391932:0;cd /sys/class/backlight
-: 1643391933:0;ll
-: 1643391942:0;cd amdgpu_bl0
-: 1643391953:0;sudo chmod a+w brightness
-: 1643392016:0;htop
-: 1643394991:0;~
-: 1643394994:0;Downloads
-: 1643394994:0;l
-: 1643395011:0;e
-: 1643395118:0;..
-: 1643395119:0;l
-: 1643395125:0;repos
-: 1643395126:0;l
-: 1643395127:0;..
-: 1643395130:0;Mail
-: 1643395131:0;l
-: 1643395132:0;ll
-: 1643395203:0;clear
-: 1643395205:0;top
-: 1643395209:0;clear
-: 1643395210:0;vi
-: 1643395222:0;nvim
-: 1643395279:0;sudo pacman -S python2
-: 1643395291:0;nvim
-: 1643395310:0;pip install neovim
-: 1643395318:0;nvim
-: 1643395390:0;df -h
-: 1643395455:0;..
-: 1643395456:0;l
-: 1643395459:0;tmp
-: 1643395460:0;l
-: 1643395462:0;..
-: 1643395463:0;l
-: 1643395464:0;ll
-: 1643395493:0;rm .bash_logout .bash_profile .bashrc
-: 1643395495:0;l
-: 1643395496:0;ll
-: 1643395612:0;git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
-: 1643395618:0;nvim
-: 1643395675:0;nvim .config/nvim
-: 1643396120:0;nvim
-: 1643396273:0;e
-: 1643396602:0;nvim
-: 1643396659:0;cd .config
-: 1643396660:0;nvim .
-: 1643396707:0;cd nvim
-: 1643396709:0;nvim .
-: 1643396742:0;lvim .
-: 1643396844:0;nvim
-: 1643397123:0;nvim .
-: 1643397136:0;e 
-: 1643397278:0;nvim
-: 1643746056:0;clear
-: 1643746058:0;startx
-: 1643746105:0;sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
-: 1643746275:0;e
-: 1643746342:0;paru
-: 1643747045:0;clear
-: 1643747685:0;htop
-: 1643749064:0;clear
-: 1643749147:0;htop
-: 1643750415:0;df -h
-: 1643750817:0;clear
-: 1643750820:0;sudo pacman -Syu
-: 1643751795:0;clear
-: 1643752237:0;cd //
-: 1643752247:0;cd /
-: 1643752249:0;clear
-: 1643752253:0;~
-: 1643752257:0;clear
-: 1643752277:0;e
-: 1643752338:0;clear
-: 1643752614:0;paru
-: 1643752655:0;paru -Syu
-: 1643752659:0;clear
-: 1643752756:0;cd .config
-: 1643752758:0;gs
-: 1643752760:0;ga .
+sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
+htop
+df -h
+sudo pacman -Syu
+cd //
+cd /
+e
+paru
+paru -Syu
+cd .config
+gs
+gc 'updating'
+echo `ls`
+ls
+cd 'Unknown Organization\
+l\
+'
+cd 'Unknown Organization/'
+git clone git@github.com/jbeneliezer/*
+git clone git@github.com/jbeneliezer/Pipelined_MMU
+git clone git@github.com:jbeneliezer/Pipelined_MMU
+cd Pipelined_MMU
+git clone git@github.com:jbeneliezer/xv6
+cd xv6/kernel
+git branch
+gb
+make clean
+../..
+cd ..
+cd Android
+cd Sdk
+cd AndroidStudioProjects
+git init
+echo "Labs and assignments for ESE 343 Mobile Cloud Computing course." > README.md
+ga .
+gc 'first commit'
+git remote add origin git@github.com:jbeneliezer/Mobile_Cloud_Computing.git
+gp
+git push -u origin master
+..
+cd repos
+git clone git@github.com:jbeneliezer/*
+git clone git@github.com:jbeneliezer/Systemc_Risc_Cpu
+cd Systemc_Risc_Cpu
+l
+sudo pacman -S systemc
+e .
+`\
+	`
+~
+paru pfetch
+clear
+pfetch
+neofetch
+exit
+: 1643756366:0;clear
+: 1643756368:0;pfetch
+: 1643918395:0;startx
+: 1643918514:0;cd repos
+: 1643918529:0;git clone git@github.com:jbeneliezer/MyFirstApp
+: 1643918661:0;clear
+: 1643918739:0;cd ../.config/alacritty
+: 1643918740:0;l
+: 1643918743:0;e .
+: 1643918758:0;clear
+: 1643918764:0;~
+: 1643918765:0;repos
+: 1643918770:0;cd MyFirstApp
+: 1643918771:0;gs
+: 1643918877:0;clear
+: 1643918879:0;htop
+: 1643918971:0;cd ../../.config
+: 1643918972:0;ga .
