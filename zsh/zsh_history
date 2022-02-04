@@ -687,3 +687,16 @@ exit
 : 1643999672:0;cd .config
 : 1643999673:0;e .
 : 1643999705:0;ga .
+: 1643999737:0;gc 'changed .gitignore, planning on updating lvim config, so just backing up\
+'
+: 1643999739:0;gp
+: 1643999743:0;cd lvim
+: 1643999744:0;ll
+: 1643999750:0;./install.sh
+: 1643999751:0;ll
+: 1643999756:0;e install.sh
+: 1643999765:0;./install.sh
+: 1643999766:0;ll
+: 1643999772:0;e .
+: 1643999798:0;..
+: 1643999799:0;ga .

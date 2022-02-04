@@ -7,7 +7,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "nightfox"
+lvim.colorscheme = "gruvbox"
 lvim.leader = "space"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
