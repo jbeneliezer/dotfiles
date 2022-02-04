@@ -1,5 +1,6 @@
 */
 zsh/zsh_history
+zsh/.zcompdump
 
 !README.md
 !*/*/
