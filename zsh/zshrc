@@ -3,7 +3,7 @@ source ~/.config/shell/.aliases
 source ~/.config/shell/.profile
 source ~/.config/zsh/git-prompt.sh
 
-# Colors from Xresources
+# Gruvbox Colors
 BG=#282828
 DARKRED=#cc241d
 DARKGREEN=#98971a
