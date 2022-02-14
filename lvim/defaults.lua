@@ -6,13 +6,13 @@ an executable
 
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save = true
-lvim.colorscheme = "nightfox"
+lvim.format_on_save = false
+lvim.colorscheme = "gruvbox"
 lvim.leader = "space"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
--- lvim.keys.normal_mode["<c-s>"] = ":w<cr>"
 -- unmap a default keymapping
+-- lvim.keys.normal_mode["<c-s>"] = ":w<cr>"
 -- lvim.keys.normal_mode["<c-Up>"] = false
 -- edit a default keymapping
 -- lvim.keys.normal_mode["<c-q>"] = ":q<cr>"
