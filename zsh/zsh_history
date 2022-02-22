@@ -348,7 +348,6 @@ sudo usermod -G libvirt -a jb
 sudo pacman -S virt-v2v
 paru virt-v2v
 sudo pacman -S paru
-/opt
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
@@ -399,7 +398,6 @@ sudo virsh net-autostart default
 sudo virsh net-start default
 start
 rm *
-cd ../../Downloads
 mv Ubuntu.ova ../repos
 cp Ubuntu.ova ../Downloads
 mv Ubuntu.ova ubuntu
@@ -447,7 +445,6 @@ cd nvim
 lvim .
 nvim .
 e 
-nvim
 cd //
 cd /
 paru -Syu
@@ -464,7 +461,6 @@ git clone git@github.com:jbeneliezer/Pipelined_MMU
 cd Pipelined_MMU
 git clone git@github.com:jbeneliezer/xv6
 cd xv6/kernel
-git branch
 gb
 make clean
 ../..
@@ -517,12 +513,10 @@ cd HW2
 git pull
 rm -rf .idea .gradle
 cat .gitignore
-repos
 rm .gitignore
 mkdir Proj1
 cd Proj1
 rm -rf Proj1
-gs
 e .gitignore
 cd zsh
 gc 'changed .gitignore, planning on updating lvim config, so just backing up\
@@ -531,9 +525,7 @@ cd lvim
 e install.sh
 ./install.sh
 gc 'changed lvim cp to ln'
-ga .
 gc 'simplified lvim config'
-gp
 nofetch
 paru treefetch
 cmatrix
@@ -581,7 +573,6 @@ ip link show wlo1
 paru qucs-s
 cd .config
 e tmux
-exit
 paru ltspice
 paru ngspice
 ngspice
@@ -596,7 +587,6 @@ cd /opt/eagle
 ./eagle
 cd bin
 ./install-desktop-icon.sh
-make
 export LIBGL_ALWAYS_SOFTWARE=1
 cd /opt
 cd eagle
@@ -620,10 +610,8 @@ cd jb
 tm -rf tmp
 rm -rf tmp
 rm '#untitled_1.sch#'
-cd repos
 mkdir schematics
 cd ubuntu
-..
 rm -rf ubuntu
 fc-list | grep gnu
 paru -h
@@ -634,7 +622,6 @@ paru -Ps
 df -h
 tl
 tk jb
-tka
 systemctl resart bluetooth
 systemctl restart bluetooth
 alsamixer
@@ -643,7 +630,6 @@ startx
 pacman -h
 sudo pacman -Syyu
 sudo rm /var/lib/pacman/db.lck
-sudo pacman -Syu
 cd /etc/udev/rules.d
 lvim 90-backlight.rules
 sudo lvim 90-backlight.rules
@@ -672,22 +658,12 @@ ls -t
 ip a
 nmcli
 nmtui
-neofetch
 e .config/tmux
-e .config
-e
-cd Documents
 ../repos
 git clone git@github.com:jbeneliezer/uv_tech
-ll
 cd .config/tmux
-t
-l
 paru alacritty-theme
 cd .config/shell
-e .
-~
-at
 e .zshrc
 source .zshrc
 paru
@@ -695,119 +671,76 @@ btop
 killall simplicity
 ps aux | grep simplicity
 kill 28995
-: 1645480512:0;e
-: 1645480643:0;cd repos
-: 1645480644:0;l
-: 1645480648:0;cd uv_tech
-: 1645480649:0;l
-: 1645480666:0;mv embedded/* .
-: 1645480672:0;rm -rf datasheets
-: 1645480673:0;l
-: 1645480675:0;make
-: 1645480685:0;cd 'GNU ARM v10.2.1 - Default\
+cd uv_tech
+mv embedded/* .
+rm -rf datasheets
+cd 'GNU ARM v10.2.1 - Default\
 l\
 '
-: 1645480690:0;cd 'GNU ARM v10.2.1 - Default/'
-: 1645480690:0;l
-: 1645480692:0;make
-: 1645480695:0;make all
-: 1645480699:0;make -j8 all
-: 1645480702:0;..
-: 1645480702:0;l
-: 1645480707:0;ll
-: 1645481298:0;neofetch
-: 1645481305:0;ll
-: 1645481308:0;!
-: 1645481310:0;~
-: 1645481311:0;l
-: 1645481537:0;at
-: 1645481561:0;ll
-: 1645481564:0;at
-: 1645481792:0;e
-: 1645482509:0;repos
-: 1645482510:0;e .
-: 1645482523:0;gs
-: 1645483822:0;at
-: 1645483827:0;neofetch
-: 1645483828:0;ll
-: 1645483831:0;at
-: 1645483882:0;ll
-: 1645483885:0;~
-: 1645483886:0;e
-: 1645483946:0;at
-: 1645484472:0;e
-: 1645484518:0;t
-: 1645484537:0;e .config
-: 1645484595:0;e .
-: 1645484846:0;t
-: 1645484859:0;tn n2
-: 1645484875:0;tka
-: 1645485994:0;l
-: 1645485996:0;cd Documents
-: 1645485999:0;mkdir notes
-: 1645486000:0;cd notes 
-: 1645486001:0;e .
-: 1645486615:0;cd repos
-: 1645486615:0;ll
-: 1645486621:0;git clone git@github.com:jbeneliezer/Ambient_Light_Sensor.git
-: 1645486627:0;e Ambient_Light_Sensor
-: 1645486744:0;repos
-: 1645486747:0;ll
-: 1645486764:0;/opt
-: 1645486765:0;l
-: 1645486766:0;ll
-: 1645486971:0;paru latex
-: 1645486996:0;paru latex | less
-: 1645487148:0;paru texmaker
-: 1645487415:0;..
-: 1645487416:0;l
-: 1645487418:0;rmdir notes
-: 1645487419:0;l
-: 1645487697:0;ll
-: 1645487701:0;mkdir ESE_330
-: 1645487705:0;mkdir ESE_306
-: 1645487725:0;mkdir AMS_301
-: 1645487732:0;mkdir ARH_202
-: 1645487739:0;mkdir ESE_441
-: 1645487747:0;mkdir ESE_343
-: 1645487755:0;ll
-: 1645487839:0;rmdir ESE_330
-: 1645487839:0;l
-: 1645487852:0;cd textbooks
-: 1645487852:0;l
-: 1645487855:0;ll
-: 1645488072:0;cd ../../Downloads
-: 1645488072:0;l
-: 1645488077:0;l | grep *.pdf
-: 1645488099:0;mv dokumen.pub_probability-statistics-and-random-signals-9780190200510-0190200510-9780190200527-0190200529.pdf ../Documents/textbooks/ESE_306.pdf
-: 1645488104:0;cd ../Documents/textbooks
-: 1645488104:0;l
-: 1645488121:0;mc CMOS-VLSI-design.pdf ESE_330.pdf
-: 1645488128:0;mv CMOS-VLSI-design.pdf ESE_306.pdf
-: 1645488150:0;../../Downloads
-: 1645488155:0;mv dokumen.pub_probability-statistics-and-random-signals-9780190200510-0190200510-9780190200527-0190200529.pdf ../Documents/textbooks/ESE_306.pdf
-: 1645488211:0;../Documents/textbooks
-: 1645488211:0;l
-: 1645488242:0;mv 'Applied Combinatorics (6th Edition) by Alan Tucker Wiley (2012).pdf' AMS_301.pdf
-: 1645488242:0;l
-: 1645488307:0;ll
-: 1645488385:0;..
-: 1645488385:0;l
-: 1645488390:0;mkdir ESE_330
-: 1645488391:0;l
-: 1645488762:0;../Downloads
-: 1645488763:0;l
-: 1645489007:0;cd /opt/android-studio
-: 1645489012:0;../alacritty
-: 1645489014:0;l
-: 1645489015:0;..
-: 1645489016:0;l
-: 1645489118:0;nvim
-: 1645489184:0;~
-: 1645489283:0;paru brave
-: 1645489483:0;paru -R brave-nightly-bin
-: 1645489501:0;paru brave
-: 1645535718:0;sudo pacman -Syu
-: 1645535963:0;.config
-: 1645535964:0;gs
-: 1645535965:0;ga .
+cd 'GNU ARM v10.2.1 - Default/'
+make
+make all
+make -j8 all
+!
+neofetch
+at
+e
+e .config
+t
+tn n2
+tka
+cd Documents
+mkdir notes
+cd notes 
+cd repos
+git clone git@github.com:jbeneliezer/Ambient_Light_Sensor.git
+e Ambient_Light_Sensor
+repos
+/opt
+paru latex
+paru latex | less
+paru texmaker
+rmdir notes
+mkdir ESE_306
+mkdir AMS_301
+mkdir ARH_202
+mkdir ESE_441
+mkdir ESE_343
+rmdir ESE_330
+cd textbooks
+cd ../../Downloads
+l | grep *.pdf
+cd ../Documents/textbooks
+mc CMOS-VLSI-design.pdf ESE_330.pdf
+mv CMOS-VLSI-design.pdf ESE_306.pdf
+../../Downloads
+mv dokumen.pub_probability-statistics-and-random-signals-9780190200510-0190200510-9780190200527-0190200529.pdf ../Documents/textbooks/ESE_306.pdf
+../Documents/textbooks
+mv 'Applied Combinatorics (6th Edition) by Alan Tucker Wiley (2012).pdf' AMS_301.pdf
+ll
+mkdir ESE_330
+../Downloads
+cd /opt/android-studio
+../alacritty
+..
+l
+nvim
+paru -R brave-nightly-bin
+paru brave
+sudo pacman -Syu
+.config
+gs
+ga .
+gc 'update'
+gp
+git branch
+~
+e .
+exit
+: 1645537026:0;e .config
+: 1645537301:0;startx
+: 1645537395:0;btop
+: 1645538136:0;e .config/i3
+: 1645538279:0;.config
+: 1645538280:0;gs
+: 1645538282:0;ga .
