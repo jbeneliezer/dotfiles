@@ -56,13 +56,10 @@ LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/luna
 source .profile
 lvim
 setxkbmap caps:escape
-e .Xmodmap
 cd .config/lvim
-./install.sh
 v install.sh
 v config.lua
 sudo pacman -S tmux
-t
 cd .config/alacritt
 gc 'updated alcritty'
 git config --global user.email "judahbeneliezer@gmail.com"
@@ -79,7 +76,6 @@ gc 'new branch first commit'
 git config pull.rebase false
 git pull origin laptop
 v .Xresources
-cd .config/alacritty
 v alacritty.yml
 e gruvbox
 mv gruvbox gruvbox.Xresources
@@ -91,7 +87,6 @@ ln -sf ~/.config/themes/gruvbox.Xresources ~/.Xresources
 ld
 cd themes
 setfont DejaVuSansMono Nerd Font
-fc-list
 cd /usr/share/kbd/consolefonts
 ps $$
 which rc.conf
@@ -120,7 +115,6 @@ sudo update-grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 nmcli device wifi show
 cd /etc/X11/xorg.conf.d
-cd xinit
 e /etc/default/grub
 cd /sys
 class
@@ -161,7 +155,6 @@ chmod +x light_inc.sh light_dec.sh
 cd /opt/dotfiles/misc
 sudo ./light_dec.sh
 cat /sys/class/backlight/amdgpu_bl0/brightness
-cd alacritty
 cd ../misc
 rm 235
 ./light_inc.sh
@@ -201,11 +194,9 @@ nmcli device wifi connect WolfieNet-Secure
 systemctl restart NetworkManager
 systemctl restart wpa_supplicant
 ping google.com
-nmtui
 git add .
 gc 'fixed sbu wifi'
 git push --set-upstream origin laptop
-ip a
 hwclock show
 hwclock --show
 sudo hwclock --show
@@ -240,11 +231,9 @@ xinput list-props 'SynPS/2 Synaptics TouchPad'
 xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Scrolling Pixel Distance' 15
 xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Accel Speed' 0.5
 rmdir repos
-cd /opt
 cd dotfile
 dotfiles
 gc 'updated alacritty'
-poweroff
 sudo pacman -R pulseaudio alsa alsa-utils
 sudo pacman -S pulseaudio
 sudo pacman -S alsa alsa-utils
@@ -305,7 +294,6 @@ tar -xvf *.tgz
 less Install-Linux-tar.txt
 rm -rf .
 rm -rf android-studio
-cd ~
 cd .local
 cd share
 mv ~/Downloads/android-studio-2021.1.1.20-linux.tar.gz .
@@ -325,8 +313,6 @@ mkdir zoom
 mv zoom_x86_64.pkg.tar.xz zoom
 tar -xvf *
 cd usr
-cd bin
-zoom
 ./zoom &
 cd ../opt/zoom/ZoomLauncher
 cd ../opt/zoom/
@@ -342,14 +328,10 @@ yay -S zoom
 systemctl enable bluez
 sudo systemctl status bluetooth
 sudo chmod a+x /sys/class/backlight/amdgpu_bl0/brightness
-systemctl restart bluetooth
 e .config/i3
 gc 'updated i3 bindings'
-git pull
 v config
-cd i3
 sudo pacman -S cmatrix
-cmatrix
 yay -S discord
 killall -r discord
 killall -q discord
@@ -372,7 +354,6 @@ cd paru
 makepkg -si
 paru -S androidstudio
 paru -S android-studio
-sudo pacman -Syyu
 paru -S simplicitystudio
 unzip *.zip
 rm 'Galaxy_S21_FE (1).zip'
@@ -394,7 +375,6 @@ export PATH=/home/jb/.cargo/bin:/home/jb/.local/bin:/home/jb/.cargo/bin:/home/jb
 echo $PATH
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
-cd Downloads
 mkdir repos
 mkdir ubuntu
 cp ~/Downloads/Ubuntu.ova ubuntu
@@ -410,11 +390,8 @@ e /etc/libvirt/libvirt.conf
 newgrp libvirt
 cd /etc/libvirt
 sudo systemctl restart libvirtd
-groups jb
 sudo pacman -S dnsmasq
 .config/i3
-alsamixer
-cd .config/i3
 e config
 lsmod | grep snd
 virsh -h
@@ -424,10 +401,8 @@ start
 rm *
 cd ../../Downloads
 mv Ubuntu.ova ../repos
-cd ../repos
 cp Ubuntu.ova ../Downloads
 mv Ubuntu.ova ubuntu
-cd ubuntu
 tar xvf Ubuntu.ova
 qemu-img convert -O qcow2 Ubuntu.vmdk Ubuntu.qcow2
 qemu-img convert -O Ubuntu-disk001.vmdk Ubuntu.qcow2
@@ -436,7 +411,6 @@ qemu-img convert -O Ubuntu-disk001.vmdk ubuntu.qcow2
 file Ubuntu-disk001.vmdk
 qemu-img convert -O qcow2 Ubuntu-disk001.vmdk ubuntu.qcow2
 cd /etc/libvirt/
-sudo lvim .
 zgrep CONFIG_KVM /proc/config.gz
 sudo modprobe kvm-amd
 egrep '(vmx|svm)' --color=always /proc/cpuinfo\
@@ -451,10 +425,8 @@ sudo modprobe -v kvm-amd
 chmod +w /sys/class/backlight/amdgpu_bl0/brightness
 sudo chmod +w /sys/class/backlight/amdgpu_bl0/brightness
 light_inc.sh
-cd zsh
 e zshrc
 source .zsrhc
-source .zshrc
 reboot
 cat /proc/cpuinfo
 cat /proc/cpuinfo | grep kvm
@@ -462,7 +434,6 @@ cd /sys/class/backlight
 cd amdgpu_bl0
 sudo chmod a+w brightness
 Downloads
-repos
 Mail
 top
 vi
@@ -470,7 +441,6 @@ sudo pacman -S python2
 pip install neovim
 tmp
 rm .bash_logout .bash_profile .bashrc
-ll
 git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
 nvim .config/nvim
 cd nvim
@@ -478,18 +448,9 @@ lvim .
 nvim .
 e 
 nvim
-startx
-sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
-htop
-df -h
-sudo pacman -Syu
 cd //
 cd /
-e
-paru
 paru -Syu
-cd .config
-gs
 gc 'updating'
 echo `ls`
 ls
@@ -507,200 +468,346 @@ git branch
 gb
 make clean
 ../..
-cd ..
-cd Android
 cd Sdk
 cd AndroidStudioProjects
-git init
 echo "Labs and assignments for ESE 343 Mobile Cloud Computing course." > README.md
-ga .
-gc 'first commit'
 git remote add origin git@github.com:jbeneliezer/Mobile_Cloud_Computing.git
-gp
 git push -u origin master
-..
-cd repos
 git clone git@github.com:jbeneliezer/*
 git clone git@github.com:jbeneliezer/Systemc_Risc_Cpu
 cd Systemc_Risc_Cpu
-l
 sudo pacman -S systemc
-e .
 `\
 	`
-~
 paru pfetch
-clear
-pfetch
-neofetch
-exit
-: 1643756366:0;clear
-: 1643756368:0;pfetch
-: 1643918395:0;startx
-: 1643918514:0;cd repos
-: 1643918529:0;git clone git@github.com:jbeneliezer/MyFirstApp
-: 1643918661:0;clear
-: 1643918739:0;cd ../.config/alacritty
-: 1643918740:0;l
-: 1643918743:0;e .
-: 1643918758:0;clear
-: 1643918764:0;~
-: 1643918765:0;repos
-: 1643918770:0;cd MyFirstApp
-: 1643918771:0;gs
-: 1643918877:0;clear
-: 1643918879:0;htop
-: 1643918971:0;cd ../../.config
-: 1643918972:0;ga .
-: 1643918983:0;gc 'added gruvbox colors to alacritty'
-: 1643918984:0;gp
-: 1643919984:0;cd ../Downloads
-: 1643919984:0;l
-: 1643919997:0;rm 'course schedule ese 343 543 mobile cloud computing 2022.docx'
-: 1643920001:0;l
-: 1643920023:0;mv 'course schedule ese 343 543 mobile cloud computing 2022 (1).docx' course_schedule_ese_343.docx
-: 1643920219:0;clear
-: 1643920316:0;cd ../repos
-: 1643920317:0;l
-: 1643920320:0;cd MyFirstApp
-: 1643920323:0;gs
-: 1643920324:0;ga .
-: 1643920334:0;gc 'nothing'
-: 1643920335:0;gp
-: 1643920483:0;sudo pacman -Syu evince
-: 1643920559:0;cd ~
-: 1643920559:0;l
-: 1643920572:0;mkdir -p Documents/textbooks
-: 1643920577:0;paru
-: 1643921196:0;cd repos
-: 1643921196:0;l
-: 1643921201:0;cd MyFirstApp
-: 1643921202:0;l
-: 1643921204:0;e .
-: 1643922210:0;l
-: 1643922212:0;cd ..
-: 1643922212:0;l
-: 1643922216:0;cd ..
-: 1643922216:0;l
-: 1643922219:0;cd Android
-: 1643922220:0;..
-: 1643922224:0;AndroidStudioProjects
-: 1643922224:0;l
-: 1643922355:0;mv Lab2 ../repos/
-: 1643922359:0;ll
-: 1643922363:0;cd ../repos
-: 1643922363:0;l
-: 1643922366:0;cd lab2
-: 1643922370:0;l
-: 1643922374:0;cd Lab2
-: 1643922374:0;l
-: 1643922438:0;git init
-: 1643922440:0;ga .
-: 1643922444:0;gc 'first commit'
-: 1643922445:0;gp
-: 1643922493:0;git remote add origin git@github.com:jbeneliezer/Lab2
-: 1643922506:0;gp -u origin master
-: 1643922515:0;e README.md
-: 1643922521:0;ga .
-: 1643922527:0;gc 'added readme'
-: 1643922527:0;gp
-: 1643922942:0;htop
-: 1643922985:0;ga .
-: 1643922992:0;gc 'moved strings to strings.xml'
-: 1643922993:0;gp
-: 1643923949:0;cd ../hw2
-: 1643923950:0;l
-: 1643923951:0;..
-: 1643923952:0;l
-: 1643923996:0;rm -rf app build.gradle gradle gradle.properties gradlew gradlew.bat local.properties settings.gradle
-: 1643923997:0;l
-: 1643926242:0;clear
-: 1643926249:0;neofetch
-: 1643926258:0;ll
-: 1643926261:0;~
-: 1643926261:0;ll
-: 1643926263:0;clear
-: 1643928003:0;cd repos
-: 1643928005:0;l
-: 1643928013:0;..
-: 1643928013:0;l
-: 1643928016:0;cd Android
-: 1643928018:0;..
-: 1643928032:0;mv HW2 repos/HW2
-: 1643928033:0;l
-: 1643928036:0;rm -rf H
-: 1643928038:0;cd repos
-: 1643928038:0;l
-: 1643928042:0;cd HW2
-: 1643928043:0;l
-: 1643928045:0;ga .
-: 1643928049:0;git init
-: 1643928079:0;echo "hw2" > README.md
-: 1643928082:0;ga .
-: 1643928086:0;gc 'first commit'
-: 1643928102:0;git remote add origin git@github.com:jbeneliezer/HW2
-: 1643928108:0;gp -u origin master
-: 1643954039:0;poweroff
-: 1643996381:0;startx
-: 1643996397:0;neofetch
-: 1643996427:0;cd repos
-: 1643996428:0;l
-: 1643996432:0;cd HW2
-: 1643996434:0;git pull
-: 1643996483:0;l
-: 1643996487:0;..
-: 1643996487:0;l
-: 1643996489:0;ll
-: 1643996499:0;rm -rf .idea .gradle
-: 1643996500:0;l
-: 1643996501:0;ll
-: 1643996510:0;cat .gitignore
-: 1643996512:0;..
-: 1643996517:0;repos
-: 1643996520:0;rm .gitignore
-: 1643996521:0;l
-: 1643996523:0;ll
-: 1643996525:0;clear
-: 1643997467:0;l
-: 1643997492:0;mkdir Proj1
-: 1643997494:0;cd Proj1
-: 1643997495:0;e .
-: 1643997841:0;l
-: 1643997842:0;..
-: 1643997845:0;rm -rf Proj1
-: 1643997845:0;l
-: 1643997846:0;clear
-: 1643999589:0;~
-: 1643999590:0;clear
-: 1643999593:0;e
-: 1643999622:0;cd .config
-: 1643999623:0;l
-: 1643999626:0;gs
-: 1643999632:0;e .gitignore
-: 1643999647:0;cd zsh
-: 1643999647:0;l
-: 1643999655:0;ll
-: 1643999659:0;..
-: 1643999659:0;l
-: 1643999665:0;~
-: 1643999666:0;ll
-: 1643999672:0;cd .config
-: 1643999673:0;e .
-: 1643999705:0;ga .
-: 1643999737:0;gc 'changed .gitignore, planning on updating lvim config, so just backing up\
+git clone git@github.com:jbeneliezer/MyFirstApp
+cd ../.config/alacritty
+cd ../../.config
+gc 'added gruvbox colors to alacritty'
+cd ../Downloads
+rm 'course schedule ese 343 543 mobile cloud computing 2022.docx'
+mv 'course schedule ese 343 543 mobile cloud computing 2022 (1).docx' course_schedule_ese_343.docx
+gc 'nothing'
+sudo pacman -Syu evince
+cd ~
+mkdir -p Documents/textbooks
+cd MyFirstApp
+AndroidStudioProjects
+mv Lab2 ../repos/
+cd ../repos
+cd lab2
+cd Lab2
+git remote add origin git@github.com:jbeneliezer/Lab2
+e README.md
+gc 'added readme'
+htop
+gc 'moved strings to strings.xml'
+cd ../hw2
+rm -rf app build.gradle gradle gradle.properties gradlew gradlew.bat local.properties settings.gradle
+cd Android
+mv HW2 repos/HW2
+rm -rf H
+git init
+echo "hw2" > README.md
+gc 'first commit'
+git remote add origin git@github.com:jbeneliezer/HW2
+gp -u origin master
+poweroff
+cd HW2
+git pull
+rm -rf .idea .gradle
+cat .gitignore
+repos
+rm .gitignore
+mkdir Proj1
+cd Proj1
+rm -rf Proj1
+gs
+e .gitignore
+cd zsh
+gc 'changed .gitignore, planning on updating lvim config, so just backing up\
 '
-: 1643999739:0;gp
-: 1643999743:0;cd lvim
-: 1643999744:0;ll
-: 1643999750:0;./install.sh
-: 1643999751:0;ll
-: 1643999756:0;e install.sh
-: 1643999765:0;./install.sh
-: 1643999766:0;ll
-: 1643999772:0;e .
-: 1643999798:0;..
-: 1643999799:0;ga .
-: 1643999805:0;gc 'changed lvim cp to ln'
-: 1643999806:0;gp
-: 1643999812:0;e .
-: 1644000308:0;ga .
+cd lvim
+e install.sh
+./install.sh
+gc 'changed lvim cp to ln'
+ga .
+gc 'simplified lvim config'
+gp
+nofetch
+paru treefetch
+cmatrix
+sudo pacman -Sy
+cd i3
+cd alacritty
+rm setcolors.sh
+cd ../tmux
+paru btop
+fc-list
+paru jetbrainsmononerdfont
+paru droid
+paru droidsans
+fonts-droid
+paru fonts-droid
+fc-list | grep droid
+fc-list | grep Droid
+cd .config/alacritty
+cd .config/i3
+rm .lesshst
+e .Xmodmap
+e .aliases
+cd tmux
+ta
+ta jb
+pfetch
+cd /etc/X11
+cd xinit
+sudo lvim .
+e .joinnow
+paru cadence
+paru orcad
+ip link
+ifconfig
+iwconfig
+iw
+ip help
+ip link -h
+ip link help
+ip link show
+cd /sys/class/net
+cd wlo1
+cat address
+ip link show wlo1
+paru qucs-s
+cd .config
+e tmux
+exit
+paru ltspice
+paru ngspice
+ngspice
+paru gspice
+cd Downloads
+l | grep Auto
+tar xvf Autodesk_EAGLE_9.6.2_English_Linux_64bit.tar.gz
+cd eagle-9.6.2
+cd ..
+cp -r eagle-9.6.2 /opt/eagle
+cd /opt/eagle
+./eagle
+cd bin
+./install-desktop-icon.sh
+make
+export LIBGL_ALWAYS_SOFTWARE=1
+cd /opt
+cd eagle
+ln -s /opt/eagle/eagle /usr/bin/eagle
+sudo ln -s /opt/eagle/eagle /usr/bin/eagle
+eagle &
+e README
+export QT_XCB_GL_INTEGRATION=xcb_egl
+eagle
+treefetch
+paru geda
+paru ttf-liberation
+gschem first.sym
+paru ttf-dejavu
+paru pipes
+pipes
+pipes.sh
+rm tmp
+l tmp
+cd jb
+tm -rf tmp
+rm -rf tmp
+rm '#untitled_1.sch#'
+cd repos
+mkdir schematics
+cd ubuntu
+..
+rm -rf ubuntu
+fc-list | grep gnu
+paru -h
+paru -P
+paru P fonts
+paru -P fonts
+paru -Ps
+df -h
+tl
+tk jb
+tka
+systemctl resart bluetooth
+systemctl restart bluetooth
+alsamixer
+zoom
+startx
+pacman -h
+sudo pacman -Syyu
+sudo rm /var/lib/pacman/db.lck
+sudo pacman -Syu
+cd /etc/udev/rules.d
+lvim 90-backlight.rules
+sudo lvim 90-backlight.rules
+sudo usermod -G video, audio jb
+sudo usermod -G video,audio jb
+sudo usermod -g wheel,libvirt,audio,video jb
+sudo usermod -G wheel,libvirt,audio,video jb
+groups jb
+clear
+sudo chmod a+w /sys/class/backlight/amdgpu_bl0/brightness
+paru nsxiv
+cd .config/wallpapers
+sxiv .
+nsxiv .
+sudo pacman -S lsd
+e .profile
+la
+lsd --group-dirs
+lsd
+lsd -A
+lsd -a
+lsd -t
+lsd -altf
+e .config/shell
+ls -t
+ip a
+nmcli
+nmtui
+neofetch
+e .config/tmux
+e .config
+e
+cd Documents
+../repos
+git clone git@github.com:jbeneliezer/uv_tech
+ll
+cd .config/tmux
+t
+l
+paru alacritty-theme
+cd .config/shell
+e .
+~
+at
+e .zshrc
+source .zshrc
+paru
+btop
+killall simplicity
+ps aux | grep simplicity
+kill 28995
+: 1645480512:0;e
+: 1645480643:0;cd repos
+: 1645480644:0;l
+: 1645480648:0;cd uv_tech
+: 1645480649:0;l
+: 1645480666:0;mv embedded/* .
+: 1645480672:0;rm -rf datasheets
+: 1645480673:0;l
+: 1645480675:0;make
+: 1645480685:0;cd 'GNU ARM v10.2.1 - Default\
+l\
+'
+: 1645480690:0;cd 'GNU ARM v10.2.1 - Default/'
+: 1645480690:0;l
+: 1645480692:0;make
+: 1645480695:0;make all
+: 1645480699:0;make -j8 all
+: 1645480702:0;..
+: 1645480702:0;l
+: 1645480707:0;ll
+: 1645481298:0;neofetch
+: 1645481305:0;ll
+: 1645481308:0;!
+: 1645481310:0;~
+: 1645481311:0;l
+: 1645481537:0;at
+: 1645481561:0;ll
+: 1645481564:0;at
+: 1645481792:0;e
+: 1645482509:0;repos
+: 1645482510:0;e .
+: 1645482523:0;gs
+: 1645483822:0;at
+: 1645483827:0;neofetch
+: 1645483828:0;ll
+: 1645483831:0;at
+: 1645483882:0;ll
+: 1645483885:0;~
+: 1645483886:0;e
+: 1645483946:0;at
+: 1645484472:0;e
+: 1645484518:0;t
+: 1645484537:0;e .config
+: 1645484595:0;e .
+: 1645484846:0;t
+: 1645484859:0;tn n2
+: 1645484875:0;tka
+: 1645485994:0;l
+: 1645485996:0;cd Documents
+: 1645485999:0;mkdir notes
+: 1645486000:0;cd notes 
+: 1645486001:0;e .
+: 1645486615:0;cd repos
+: 1645486615:0;ll
+: 1645486621:0;git clone git@github.com:jbeneliezer/Ambient_Light_Sensor.git
+: 1645486627:0;e Ambient_Light_Sensor
+: 1645486744:0;repos
+: 1645486747:0;ll
+: 1645486764:0;/opt
+: 1645486765:0;l
+: 1645486766:0;ll
+: 1645486971:0;paru latex
+: 1645486996:0;paru latex | less
+: 1645487148:0;paru texmaker
+: 1645487415:0;..
+: 1645487416:0;l
+: 1645487418:0;rmdir notes
+: 1645487419:0;l
+: 1645487697:0;ll
+: 1645487701:0;mkdir ESE_330
+: 1645487705:0;mkdir ESE_306
+: 1645487725:0;mkdir AMS_301
+: 1645487732:0;mkdir ARH_202
+: 1645487739:0;mkdir ESE_441
+: 1645487747:0;mkdir ESE_343
+: 1645487755:0;ll
+: 1645487839:0;rmdir ESE_330
+: 1645487839:0;l
+: 1645487852:0;cd textbooks
+: 1645487852:0;l
+: 1645487855:0;ll
+: 1645488072:0;cd ../../Downloads
+: 1645488072:0;l
+: 1645488077:0;l | grep *.pdf
+: 1645488099:0;mv dokumen.pub_probability-statistics-and-random-signals-9780190200510-0190200510-9780190200527-0190200529.pdf ../Documents/textbooks/ESE_306.pdf
+: 1645488104:0;cd ../Documents/textbooks
+: 1645488104:0;l
+: 1645488121:0;mc CMOS-VLSI-design.pdf ESE_330.pdf
+: 1645488128:0;mv CMOS-VLSI-design.pdf ESE_306.pdf
+: 1645488150:0;../../Downloads
+: 1645488155:0;mv dokumen.pub_probability-statistics-and-random-signals-9780190200510-0190200510-9780190200527-0190200529.pdf ../Documents/textbooks/ESE_306.pdf
+: 1645488211:0;../Documents/textbooks
+: 1645488211:0;l
+: 1645488242:0;mv 'Applied Combinatorics (6th Edition) by Alan Tucker Wiley (2012).pdf' AMS_301.pdf
+: 1645488242:0;l
+: 1645488307:0;ll
+: 1645488385:0;..
+: 1645488385:0;l
+: 1645488390:0;mkdir ESE_330
+: 1645488391:0;l
+: 1645488762:0;../Downloads
+: 1645488763:0;l
+: 1645489007:0;cd /opt/android-studio
+: 1645489012:0;../alacritty
+: 1645489014:0;l
+: 1645489015:0;..
+: 1645489016:0;l
+: 1645489118:0;nvim
+: 1645489184:0;~
+: 1645489283:0;paru brave
+: 1645489483:0;paru -R brave-nightly-bin
+: 1645489501:0;paru brave
+: 1645535718:0;sudo pacman -Syu
+: 1645535963:0;.config
+: 1645535964:0;gs
+: 1645535965:0;ga .

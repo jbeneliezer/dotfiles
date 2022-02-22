@@ -7,7 +7,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "gruvbox"
+lvim.colorscheme = "tokyonight"
 lvim.leader = "space"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
@@ -131,6 +131,7 @@ lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
 lvim.builtin.nvimtree.quit_on_open = 1
+-- lvim.builtin.nvimtree.hijack_netrw = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -149,7 +150,7 @@ lvim.builtin.treesitter.ensure_installed = {
 	"markdown",
 }
 
-lvim.builtin.treesitter.ignore_install = { "haskell" }
+-- lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
 -- generic LSP settings

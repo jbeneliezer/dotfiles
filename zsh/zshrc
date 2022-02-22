@@ -4,43 +4,43 @@ source ~/.config/shell/.profile
 source ~/.config/zsh/git-prompt.sh
 
 # Colors from Xresources
-# BG=$(xrdb -query | grep '*color0' | awk '{print $NF}')
-# DARKRED=$(xrdb -query | grep '*color1' | awk '{print $NF}')
-# DARKGREEN=$(xrdb -query | grep '*color2' | awk '{print $NF}')
-# DARKYELLOW=$(xrdb -query | grep '*color3' | awk '{print $NF}')
-# DARKBLUE=$(xrdb -query | grep '*color4' | awk '{print $NF}')
-# DARKPURPLE=$(xrdb -query | grep '*color5' | awk '{print $NF}')
-# DARKCYAN=$(xrdb -query | grep '*color6' | awk '{print $NF}')
-# DARKGRAY=$(xrdb -query | grep '*color7' | awk '{print $NF}')
-# GRAY=$(xrdb -query | grep '*color8' | awk '{print $NF}')
-# RED=$(xrdb -query | grep '*color9' | awk '{print $NF}')
-# GREEN=$(xrdb -query | grep '*color10' | awk '{print $NF}')
-# YELLOW=$(xrdb -query | grep '*color11' | awk '{print $NF}')
-# BLUE=$(xrdb -query | grep '*color12' | awk '{print $NF}')
-# PURPLE=$(xrdb -query | grep '*color13' | awk '{print $NF}')
-# CYAN=$(xrdb -query | grep '*color14' | awk '{print $NF}')
-# FG=$(xrdb -query | grep '*color15' | awk '{print $NF}')
-# SUCCESS=#05ff44
-# ERROR=#ff052b
-
-BG=#282828
-DARKRED=#cc241d
-DARKGREEN=#98971a
-DARKYELLOW=#d79921
-DARKBLUE=#458588
-DARKPURPLE=#b16286
-DARKCYAN=#689d6a
-DARKGRAY=#928374
-GRAY=#a89984
-RED=#fb4934
-GREEN=#b8bb26
-YELLOW=#fabd2f
-BLUE=#83a598
-PURPLE=#d38698b
-CYAN=#8ec07c
-FG=#ebdbb2
+BG=$(xrdb -query | grep '*color0' | awk '{print $NF}')
+DARKRED=$(xrdb -query | grep '*color1' | awk '{print $NF}')
+DARKGREEN=$(xrdb -query | grep '*color2' | awk '{print $NF}')
+DARKYELLOW=$(xrdb -query | grep '*color3' | awk '{print $NF}')
+DARKBLUE=$(xrdb -query | grep '*color4' | awk '{print $NF}')
+DARKPURPLE=$(xrdb -query | grep '*color5' | awk '{print $NF}')
+DARKCYAN=$(xrdb -query | grep '*color6' | awk '{print $NF}')
+DARKGRAY=$(xrdb -query | grep '*color7' | awk '{print $NF}')
+GRAY=$(xrdb -query | grep '*color8' | awk '{print $NF}')
+RED=$(xrdb -query | grep '*color9' | awk '{print $NF}')
+GREEN=$(xrdb -query | grep '*color10' | awk '{print $NF}')
+YELLOW=$(xrdb -query | grep '*color11' | awk '{print $NF}')
+BLUE=$(xrdb -query | grep '*color12' | awk '{print $NF}')
+PURPLE=$(xrdb -query | grep '*color13' | awk '{print $NF}')
+CYAN=$(xrdb -query | grep '*color14' | awk '{print $NF}')
+FG=$(xrdb -query | grep '*color15' | awk '{print $NF}')
 SUCCESS=#05ff44
 ERROR=#ff052b
+
+# BG=#282828
+# DARKRED=#cc241d
+# DARKGREEN=#98971a
+# DARKYELLOW=#d79921
+# DARKBLUE=#458588
+# DARKPURPLE=#b16286
+# DARKCYAN=#689d6a
+# DARKGRAY=#928374
+# GRAY=#a89984
+# RED=#fb4934
+# GREEN=#b8bb26
+# YELLOW=#fabd2f
+# BLUE=#83a598
+# PURPLE=#d38698b
+# CYAN=#8ec07c
+# FG=#ebdbb2
+# SUCCESS=#05ff44
+# ERROR=#ff052b
 
 # Set up the prompt
 setopt PROMPT_SUBST
@@ -81,3 +81,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # Set vi mode
 bindkey -v
+
+alacritty-themes Tokyonight_Storm >/dev/null 2>&1
