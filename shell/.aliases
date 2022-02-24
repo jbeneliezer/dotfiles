@@ -2,7 +2,7 @@
 alias ls='ls --color=auto'
 alias l='ls -F'
 alias la='ls -aF'
-alias ll='ls -altF'
+alias ll='lsd -lAF --group-dirs first'
 alias e='$EDITOR'
 alias v='$EDITOR'
 alias cf='cd $XDG_CONFIG_HOME'

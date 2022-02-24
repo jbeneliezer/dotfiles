@@ -34,7 +34,3 @@
 ! LightGrey + White
 *color7:  #a89984
 *color15: #ebdbb2
-
-alacritty*faceName: DejaVuSansMono Nerd Font
-alacritty*faceSize: 10
-alacritty*renderFont: true

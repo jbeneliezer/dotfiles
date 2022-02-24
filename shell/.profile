@@ -12,7 +12,6 @@
 
 BROWSER=chromium
 EDITOR=lvim
-# "$HOME/.cargo/env"
 
 XDG_CONFIG_HOME=$HOME/.config
 XDG_CACHE_HOME=$HOME/.cache

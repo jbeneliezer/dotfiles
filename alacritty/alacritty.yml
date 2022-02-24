@@ -8,6 +8,8 @@ key_bindings:
   - { key: C, mods: Alt, action: Copy }
   - { key: Up, mods: Control, action: IncreaseFontSize }
   - { key: Down, mods: Control, action: DecreaseFontSize }
+  - { key: =, mods: Control, action: IncreaseFontSize}
+  - { key: -, mods: Control, action: DecreaseFontSize }
 shell:
   program: /usr/bin/zsh
   args:

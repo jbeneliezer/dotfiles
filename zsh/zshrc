@@ -23,6 +23,25 @@ FG=#ebdbb2
 SUCCESS=#05ff44
 ERROR=#ff052b
 
+# Tokyonight Colors
+# BG=#1a1b26
+# DARKRED=#f7768e
+# DARKGREEN=#9ece6a
+# DARKYELLOW=#e0af68
+# DARKBLUE=#7aa2f7
+# DARKPURPLE=#9a7ecc
+# DARKCYAN=#4abaaf
+# DARKGRAY=#acb0d0
+# RED=#f7768e
+# GREEN=#9ece6a
+# YELLOW=#e0af68
+# BLUE=#7aa2f7
+# PURPLE=#9a7ecc
+# CYAN=#4abaaf
+# GRAY=#acb0d0
+# SUCCESS=#05ff44
+# ERROR=#ff052b
+
 # Set up the prompt
 setopt PROMPT_SUBST
 prompt='%B%(?.%F{$SUCCESS}.%F{$ERROR})%f%b%F{$DARKYELLOW}$(__git_ps1 " (%s)")%f %F{$DARKBLUE}(%~%)%f %F{$DARKPURPLE}%(!.#.$)%f '
