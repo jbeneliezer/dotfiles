@@ -4,24 +4,24 @@ source ~/.config/shell/.profile
 source ~/.config/zsh/git-prompt.sh
 
 # Gruvbox Colors
-BG=#282828
-DARKRED=#cc241d
-DARKGREEN=#98971a
-DARKYELLOW=#d79921
-DARKBLUE=#458588
-DARKPURPLE=#b16286
-DARKCYAN=#689d6a
-DARKGRAY=#928374
-GRAY=#a89984
-RED=#fb4934
-GREEN=#b8bb26
-YELLOW=#fabd2f
-BLUE=#83a598
-PURPLE=#d38698b
-CYAN=#8ec07c
-FG=#ebdbb2
-SUCCESS=#05ff44
-ERROR=#ff052b
+# BG=#282828
+# DARKRED=#cc241d
+# DARKGREEN=#98971a
+# DARKYELLOW=#d79921
+# DARKBLUE=#458588
+# DARKPURPLE=#b16286
+# DARKCYAN=#689d6a
+# DARKGRAY=#928374
+# GRAY=#a89984
+# RED=#fb4934
+# GREEN=#b8bb26
+# YELLOW=#fabd2f
+# BLUE=#83a598
+# PURPLE=#d38698b
+# CYAN=#8ec07c
+# FG=#ebdbb2
+# SUCCESS=#05ff44
+# ERROR=#ff052b
 
 # Tokyonight Colors
 # BG=#1a1b26
@@ -42,9 +42,32 @@ ERROR=#ff052b
 # SUCCESS=#05ff44
 # ERROR=#ff052b
 
+# Nightfox Colors
+BG=#192330
+black=#393B44
+blue=#719CD6
+brightBlack=#475072
+brightBlue=#84CEE4
+brightCyan=#59F0FF
+brightGreen=#58CD8B
+brightPurple=#B8A1E3
+brightRed=#D6616B
+brightWhite=#F2F2F2
+brightYellow=#FFE37E
+cursorColor=#CDCECF
+cyan=#63CDCF
+foreground=#CDCECF
+green=#81B29A
+purple=#9D79D6
+red=#C94F6D
+white=#DFDFE0
+yellow=#DBC074
+SUCCESS=#05ff44
+ERROR=#ff052b
+
 # Set up the prompt
 setopt PROMPT_SUBST
-prompt='%B%(?.%F{$SUCCESS}.%F{$ERROR})%f%b%F{$DARKYELLOW}$(__git_ps1 " (%s)")%f %F{$DARKBLUE}(%~%)%f %F{$DARKPURPLE}%(!.#.$)%f '
+prompt='%B%(?.%F{$SUCCESS}.%F{$ERROR})%f%b%F{$yellow}$(__git_ps1 " (%s)")%f %F{$blue}(%~%)%f %F{$purple}%(!.#.$)%f '
 
 setopt histignorealldups sharehistory auto_cd
 
