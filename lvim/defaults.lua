@@ -7,7 +7,7 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "nightfox"
+lvim.colorscheme = "terafox"
 lvim.leader = "space"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
@@ -75,10 +75,10 @@ lvim.builtin.which_key.mappings = {
 	["q"] = { "<cmd>q<cr>", "Quit" },
 	["x"] = { "<cmd>x<cr>", "Save and Quit" },
 	["!"] = { "<cmd>q!<cr>", "Force Quit" },
-	["c"] = { "<cmd>BufferClose!<cr>", "Close Buffer" },
+	["c"] = { "<cmd>:bd<cr>", "Close Buffer" },
 	["s"] = { ":w ", "Save as" },
-	["n"] = { "<cmd>ene ", "New File" },
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+	["n"] = { ":ene<cr>", "New File" },
 	["o"] = { "<c-w>o", "Fullscreen" },
 	["a"] = { "G=gg2<c-o>zz", "Style" },
 	["j"] = { "<cmd>m .+1<cr>", "which_key_ignore" },
@@ -287,8 +287,8 @@ lvim.builtin.which_key.mappings = {
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.show_icons.git = 0
--- lvim.builtin.nvimtree.quit_on_open = 1
+lvim.builtin.nvimtree.show_icons.git = true
+lvim.builtin.nvimtree.quit_on_open = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -399,16 +399,3 @@ lvim.plugins = {
 -- { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
 -- { "BufWinEnter", "*.lua", ":normal G=gg" },
 -- }
-
-if vim.fn.has "wsl" == 1 then
-	vim.g.clipboard = {
-		copy = {
-			["*"] = "win32yank.exe -i --crlf",
-			["+"] = "win32yank.exe -i --crlf",
-		},
-		paste = {
-			["+"] = "win32yank.exe -o --lf",
-			["*"] = "win32yank.exe -o --lf",
-		},
-	}
-end
