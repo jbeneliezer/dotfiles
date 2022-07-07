@@ -32,7 +32,10 @@ font pango:DejaVu Sans Mono 8
 exec --no-startup-id dex --autostart --environment i3
 
 # start sxhkd
-exec_always sxhkd &
+exec_always --no-startup-id sxhkd &
+
+# polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -208,11 +211,11 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # set background
-exec_always --no-startup-id feh --bg-fill --no-fehbg ~/.config/wallpapers/ApusColors2.png
+exec_always --no-startup-id feh --bg-fill --no-fehbg ~/.config/wallpapers/pang-yuhao-7f_DhSd55JY-unsplash.jpg
 
 # Start i3bar to display a workspace bar (plus the system information i3status
+# bar {
 # finds out, if available)
-bar {
-position top
-status_command i3status
-}
+# position top
+# status_command i3status
+# }

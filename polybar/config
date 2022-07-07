@@ -32,11 +32,11 @@ gray = #9aa5ce
 
 background-transparent = #00000000
 background = #24283b
-background-alt = #565f89
+background-alt = #414868
 foreground = #a9b1d6
 primary = #9ece6a
 secondary = #bb9af7
-alert = #A54242
+alert = #f7768e
 disabled = #707880
 
 [bar/main]
@@ -106,6 +106,7 @@ label-empty-padding = 1
 [module/xwindow]
 type = internal/xwindow
 label = "%title:0:60:...%%{B#00000000}%{F#24283b}%{T2}%{T-}%{F-}%{B-}"
+label-foreground = ${colors.cyan}
 label-background = ${colors.background}
 
 [module/filesystem]

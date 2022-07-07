@@ -382,6 +382,7 @@ lvim.plugins = {
 		"folke/trouble.nvim",
 		cmd = "TroubleToggle",
 	},
+	{'norcalli/nvim-colorizer.lua'},
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
