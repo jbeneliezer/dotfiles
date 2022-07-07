@@ -1,0 +1,8 @@
+alt + Escape
+	pkill -USR1 -x sxhkd
+alt + Return
+	alacritty
+alt + w
+	chromium
+alt + space
+	dmenu_run

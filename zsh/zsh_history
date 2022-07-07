@@ -1,0 +1,770 @@
+: 1657207607:0;l .config/zsh
+: 1657207607:0;ls .config/zsh
+: 1657207607:0;ls -alt .config/zsh
+: 1657207607:0;cp /opt/dotfiles/zsh/.zshrc .config/zsh/zshrc
+: 1657207607:0;cp /opt/dotfiles/zsh/.zshrc .config/zsh/
+: 1657207607:0;ls -alt
+: 1657207607:0;pwd
+: 1657207607:0;vim zshrc
+: 1657207607:0;cp asoundrc ~/.asoundrc
+: 1657207607:0;cp .asoundrc.asoundconf ~
+: 1657207607:0;l | grep asound
+: 1657207607:0;ln -s .config/zsh/zshrc .zshrc
+: 1657207607:0;v .asoundrc
+: 1657207607:0;alsamixer
+: 1657207607:0;cd .config/alsa
+: 1657207607:0;mv alsa alsa2
+: 1657207607:0;rm alsa
+: 1657207607:0;rm .asoundrc
+: 1657207607:0;rm .asoundrc.asoundconf
+: 1657207607:0;rm -rf alsa2
+: 1657207607:0;git commit -m 'just updating'
+: 1657207607:0;echo ${xrdb:background}
+: 1657207607:0;xrdb -query | grep '*color0' | awk '{print $NF}\
+'
+: 1657207607:0;echo GREEN
+: 1657207607:0;echo $GREEN
+: 1657207607:0;cd .local
+: 1657207607:0;j;dlfska
+: 1657207607:0;klfsadj
+: 1657207607:0;yay -S nerd-fonts-dejavu-complete
+: 1657207607:0;fc-list | grep dejavu
+: 1657207607:0;fc-list
+: 1657207607:0;fc-list | grep Dejavu
+: 1657207607:0;fc-list | grep Nerd
+: 1657207607:0;source .Xresources
+: 1657207607:0;v .Xresources
+: 1657207607:0;lksdjf
+: 1657207607:0;slkdfj
+: 1657207607:0;cd zsh
+: 1657207607:0;fdsa
+: 1657207607:0;v ../.zshrc
+: 1657207607:0;v .zsrhc
+: 1657207607:0;kldsfj
+: 1657207607:0;cd ~/.local/share/lunarvim
+: 1657207607:0;asdkf;
+: 1657207607:0;lkdfas;j
+: 1657207607:0;gc 'made prompt better'
+: 1657207607:0;su
+: 1657207607:0;mkdir themes
+: 1657207607:0;v
+: 1657207607:0;v themes
+: 1657207607:0;cat .Xresources
+: 1657207607:0;v setcolors.sh
+: 1657207607:0;chmod +x setcolors.sh
+: 1657207607:0;./setcolors.sh
+: 1657207607:0;lsbli
+: 1657207607:0;gc 'added alacritty'
+: 1657207607:0;v .gitignore
+: 1657207607:0;gc 'added themes'
+: 1657207607:0;rm zshrc
+: 1657207607:0;cp .Xresources .config/themes/gruvbox
+: 1657207607:0;git commit -m 'added gruvbox theme'
+: 1657207607:0;v alacritty.yml
+: 1657207607:0;cd ../zsh
+: 1657207607:0;git commit -m 'updated alacritty'
+: 1657207607:0;cd Pictures/wallpapers
+: 1657207607:0;cp wallpapers /opt/dotfiles
+: 1657207607:0;cp -r wallpapers /opt/dotfiles
+: 1657207607:0;cd i3
+: 1657207607:0;v config
+: 1657207607:0;v .gitignore\\
+'\
+'
+: 1657207607:0;git status
+: 1657207607:0;gc 'added wallpapers'
+: 1657207607:0;cd /opt/dotfiles
+: 1657207607:0;git config pull.rebase false
+: 1657207607:0;git pull
+: 1657207607:0;e .gitignore
+: 1657207607:0;git commit -m 'added wallpapers'
+: 1657207607:0;git push
+: 1657207607:0;cp config.lua defaults.lua
+: 1657207607:0;gc 'updated lvim config and install script'
+: 1657207607:0;hwclock --show
+: 1657207607:0;sudo hwclock --show
+: 1657207607:0;timedatectl set-ntp true
+: 1657207607:0;timedatectl list-timezones | grep New
+: 1657207607:0;timedatectl set-timezone America/New_York
+: 1657207607:0;timedatectl set-local-rtc 1
+: 1657207607:0;clerar
+: 1657207607:0;tar -xvf *
+: 1657207607:0;./setup.sh
+: 1657207607:0;sudo ./setup.sh
+: 1657207607:0;cp studio /usr/bin/
+: 1657207607:0;sudo cp studio /usr/bin/
+: 1657207607:0;studio
+: 1657207607:0;./studio &
+: 1657207607:0;jlink_configure -list-devices
+: 1657207607:0;cd Downloads/SimplicityStudio_v5
+: 1657207607:0;cd developer
+: 1657207607:0;cd adapter_packs
+: 1657207607:0;cd jlink
+: 1657207607:0;./jlink_configure -list-devices
+: 1657207607:0;lsblk
+: 1657207607:0;findmnt
+: 1657207607:0;l /dev
+: 1657207607:0;./jlink_configure
+: 1657207607:0;sudo dmesg | grep usb
+: 1657207607:0;rm /usr/bin/studio
+: 1657207607:0;sudo rm /usr/bin/studio
+: 1657207607:0;rm *.tgz
+: 1657207607:0;cd SimplicityStudio_v5
+: 1657207607:0;ln -s studio /usr/bin/studio
+: 1657207607:0;sudo ln -s studio /usr/bin/studio
+: 1657207607:0;./studio
+: 1657207607:0;sudo pacman -S bluez bluez-utils blueman
+: 1657207607:0;gc 'changed i3 keybindings'
+: 1657207607:0;yay -S android-studio
+: 1657207607:0;lspci -k
+: 1657207607:0;cd Sdk
+: 1657207607:0;rm -rf SimplicityStudio
+: 1657207607:0;yay -S simplicitystudio5-bin
+: 1657207607:0;yay -S simplicitystudio
+: 1657207607:0;LC_ALL=c lscpu | grep Virtualization
+: 1657207607:0;sudo pacman -S qemu virt-manager libvirt-bin
+: 1657207607:0;sudo pacman -S qemu virt-manager libvirt
+: 1657207607:0;sudo systemctl enable libvirt
+: 1657207607:0;systemctl enable libvirt
+: 1657207607:0;libvirt
+: 1657207607:0;sudo pacman -S virt-manager qemu vde2 ebtables dnsmasq bridge-utils netcat
+: 1657207607:0;sudo pacman -S virt-manager qemu vde2 dnsmasq bridge-utils netcat
+: 1657207607:0;sudo systemctl enable libvirtd
+: 1657207607:0;sudo systemctl start libvirtd
+: 1657207607:0;sudo addgroup libvirtd
+: 1657207607:0;sudo groupadd libvirtd
+: 1657207607:0;sudo usermod -G libvirtd -a jb
+: 1657207607:0;e /etc/libvirt/libvirt.conf
+: 1657207607:0;zgrep CONFIG_KVM /proc/config.gz
+: 1657207607:0;cd /etc/libvirt
+: 1657207607:0;sudo e .
+: 1657207607:0;sudo lvim .
+: 1657207607:0;cat /etc/group | grep libvirt
+: 1657207607:0;usermod -G libvirt -a jb
+: 1657207607:0;sudo usermod -G libvirt -a jb
+: 1657207607:0;vim .zshrc
+: 1657207607:0;cd /usr/share/kbd/consolefonts
+: 1657207607:0;l | grep D
+: 1657207607:0;l | grep d
+: 1657207607:0;cd jb
+: 1657207607:0;dmesg
+: 1657207607:0;sudo dmesg
+: 1657207607:0;sudo pacman -S htop
+: 1657207607:0;yay -S eww-git
+: 1657207607:0;rustup
+: 1657207607:0;cargo
+: 1657207607:0;git clone https://aur.archlinux.org/eww-git.git
+: 1657207607:0;cd eww-git
+: 1657207607:0;chmod +x eww.install
+: 1657207607:0;./eww.install
+: 1657207607:0;rm -rf eww-git
+: 1657207607:0;git clone git clone https://github.com/elkowar/eww\
+
+: 1657207607:0;git clone https://github.com/elkowar/eww\
+
+: 1657207607:0;cargo build --release
+: 1657207607:0;mkdir ~/.config/eww
+: 1657207607:0;chmod +x eww
+: 1657207607:0;./eww daemon
+: 1657207607:0;eww open example
+: 1657207607:0;e ~/.config/eww/
+: 1657207607:0;cd /opt/eww
+: 1657207607:0;cd target/release
+: 1657207607:0;./eww open example
+: 1657207607:0;./eww close example
+: 1657207607:0;./eww
+: 1657207607:0;cp eww /usr/bin
+: 1657207607:0;sudo cp eww /usr/bin
+: 1657207607:0;fej
+: 1657207607:0;feh
+: 1657207607:0;feh --help
+: 1657207607:0;cat .fehbg
+: 1657207607:0;rm .fehbg
+: 1657207607:0;e config
+: 1657207607:0;sudo pacman -S paru
+: 1657207607:0;git clone https://aur.archlinux.org/paru.git\
+
+: 1657207607:0;cd paru
+: 1657207607:0;makepkg -si
+: 1657207607:0;sudo pacman -S webkit2gtk
+: 1657207607:0;paru -s simplicitystudio
+: 1657207607:0;l | grep lilabs
+: 1657207607:0;find / | grep silabs
+: 1657207607:0;rm -rf SimplicityStudio_v5
+: 1657207607:0;cd /etc/udev/rules.d
+: 1657207607:0;rm *
+: 1657207607:0;sudo rm *
+: 1657207607:0;paru -S simplicitystudio
+: 1657207607:0;paru simplicitystudio
+: 1657207607:0;git@github.com:Axarva/dotfiles-2.0.git
+: 1657207607:0;git clone git@github.com:Axarva/dotfiles-2.0.git
+: 1657207607:0;rm dotfiles-2.0
+: 1657207607:0;sudo rm -rf dotfiles-2.0
+: 1657207607:0;cd ~/.config/eww
+: 1657207607:0;git clone git@github.com:Axarva/dotfiles-2.0.git ewwconf
+: 1657207607:0;cd ewwconf
+: 1657207607:0;cd config
+: 1657207607:0;mv eww-1920 ~/.config/eww
+: 1657207607:0;cd eww
+: 1657207607:0;cd eww-1920
+: 1657207607:0;mv * ..
+: 1657207607:0;rm -rf  eww-1920/
+: 1657207607:0;eww
+: 1657207607:0;\
+
+: 1657207607:0;eww daemon
+: 1657207607:0;eww open *
+: 1657207607:0;eww windows
+: 1657207607:0;eww open-many player_side home_dir sliders_side blur_full screenshot time_side lock_full profile sys_side power_full weather_side search_full suspend_full quote close_full reboot_full smol_calendar vpn-icon disturb-icon logout_full
+: 1657207607:0;eww kill
+: 1657207607:0;cd .config/eww
+: 1657207607:0;e i3/config
+: 1657207607:0;lsus b
+: 1657207607:0;sudo pacman -Syu brillo
+: 1657207607:0;cd SimplicityStudio
+: 1657207607:0;cd v5_workspace
+: 1657207607:0;cd outgoing
+: 1657207607:0;cd ../
+: 1657207607:0;d
+: 1657207607:0;cd textbooks
+: 1657207607:0;zathura *.pdf
+: 1657207607:0;zathura 'Andrew S. Tanenbaum - Modern Operating Systems.pdf'
+: 1657207607:0;tar xvf Ubuntu.ova
+: 1657207607:0;mv Ubuntu-disk001.vmdk ../repos
+: 1657207607:0;qemu-img convert -O qcow2 Ubuntu-disk001.vmdk Ubuntu.qcow2
+: 1657207607:0;echo .Xmodmap
+: 1657207607:0;cat .Xmodmap
+: 1657207607:0;paru matlab
+: 1657207607:0;paru -S matlab
+: 1657207607:0;rm Ubuntu-disk001.vmdk
+: 1657207607:0;mv matlab_R2021b_glnxa64.zip /opt
+: 1657207607:0;unzip matlab_R2021b_glnxa64.zip
+: 1657207607:0;mkdir matlab
+: 1657207607:0;mv mathworks_installation_help matlab
+: 1657207607:0;mv matlab_R2021b_glnxa64.zip matlab
+: 1657207607:0;mv mathworks_installation_help* matlab
+: 1657207607:0;mv mathworks* matlab
+: 1657207607:0;mv install matlab
+: 1657207607:0;cat trademarks.txt
+: 1657207607:0;mv trademarks.txt matlab
+: 1657207607:0;cat VersionInfo.xml
+: 1657207607:0;mv VersionInfo.xml matlab
+: 1657207607:0;mv installer_input.txt matalb
+: 1657207607:0;cat controllingProduct.json
+: 1657207607:0;mv bin matlab/
+: 1657207607:0;cd ui
+: 1657207607:0;cd install
+: 1657207607:0;cd product_installer_ui
+: 1657207607:0;cat bundle.index.js
+: 1657207607:0;cat bundle.index.js | grep Mat
+: 1657207607:0;cat license_agreement.pdf
+: 1657207607:0;rm matalb
+: 1657207607:0;mv license_agreement.txt matlab
+: 1657207607:0;mv readme.txt matlab
+: 1657207607:0;mv archives matlab
+: 1657207607:0;mv patents.txt matlab
+: 1657207607:0;mv sys matlab/
+: 1657207607:0;mv ui matlab/
+: 1657207607:0;mv cefclient matlab/
+: 1657207607:0;mv resources matlab/
+: 1657207607:0;mv extern matlab/
+: 1657207607:0;cd matlab
+: 1657207607:0;./install
+: 1657207607:0;matlab
+: 1657207607:0;matlab &
+: 1657207607:0;rm .zcompdump
+: 1657207607:0;rm .lesshst
+: 1657207607:0;cd .config/alacritty
+: 1657207607:0;paru ii
+: 1657207607:0;paru pfetch
+: 1657207607:0;paru treefetch
+: 1657207607:0;ip addr
+: 1657207607:0;x
+: 1657207607:0;lvim .config/lvim
+: 1657207607:0;cd .config/lvim
+: 1657207607:0;e install.sh
+: 1657207607:0;gc 'changed lvim install to symlink rather than cp'
+: 1657207607:0;sudo pacman -S openoffice
+: 1657207607:0;paru openoffice
+: 1657207607:0;sudo pacman -S libreoffice
+: 1657207607:0;sudo pacman -R openoffice
+: 1657207607:0;paru -h
+: 1657207607:0;paru -R openoffice
+: 1657207607:0;paru -R openoffice-bin
+: 1657207607:0;killall -r libreoffice
+: 1657207607:0;pgrep libreoffice
+: 1657207607:0;man pgrep
+: 1657207607:0;man
+: 1657207607:0;sudo pacman -S man
+: 1657207607:0;sudo pacman -S zathura
+: 1657207607:0;sudo pacman -S deepin-reader
+: 1657207607:0;sudo pacman -S mupdf
+: 1657207607:0;mupdf
+: 1657207607:0;cd ../..
+: 1657207607:0;mupdf *
+: 1657207607:0;paru llpp
+: 1657207607:0;llpp *
+: 1657207607:0;llpp * &
+: 1657207607:0;sudo pacman -S evince
+: 1657207607:0;../..
+: 1657207607:0;;lfksdj;;;;l;jslkdfj;slkdjf;lskdjfs;ldkfjsl;dkfjs
+: 1657207607:0;case $1\
+a ;;
+: 1657207607:0;lsusb
+: 1657207607:0;lspci
+: 1657207607:0;git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git
+: 1657207607:0;cd zsh-autocomplete
+: 1657207607:0;v .zshrc
+: 1657207607:0;v zshrc
+: 1657207607:0;v .
+: 1657207607:0;rm -rf zsh-autocomplete
+: 1657207607:0;paru irc
+: 1657207607:0;htop
+: 1657207607:0;man sudo
+: 1657207607:0;ip link
+: 1657207607:0;paru paru
+: 1657207607:0;help cargo
+: 1657207607:0;cargo help
+: 1657207607:0;cd .cargo
+: 1657207607:0;cargo update
+: 1657207607:0;cd bin
+: 1657207607:0;rustup help
+: 1657207607:0;rustup update
+: 1657207607:0;rustup show
+: 1657207607:0;sudo pacman -S zsh-autosuggestions -y
+: 1657207607:0;cd /mnt
+: 1657207607:0;sudo pacman -R zsh-autosuggestions
+: 1657207607:0;cd .c
+: 1657207607:0;sudo pacman -Syu coreshot
+: 1657207607:0;sudo pacman -S screenshot
+: 1657207607:0;paru flameshot
+: 1657207607:0;cd Android
+: 1657207607:0;cd .android
+: 1657207607:0;gc 'fist commit'
+: 1657207607:0;git remote add origin git@github.com:jbeneliezer/MyFirstApp
+: 1657207607:0;e README.md
+: 1657207607:0;gc 'added readme'
+: 1657207607:0;cd ~/Downloads
+: 1657207607:0;rm 'course schedule ese 343 543 mobile cloud computing 2022 (1).docx'
+: 1657207607:0;cd ..
+: 1657207607:0;mkdir ubuntu
+: 1657207607:0;mv Ubuntu.qcow2 ubuntu/
+: 1657207607:0;gc 'made textview work'
+: 1657207607:0;gc git@github.com:jbeneliezer/Lab2
+: 1657207607:0;git clone git@github.com:jbeneliezer/Lab2
+: 1657207607:0;git clone git@github.com:jbeneliezer/HW2
+: 1657207607:0;cd ../Downloads
+: 1657207607:0;mv 'lab2_2022(1).pptx' lab2.ppt
+: 1657207607:0;cd MyFirstApp
+: 1657207607:0;cd ../repos
+: 1657207607:0;gc 'made it work'
+: 1657207607:0;gc 'updated readme'
+: 1657207607:0;cd CC_Kotlin
+: 1657207607:0;cd app
+: 1657207607:0;cd src
+: 1657207607:0;cd main
+: 1657207607:0;cd java
+: 1657207607:0;cd com
+: 1657207607:0;cd example
+: 1657207607:0;rm hw2 cc_kotlin
+: 1657207607:0;mv hw2 cc_kotlin
+: 1657207607:0;cleear
+: 1657207607:0;../../../..
+: 1657207607:0;../../..
+: 1657207607:0;cp -r HW2 CC_Kotlin
+: 1657207607:0;rm -rf CC_Kotlin
+: 1657207607:0;cd HW2
+: 1657207607:0;gc 'changed protected to private methods'
+: 1657207607:0;gc 'refactor'
+: 1657207607:0;gc 'made more accomodating to different screen sizes'
+: 1657207607:0;gc 'simplified strings, colons still dont work'
+: 1657207607:0;paru btop
+: 1657207607:0;startxc
+: 1657207607:0;cd Downloads
+: 1657207607:0;mv 20220207_161316.jpg ../Documents/signature.jpg
+: 1657207607:0;../Documents
+: 1657207607:0;mv cover_sheet.pdf.odg cover_sheet.odg
+: 1657207607:0;../Downloads
+: 1657207607:0;rm cover_sheet.pdf
+: 1657207607:0;mv cover_sheet\ \(1\).pdf cover_sheet.pdf
+: 1657207607:0;reboto
+: 1657207607:0;sudo pacman -Syu gimp
+: 1657207607:0;e .config
+: 1657207607:0;paru alacritty-themes
+: 1657207607:0;alacritty-themes tokyonight
+: 1657207607:0;pipes.sh
+: 1657207607:0;paru cmatrix
+: 1657207607:0;cmatrix
+: 1657207607:0;paru pipes.sh
+: 1657207607:0;btop
+: 1657207607:0;alacritty-themes Tokyo_Night
+: 1657207607:0;alacritty-themes Tokyonight_Storm
+: 1657207607:0;alacritty-themes
+: 1657207607:0;ping gnu.org
+: 1657207607:0;source .tmux.conf
+: 1657207607:0;paru lsd
+: 1657207607:0;lsd -h
+: 1657207607:0;lsd --help
+: 1657207607:0;e .config/shell
+: 1657207607:0;l /opt
+: 1657207607:0;paru dmenu
+: 1657207607:0;paru nsxiv
+: 1657207607:0;paru zathura
+: 1657207607:0;paru evince
+: 1657207607:0;paru gimp
+: 1657207607:0;
+: 1657207607:0;alacritty
+: 1657207607:0;e .config/alacritty
+: 1657207607:0;poweroff
+: 1657207607:0;cd workspace
+: 1657207607:0;cd .local/share/xorg
+: 1657207607:0;cat Xorg.0.log
+: 1657207607:0;cat Xorg.0.log | less
+: 1657207607:0;cd .config/i3
+: 1657207607:0;shutdown
+: 1657207607:0;tmux split-window
+: 1657207607:0;tmux split-window -h
+: 1657207607:0;tmux split-window -c
+: 1657207607:0;tka
+: 1657207607:0;clear
+: 1657207607:0;tk jb
+: 1657207607:0;paru
+: 1657207607:0;paru brave
+: 1657207607:0;paru -R brave-nightly-bin
+: 1657207607:0;cd Documents/textbooks
+: 1657207607:0;rm ESE_330.pdf `\
+'\
+'
+: 1657207607:0;rm ESE_330.pdf
+: 1657207607:0;mv CMOS-VLSI-design.pdf ESE_330.pdf
+: 1657207607:0;cd Documents
+: 1657207607:0;mkdir ESE_330 ESE_306 ARH_202 AMS_301 ESE_441
+: 1657207607:0;cd ARH_202
+: 1657207607:0;e .config/tmux
+: 1657207607:0;ta
+: 1657207607:0;ta jb
+: 1657207607:0;treefetch
+: 1657207607:0;at -h
+: 1657207607:0;at -c
+: 1657207607:0;cd alacritty
+: 1657207607:0;paru st
+: 1657207607:0;echo $XDG_DATA_HOME
+: 1657207607:0;echo $XDG_CONFIG_HOME
+: 1657207607:0;cd .config/shell
+: 1657207607:0;source .z~
+: 1657207607:0;cd ~
+: 1657207607:0;cd .local/share
+: 1657207607:0;cp ~/Downloads/st-0.8.5.tar.gz .
+: 1657207607:0;tar xvf st-0.8.5.tar.gz
+: 1657207607:0;rm st-0.8.5.tar.gz
+: 1657207607:0;cd st-0.8.5
+: 1657207607:0;make clean install
+: 1657207607:0;st
+: 1657207607:0;sdklfj;
+: 1657207607:0;t
+: 1657207607:0;cd ~/Downloads/sur
+: 1657207607:0;cp ~/Downloads/surf-2.1.tar.gz ..
+: 1657207607:0;tar xvf surf-2.1.tar.gz
+: 1657207607:0;rm surf-2.1.tar.gz
+: 1657207607:0;cd surf-2.1
+: 1657207607:0;surf
+: 1657207607:0;surf google.com
+: 1657207607:0;cp ~/Downloads/ii-1.9.tar.gz ..
+: 1657207607:0;mv ii-1.9.tar.gz share/
+: 1657207607:0;cd share
+: 1657207607:0;tar xvf ii-1.9.tar.gz
+: 1657207607:0;rm ii-1.9.tar.gz
+: 1657207607:0;cd ii-1.9
+: 1657207607:0;cat README
+: 1657207607:0;sudo make clean install
+: 1657207607:0;ii
+: 1657207607:0;cd repos
+: 1657207607:0;cd Lab
+: 1657207607:0;cd Lab5
+: 1657207607:0;echo "Lab 5: Location" > README.md
+: 1657207607:0;git remote add origin git@github.com:jbeneliezer/lab5
+: 1657207607:0;~/Downloads
+: 1657207607:0;l | grep mp4
+: 1657207607:0;mkdir ~/Videos
+: 1657207607:0;mv XRecorder_27022022_234458.mp4 ../Videos/lab5.mp4
+: 1657207607:0;mv XRecorder_27022022_234839.mp4 ../Videos/lab5.mp4
+: 1657207607:0;reboot now
+: 1657207607:0;sudo reboot
+: 1657207607:0;e .config/lvim
+: 1657207607:0;repos
+: 1657207607:0;rm -rf UV
+: 1657207607:0;cd UV
+: 1657207607:0;git init
+: 1657207607:0;echo "app portion of UV sensor project" > README.md
+: 1657207607:0;git add .
+: 1657207607:0;git remote add origin git@github.com:jbeneliezer/UV_app
+: 1657207607:0;gc 'first commit'
+: 1657207607:0;gp -u origin master
+: 1657207607:0;git checkout -b bluetooth
+: 1657207607:0;gc 'new branch, adding bluetooth'
+: 1657207607:0;gp -u origin bluetooth
+: 1657207607:0;git checkout master
+: 1657207607:0;git checkout bluetooth
+: 1657207607:0;../repos
+: 1657207607:0;git clone git@github.com:jbeneliezer/hw5
+: 1657207607:0;e .config/nvim
+: 1657207607:0;l .config
+: 1657207607:0;jb
+: 1657207607:0;paru gitkraken
+: 1657207607:0;sudo pacman -Sy
+: 1657207607:0;ping google.com
+: 1657207607:0;shutdown now
+: 1657207607:0;sudo pacman -Rdd pipewire-media-session
+: 1657207607:0;nvim
+: 1657207607:0;cd .config
+: 1657207607:0;cd nvim
+: 1657207607:0;mkdir nvim
+: 1657207607:0;mkdir lua
+: 1657207607:0;mkdir lua/user
+: 1657207607:0;rm -rf lua
+: 1657207607:0;rm -rf nvim
+: 1657207607:0;vim settings.lua
+: 1657207607:0;./install.sh
+: 1657207607:0;sudo pacman -Syu
+: 1657207607:0;pfetch
+: 1657207607:0;reboot
+: 1657207607:0;sudo pacman -Syyu
+: 1657207607:0;paru sxhkd
+: 1657207607:0;mkdir -p .config/sxhkd/sxhkdrc
+: 1657207607:0;cd .config/sxhkd
+: 1657207607:0;cd /etc
+: 1657207607:0;cd X11
+: 1657207607:0;cd xinit
+: 1657207607:0;e xinitrc
+: 1657207607:0;sudo lvim xinitrc
+: 1657207607:0;e .config/sxhkd/`\
+'\
+'
+: 1657207607:0;e .config/sxhkd
+: 1657207607:0;sudo systemctl enable sxhkd
+: 1657207607:0;sudo lvim /etc/X11
+: 1657207607:0;e .xinitrc
+: 1657207607:0;i3-msg move container to workspace number 2
+: 1657207607:0;i3-msg move container to workspace number 7
+: 1657207607:0;i3-msg move container to workspace number 2; workspace 2 focus
+: 1657207607:0;i3-msg move container to workspace number 7; i3-msg workspace 7 focus
+: 1657207607:0;e .config/i3/config
+: 1657207607:0;e .config/i3
+: 1657207607:0;startx
+: 1657207607:0;$(xrdb -query | grep '*color15' | awk '{print $NF}')
+: 1657207607:0;xrdb -query | grep '*color15'
+: 1657207607:0;xrdb -query | grep '*color15' | awk '{print $NF}'
+: 1657207607:0;e .Xresources
+: 1657207607:0;neofetch
+: 1657207607:0;e .profile
+: 1657207607:0;at
+: 1657207607:0;paru rofi
+: 1657207607:0;sudo pacman -S rofi
+: 1657207607:0;e
+: 1657207607:0;paru tree
+: 1657207607:0;sudo pacman -S tree
+: 1657207607:0;lvim
+: 1657207607:0;tree
+: 1657207607:0;rofi
+: 1657207607:0;rofi run
+: 1657207607:0;rofi_run
+: 1657207607:0;zsh
+: 1657207607:0;exit
+: 1657199354:0;cd .config/zsh
+: 1657199362:0;git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+: 1657199385:0;e zshrc
+: 1657199457:0;source zshrc
+: 1657199616:0;cd .oh-my-zsh
+: 1657199620:0;cd custom
+: 1657199623:0;cd themes
+: 1657199814:0;oh-my-zsh
+: 1657199826:0;paru oh-my-zsh
+: 1657199859:0;paru -R oh-my-zsh
+: 1657199870:0;paru -R oh-my-zsh-git
+: 1657199907:0;rm -rf .oh-my-zsh
+: 1657199911:0;sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+: 1657200276:0;ls
+: 1657201892:0;p10k
+: 1657201992:0;cd lvim
+: 1657202006:0;cd /opt
+: 1657202010:0;neovim
+: 1657202016:0;..\\
+
+: 1657202025:0;cd dotfiles
+: 1657202035:0;gc 'update'
+: 1657202067:0;p10k configure
+: 1657202123:0;gc 'p10k'
+: 1657202127:0;gs
+: 1657202130:0;gh
+: 1657202375:0;e i3
+: 1657202418:0;sxiv
+: 1657202421:0;paru sxiv
+: 1657204567:0;la
+: 1657204571:0;ip a
+: 1657204583:0;ga .
+: 1657204590:0;gc 'updated p10k'
+: 1657204591:0;gp
+: 1657204806:0;~
+: 1657206193:0;paru fzf
+: 1657206339:0;cd .fzf
+: 1657206369:0;sudo pacman -R fzf
+: 1657206559:0;.config
+: 1657206560:0;..
+: 1657206688:0;git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+: 1657206883:0;ll
+: 1657206899:0;
+: 1657206906:0;l
+: 1657206961:0;e .
+: 1657207001:0;google hello
+: 1657207394:0;source .zshrc
+: 1657207506:0;e .zshrc
+: 1657207607:0;exec zsh
+: 1657207617:0;source .zshrc
+: 1657207624:0;e .zshrc
+: 1657207825:0;git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf\
+~/.fzf/install
+: 1657207848:0;source .zshrc
+: 1657207861:0;e .zshrc
+: 1657207882:0;e .config/alacritty
+: 1657207937:0;ls repos | fzf
+: 1657207953:0;e .config/alacritty
+: 1657208083:0;l
+: 1657208087:0;e .config/alacritty
+: 1657208326:0;lf
+: 1657208330:0;paru lf
+: 1657208399:0;env CGO_ENABLED=0 go install -ldflags="-s -w" github.com/gokcehan/lf@latest\
+
+: 1657208412:0;l
+: 1657208414:0;ll
+: 1657208415:0;l
+: 1657208422:0;rm -rf go
+: 1657208424:0;l
+: 1657208430:0;sudo ll
+: 1657208434:0;l
+: 1657208440:0;sudo rm -rf go
+: 1657208451:0;cd workspace
+: 1657208452:0;l
+: 1657208452:0;ll
+: 1657208453:0;..
+: 1657208456:0;ll
+: 1657208458:0;l
+: 1657208464:0;rm -rf workspace
+: 1657208466:0;ll
+: 1657208468:0;l
+: 1657208481:0;.config
+: 1657208483:0;gs
+: 1657208484:0;..
+: 1657208510:0;mkdir config_new
+: 1657208517:0;rmdir config_new
+: 1657208523:0;cp .config config_new
+: 1657208526:0;ll
+: 1657208527:0;l
+: 1657208534:0;cp -r .config config_new
+: 1657208535:0;l
+: 1657208543:0;ll
+: 1657208555:0;rm -rf config_new
+: 1657208555:0;l
+: 1657208559:0;.config
+: 1657208560:0;..
+: 1657208577:0;cp -r /opt/dotfiles config_new
+: 1657208578:0;ll
+: 1657208579:0;l
+: 1657208618:0;rm -rf .config
+: 1657209073:0;ln -s /var/lib/dotfiles/zsh zsh
+: 1657209090:0;t
+: 1657209096:0;ll
+: 1657209118:0;rm -rf shell wallpapers themes sxhkd
+: 1657209127:0;ln -s /var/lib/dotfiles/shell shell
+: 1657209140:0;ln -s /var/lib/dotfiles/wallpapers wallpapers
+: 1657209149:0;ln -s /var/lib/dotfiles/themes themes
+: 1657209160:0;ln -s /var/lib/dotfiles/sxhkd sxhkd
+: 1657209163:0;ll
+: 1657209171:0;rm -rf yay
+: 1657209172:0;ll
+: 1657209178:0;rm -rf README.md
+: 1657209178:0;ll
+: 1657209187:0;rm -rf .gitignore
+: 1657209189:0;ll
+: 1657209206:0;cd zsh
+: 1657209207:0;l
+: 1657209217:0;rm zshrc
+: 1657209230:0;cp ~/.zshrc zshrc
+: 1657209231:0;ll
+: 1657209236:0;e zshrc
+: 1657209249:0;~
+: 1657209250:0;ll
+: 1657209263:0;rm .zshrc .zshrc.pre-oh-my-zsh
+: 1657209275:0;ln -s .config/zsh/zshrc .zshrc
+: 1657209293:0;.config
+: 1657209296:0;~
+: 1657209300:0;/var/lib/dotfiles
+: 1657209301:0;l
+: 1657209303:0;gs
+: 1657209304:0;ga .
+: 1657209309:0;gc 'updated zsh'
+: 1657209310:0;gp
+: 1657209312:0;ll
+: 1657209314:0;~
+: 1657209316:0;.config
+: 1657209316:0;l
+: 1657209318:0;ll
+: 1657209391:0;e zsh
+: 1657209438:0;/var/li
+: 1657209444:0;/var/lib/dotfiles
+: 1657209444:0;l
+: 1657209449:0;rm -rf .gitignore
+: 1657209451:0;gs
+: 1657209457:0;ll
+: 1657209465:0;rm llpp.conf
+: 1657209474:0;rm -rf Android\ Open\ Source\ Project
+: 1657209478:0;rm -rf BraveSoftware
+: 1657209481:0;rm -rf btop
+: 1657209550:0;rm -rf cef_user_data chromium dconf GIMP Google gtk-2.0 gtk-3.0 htop jxbrowser libreoffice neofetch pulse SEGGER SimplicityStudio spotify vlc yarn yay mimeapps.list
+: 1657209551:0;ll
+: 1657209558:0;rm -rf git
+: 1657209559:0;l
+: 1657209562:0;cd X11
+: 1657209563:0;l
+: 1657209564:0;ll
+: 1657209568:0;e .xinitrc
+: 1657209582:0;rm -rf .xinitrc
+: 1657209584:0;l
+: 1657209603:0;mv ~/.xinitrc .
+: 1657209604:0;l
+: 1657209606:0;ll
+: 1657209612:0;mv .xinitrc xinitrc
+: 1657209612:0;l
+: 1657209623:0;ll
+: 1657209628:0;~/.config
+: 1657209629:0;l
+: 1657209630:0;ll
+: 1657209634:0;cd X11
+: 1657209635:0;l
+: 1657209635:0;ll
+: 1657209640:0;rm .xinitrc
+: 1657209641:0;..
+: 1657209648:0;rm -rf X11
+: 1657209659:0;ln -s /var/lib/dotfiles/X11 X11
+: 1657209659:0;l
+: 1657209677:0;ln -s X11/xinitrc ~/.xinitrc
+: 1657209679:0;~
+: 1657209679:0;l
+: 1657209680:0;ll
+: 1657209690:0;rm .xinitrc
+: 1657209694:0;.config/X11
+: 1657209695:0;l
+: 1657209708:0;ln -s xinitrc ~/.xinitrc
+: 1657209709:0;~
+: 1657209710:0;l
+: 1657209710:0;ll
+: 1657209718:0;rm .xinitrc
+: 1657209728:0;ln .config/X11/xinitrc .xinitrc
+: 1657209729:0;ll
+: 1657209749:0;rm .xinitrc
+: 1657209750:0;ll
+: 1657209764:0;ln -s .config/X11/xinitrc .xinitrc
+: 1657209766:0;ll
+: 1657209784:0;/var/lib/dotfiles
+: 1657209785:0;ll
+: 1657209787:0;gs
+: 1657209789:0;ga .
