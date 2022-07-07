@@ -2,7 +2,11 @@ font:
   normal:
     family: DejaVuSansMono Nerd Font
   size: 9
-window.opacity: 1.0
+window:
+  opacity: 1.0
+  padding:
+    x: 0
+    y: 20
 # Colors
 colors:
   name: TokyoNight Storm

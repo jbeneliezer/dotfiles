@@ -1,4 +1,4 @@
-# mae sxhkd reload its configuration files
+# make sxhkd reload its configuration files
 alt + Escape
 	pkill -USR1 -x sxhkd
 
@@ -26,8 +26,11 @@ alt + ctrl + {h,j,k,l}
 alt + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
+alt + {_, shift + }{h, j, k, l}
+	bspc node -{f,s} {west,south,north,east}
+
 alt + w
 	chromium
 
-alt + space
-	dmenu_run
+alt + @space
+	rofi -show run
