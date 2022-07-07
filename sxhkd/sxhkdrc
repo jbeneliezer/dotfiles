@@ -1,8 +1,33 @@
+# mae sxhkd reload its configuration files
 alt + Escape
 	pkill -USR1 -x sxhkd
-alt + Return
-	alacritty
+
+# quit or restart bspwm
+alt + shift + {e,r}
+	bspc {quit, wm -r}
+
+# create a new terminal window or swap the current one to the biggest one in the screen 
+alt + {_,shift + }Return
+	{alacritty, bspc node -s biggest.local}
+ 
+# close or kill a window
+alt + {_,shift + }q
+	bspc node -{c, k}
+ 
+# change the window state
+alt + {t,ctrl + t,l,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+ 
+# expand a window by moving one of its side outward
+alt + ctrl + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+ 
+# focus or send a window to the given desktop
+alt + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
 alt + w
 	chromium
+
 alt + space
 	dmenu_run
