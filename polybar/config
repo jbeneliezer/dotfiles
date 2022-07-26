@@ -49,13 +49,14 @@ radius = 11
 
 font-0 = Monospace:style=bold:size=10;2
 font-1 = DejaVuSansMono Nerd Font Mono:style=bold:size=14;3
+font-3 = DejaVuSansMono Nerd Font Mono:style=bold:size=10;2
 
 background = ${colors.background-transparent}
 foreground = ${colors.foreground}
 
 line-size = 2pt
 
-border-size = 3pt
+border-size = 5pt
 border-color = ${colors.background-transparent}
 
 padding-left = 0

@@ -82,6 +82,7 @@ plugins=(
 	git
 	web-search
 	zsh-autosuggestions
+	zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh

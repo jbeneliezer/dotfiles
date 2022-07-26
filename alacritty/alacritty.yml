@@ -5,7 +5,7 @@ font:
 window:
   opacity: 1.0
   padding:
-    x: 0
+    x: 10
     y: 20
 # Colors
 colors:
@@ -38,6 +38,12 @@ colors:
     cyan: '0x7dcfff'
     white: '0xc0caf5'
 
+cursor:
+  style:
+    shape: Beam
+  vi_mode_style:
+    shape: Block
+
   indexed_colors:
     - { index: 16, color: '0xff9e64' }
     - { index: 17, color: '0xdb4b4b' }
@@ -47,6 +53,7 @@ key_bindings:
   - { key: C, mods: Alt, action: Copy }
   - { key: Up, mods: Control, action: IncreaseFontSize }
   - { key: Down, mods: Control, action: DecreaseFontSize }
+  - { key: Return, mods: shift, chars: "; \\\x0a" }
 shell:
   program: /bin/zsh
   args:
