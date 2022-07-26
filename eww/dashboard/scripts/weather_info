@@ -9,7 +9,7 @@ cache_weather_hex=${cache_dir}/weather-hex
 cache_weather_icon=${cache_dir}/weather-icon
 
 ## Weather data
-KEY="416a2e0aa36d0304235098f7085b67bd"
+KEY="Key"
 ID="New York"
 UNIT="imperial"	# Available options : 'metric' or 'imperial'
 
