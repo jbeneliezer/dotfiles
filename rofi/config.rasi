@@ -1,0 +1,6 @@
+configuration {
+ modi: "window,drun,ssh,combi";
+ font: "DejaVuSansMono";
+ combi-modi: "window,drun,ssh, windowcd, run, keys, filebrowser";
+}
+@theme "tokyonight"

@@ -2,7 +2,7 @@
 alias ls='ls --color=auto'
 alias l='ls -F'
 alias la='ls -aF'
-alias ll='ls -altF'
+alias ll='lsd -AlF --group-dirs first'
 alias e='$EDITOR'
 alias v='$EDITOR'
 alias cf='cd $XDG_CONFIG_HOME'
@@ -23,3 +23,6 @@ alias ga='git add '
 alias gs='git status'
 alias gc='git commit -m '
 alias gp='git push'
+
+# Alacritty themes
+alias at='alacritty-themes'

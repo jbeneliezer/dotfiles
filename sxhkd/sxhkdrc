@@ -1,0 +1,73 @@
+# make sxhkd reload its configuration files
+alt + Escape
+	pkill -USR1 -x sxhkd
+
+# quit or restart bspwm
+alt + shift + {e,r}
+	bspc {quit, wm -r}
+
+#
+# launch programs
+#
+
+# create a new terminal window or swap the current one to the biggest one in the screen 
+alt + {_,shift + }Return
+	{alacritty, bspc node -s biggest.local}
+
+# open a browser
+alt + w
+	chromium
+
+# launch rofi
+alt + @space
+	rofi -show run
+
+# launch dashboard
+alt + semicolon
+	~/.config/eww/dashboard/launch_dashboard
+
+# super
+	# ~/.config/eww/dashboard/launch_dashboard
+
+#
+# window keybinds
+#
+ 
+# close or kill a window
+alt + {_,shift + }q
+	bspc node -{c, k}
+ 
+# change the window state
+alt + {t,ctrl + t,y,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+ 
+# expand a window by moving one of its side outward
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+ 
+# focus a desktop
+alt + {1-9,0}
+	bspc desktop -f '^{1-9,10}'
+
+# send to a desktop and focus it
+alt + shift + {1-9,0}
+	bspc node -d '^{1-9,10}' --follow
+
+# navigate nodes
+alt + {h, j, k, l}
+	bspc node -f {west,south,north,east}
+
+# swap nodes
+alt + shift + {h, j, k, l}
+	bspc node -s {west,south,north,east} --follow
+
+# Smart resize, will grow or shrink depending on location.
+# Will always grow for floating nodes.
+alt + ctrl + {Left,Down,Up,Right}
+	n=10; \
+	{ d1=left;   d2=right;  dx=-$n; dy=0;   \
+	, d1=bottom; d2=top;    dx=0;   dy=$n;  \
+	, d1=top;    d2=bottom; dx=0;   dy=-$n; \
+	, d1=right;  d2=left;   dx=$n;  dy=0;   \
+	} \
+	bspc node --resize $d1 $dx $dy || bspc node --resize $d2 $dx $dy
+

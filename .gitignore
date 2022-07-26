@@ -1,13 +1,2 @@
-*/
 zsh/zsh_history
-
-!README.md
-!*/*/
-!alacritty/
-!i3/
-!shell/
-!lvim/
-!tmux/
-!zsh/
-!themes/
-!wallpapers/
+eww
