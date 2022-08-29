@@ -1,5 +1,5 @@
 # source profile, aliases, git prompt
-source ~/.config/shell/.aliases
+source ~/.config/shell/aliases
 source ~/.config/shell/profile
 source ~/.config/zsh/git-prompt.sh
 
