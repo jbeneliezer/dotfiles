@@ -26,3 +26,15 @@ configs.setup({
 		enable_autocmd = false,
 	},
 })
+
+-- treesitter context
+local context_ok, context = pcall(require, "treesitter-context")
+if not context_ok then
+	return
+end
+
+context.setup({
+	enable = true,
+	mode = "cursor",
+	separator = "=",
+})

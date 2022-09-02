@@ -1,5 +1,5 @@
 local opts = { noremap = true, silent = true }
-local term_opts = { silent = true }
+--[[ local term_opts = { silent = true } ]]
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -17,8 +17,11 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
-keymap("n", "*", "", opts);
-keymap("v", "*", "", opts);
+keymap("n", "*", "", opts)
+keymap("v", "*", "", opts)
+
+keymap("n", "<s-j>", "<c-d>zz", opts);
+keymap("n", "<s-k>", "<c-u>zz", opts);
 
 keymap("n", "<leader>w", "<cmd>w<cr>", opts)
 keymap("n", "<leader>q", "<cmd>q<cr>", opts)
@@ -39,8 +42,8 @@ keymap("n", "<c-Left>", "<cmd>vertical resize -2<cr>", opts)
 keymap("n", "<c-Right>", "<cmd>vertical resize +2<cr>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", "<cmd>bnext<cr>", opts)
-keymap("n", "<S-h>", "<cmd>bprevious<cr>", opts)
+keymap("n", "<s-l>", "<cmd>bnext<cr>", opts)
+keymap("n", "<s-h>", "<cmd>bprevious<cr>", opts)
 keymap("n", "<leader>c", "<cmd>Bdelete!<cr>", opts)
 
 -- Move text up and down
