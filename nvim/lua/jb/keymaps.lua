@@ -51,12 +51,12 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Move text up and down
-keymap("n", "<leader>j", "<esc><cmd>m .+1<cr>==", opts)
-keymap("n", "<leader>k", "<esc><cmd>m .-2<cr>==", opts)
-keymap("v", "<leader>j", "<cmd>m '>+1<cr>gv=gv", opts)
-keymap("v", "<leader>k", "<cmd>m '<-2<cr>gv=gv", opts)
-keymap("x", "<leader>j", "<cmd>m '>+1<cr>gv=gv", opts)
-keymap("x", "<leader>k", "<cmd>m '<-2<cr>gv=gv", opts)
+--[[ keymap("n", "<leader>j", "<cmd>m .+1<cr>==", opts) ]]
+--[[ keymap("n", "<leader>k", "<cmd>m .-2<cr>==", opts) ]]
+--[[ keymap("v", "<leader>j", "<cmd>m '>+1<cr>gv=gv", opts) ]]
+--[[ keymap("v", "<leader>k", "<cmd>m '<-2<cr>gv=gv", opts) ]]
+--[[ keymap("x", "<leader>j", "<cmd>m '>+1<cr>gv=gv", opts) ]]
+--[[ keymap("x", "<leader>k", "<cmd>m '<-2<cr>gv=gv", opts) ]]
 
 -- Paste in visual mode
 keymap("v", "p", '"_dP', opts)
