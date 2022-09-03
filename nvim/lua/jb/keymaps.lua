@@ -51,4 +51,5 @@ keymap("v", "p", '"_dP', opts)
 keymap("n", "<c-t>", "<cmd>ToggleTerm<cr>", opts)
 keymap("t", "<c-t>", "<cmd>ToggleTerm<cr>", opts)
 
+-- Git
 keymap("n", "<c-g>", "<cmd>lua _LAZYGIT_TOGGLE()<cr>", opts)

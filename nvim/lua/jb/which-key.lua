@@ -80,8 +80,8 @@ local opts = {
 
 local mappings = {
 	["/"] = { '<cmd>lua require("Comment.api").toggle_current_linewise()<CR>', "Comment" },
-	[";"] = { "<cmd>Alpha<cr>", "Alpha" },
-	["a"] = { "G=gg2<c-o>zz", "Style" },
+	["."] = { "<cmd>Alpha<cr>", "Alpha" },
+	["s"] = { "G=gg2<c-o>zz", "Style" },
 	["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["o"] = { "<c-w>o", "Fullscreen" },
@@ -146,7 +146,7 @@ local mappings = {
 			"<cmd>Telescope lsp_workspace_diagnostics<cr>",
 			"Workspace Diagnostics",
 		},
-		f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+		f = { "<cmd>lua vim.lsp.buf.format({async = true})<cr>", "Format" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
 		j = {
