@@ -18,7 +18,7 @@ null_ls.setup({
 		formatting.stylua,
 		formatting.rustfmt,
 		-- formatting.uncrustify,
-		formatting.astyle.with({ extra_args = { "--indent=force-tab=4" } }),
+		--[[ formatting.astyle.with({ extra_args = { "--indent=force-tab=4" } }), ]]
 
 		diagnostics.flake8,
 		diagnostics.cppcheck.with({

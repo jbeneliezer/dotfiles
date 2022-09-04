@@ -20,8 +20,8 @@ vim.g.maplocalleader = " "
 keymap("n", "*", "", opts)
 keymap("v", "*", "", opts)
 
-keymap("n", "<s-j>", "<c-d>zz", opts);
-keymap("n", "<s-k>", "<c-u>zz", opts);
+keymap("n", "<s-j>", "<c-d>zz", opts)
+keymap("n", "<s-k>", "<c-u>zz", opts)
 
 -- Better window navigation
 keymap("n", "<c-h>", "<c-w>h", opts)
@@ -53,3 +53,16 @@ keymap("t", "<c-t>", "<cmd>ToggleTerm<cr>", opts)
 
 -- Git
 keymap("n", "<c-g>", "<cmd>lua _LAZYGIT_TOGGLE()<cr>", opts)
+keymap("t", "<c-g>", "<cmd>ToggleTerm<cr>", opts)
+
+-- Dap
+keymap("n", "t", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
+keymap("n", "<F8>", "<cmd>lua require'dap'.continue()<cr>", opts)
+keymap("n", "<F9>", "<cmd>lua require'dap'.step_into()<cr>", opts)
+keymap("n", "<F10>", "<cmd>lua require'dap'.step_over()<cr>", opts)
+keymap("n", "<F11>", "<cmd>lua require'dap'.step_out()<cr>", opts)
+keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
+keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
+keymap("n", "<c-d>", "<cmd>lua require'dapui'.toggle()<cr>", opts)
+keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
+

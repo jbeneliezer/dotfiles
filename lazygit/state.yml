@@ -1,6 +1,7 @@
 lastupdatecheck: 0
 recentrepos:
 - /var/lib/dotfiles
+- /home/jb/repos/leetcode
 startuppopupversion: 5
 customcommandshistory: []
 hidecommandlog: false
