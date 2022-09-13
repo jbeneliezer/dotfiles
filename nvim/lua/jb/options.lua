@@ -24,8 +24,8 @@ local options = {
 	updatetime = 300,
 	writebackup = false,
 	expandtab = false,
-	shiftwidth = 4,
-	tabstop = 4,
+	shiftwidth = 2,
+	tabstop = 2,
 	cursorline = true,
 	cursorcolumn = true,
 	number = true,
@@ -36,7 +36,6 @@ local options = {
 	scrolloff = 8,
 	sidescrolloff = 8,
 }
-
 
 for k, v in pairs(options) do
 	vim.opt[k] = v

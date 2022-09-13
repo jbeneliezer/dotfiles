@@ -46,10 +46,7 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim")
 	use("windwp/nvim-autopairs")
 	use("numToStr/Comment.nvim")
-	use({
-		"terrortylor/nvim-comment",
-		config = require("nvim_comment").setup(),
-	})
+	use("lukas-reineke/indent-blankline.nvim")
 	use({
 		"norcalli/nvim-colorizer.lua",
 		config = require("colorizer").setup(),
@@ -57,12 +54,17 @@ return packer.startup(function(use)
 	use("akinsho/toggleterm.nvim")
 	use("ahmedkhalf/project.nvim")
 	use("lewis6991/impatient.nvim")
+	--[[ use("ggandor/lightspeed.nvim") ]]
+	--[[ use({ ]]
+	--[[ 	"ggandor/leap.nvim", ]]
+	--[[ 	config = require("leap").set_default_keymaps(), ]]
+	--[[ }) ]]
+	--[[ use("tpope/vim-repeat") ]]
 
 	-- Colors
 	use("folke/tokyonight.nvim")
-	use("lukas-reineke/indent-blankline.nvim")
 
-	-- cmp plugins
+	-- Cmp
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
@@ -81,13 +83,14 @@ return packer.startup(function(use)
 	--[[ }) ]]
 
 	-- snippets
-	use("L3MON4D3/LuaSnip") --snippet engine
-	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
+	use("L3MON4D3/LuaSnip")
+	use("rafamadriz/friendly-snippets")
 
 	-- LSP
-	use("neovim/nvim-lspconfig") -- enable LSP
-	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
-	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
+	use("neovim/nvim-lspconfig")
+	use("williamboman/nvim-lsp-installer")
+	use("jose-elias-alvarez/null-ls.nvim")
+	use("WhoIsSethDaniel/toggle-lsp-diagnostics.nvim")
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
@@ -122,6 +125,8 @@ return packer.startup(function(use)
 	use("mfussenegger/nvim-dap")
 	use("rcarriga/nvim-dap-ui")
 	use("theHamsta/nvim-dap-virtual-text")
+	use("nvim-telescope/telescope-dap.nvim")
+	use("Joakker/lua-json5")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

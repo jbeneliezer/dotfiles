@@ -1,8 +1,8 @@
 local status_ok, _ = pcall(require, "lspconfig")
 if not status_ok then
-  return
+	return
 end
 
-require "jb.lsp.lsp-installer"
+require("jb.lsp.lsp-installer")
 require("jb.lsp.handlers").setup()
-require "jb.lsp.null-ls"
+require("jb.lsp.null-ls")

@@ -10,6 +10,13 @@ return {
 					[vim.fn.stdpath("config") .. "/lua"] = true,
 				},
 			},
+			format = {
+				enable = true,
+				defaultConfig = {
+					indent_style = "tab",
+					indent_size = "2",
+				},
+			},
 		},
 	},
 }

@@ -13,6 +13,17 @@ if not dap_virtual_status then
 	return
 end
 
+local json5_ok, json5 = pcall(require, "json5")
+if not json5_ok then
+	return
+end
+
+-- Cppdbg
+dap.ext.vscode.json_decode = json5.parse
+dap.ext.vscode.load_launchjs(nil, { cppdbg = {'c', 'cpp'} })
+
+vim.g.dap_virtual_text = true
+
 dap.adapters.cpp = {
 	type = "executable",
 	attach = {
@@ -23,20 +34,20 @@ dap.adapters.cpp = {
 	name = "gdb",
 }
 
-dap.configurations.cpp = {
-	{
-		name = "gdb",
-		type = "cpp",
-		request = "launch",
-		program = function()
-			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-		end,
-		cwd = "${workspaceFolder}",
-		externalTerminal = false,
-		stopOnEntry = false,
-		args = {},
-	},
-}
+--[[ dap.configurations.cpp = { ]]
+--[[ 	{ ]]
+--[[ 		name = "gdb", ]]
+--[[ 		type = "cpp", ]]
+--[[ 		request = "launch", ]]
+--[[ 		program = function() ]]
+--[[ 			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file") ]]
+--[[ 		end, ]]
+--[[ 		cwd = "${workspaceFolder}", ]]
+--[[ 		externalTerminal = false, ]]
+--[[ 		stopOnEntry = false, ]]
+--[[ 		args = {}, ]]
+--[[ 	}, ]]
+--[[ } ]]
 
 dapui.setup({
 	layouts = {

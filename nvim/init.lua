@@ -1,7 +1,6 @@
 require("jb.options")
 require("jb.keymaps")
 require("jb.plugins")
-require("jb.colorscheme")
 require("jb.indent-blankline")
 require("jb.cmp")
 require("jb.lsp")

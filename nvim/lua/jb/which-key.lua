@@ -79,7 +79,7 @@ local opts = {
 }
 
 local mappings = {
-	["/"] = { '<cmd>lua require("Comment.api").toggle_current_linewise()<CR>', "Comment" },
+	["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" },
 	["."] = { "<cmd>Alpha<cr>", "Alpha" },
 	["j"] = { "<cmd>m .+1<cr>==", "which_key_ignore" },
 	["k"] = { "<cmd>m .-2<cr>==", "which_key_ignore" },
@@ -97,10 +97,14 @@ local mappings = {
 		p = { "<cmd>Telescope projects<cr>", "Projects" },
 		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
 		c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
-		h = { "<cmd>Telescope help_tags<cr>", "Help" },
+		h = { "<cmd>Telescope highlights<cr>", "Help" },
+		j = {
+			"<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
+			"Colorscheme with Preview",
+		},
 		m = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
 		o = { "<cmd>Telescope oldfiles<cr>", "Recent" },
-		R = { "<cmd>Telescope registers<cr>", "Registers" },
+		r = { "<cmd>Telescope registers<cr>", "Registers" },
 		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
 	},
@@ -179,7 +183,7 @@ local vopts = {
 	nowait = true, -- use `nowait` when creating keymaps
 }
 local vmappings = {
-	["/"] = { '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>', "Comment" },
+	["/"] = { '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', "Comment" },
 	["j"] = { ":m '>+1<cr>gv=gv", "Move Down" },
 	["k"] = { ":m '<-2<cr>gv=gv", "Move Up" },
 }
