@@ -38,9 +38,6 @@ lvim.keys.visual_mode["K"] = ":m '<-2<cr>gv=gv"
 lvim.keys.insert_mode["<c-j>"] = "<ESC>:m .+1<cr>a"
 lvim.keys.insert_mode["<c-k>"] = "<ESC>:m .-2<cr>a"
 
--- Paste in visual mode
-lvim.keys.visual_mode["<c-p>"] = '"_dP'
-
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
 local _, actions = pcall(require, "telescope.actions")
@@ -77,7 +74,6 @@ lvim.builtin.which_key.mappings = {
 	["!"] = { "<cmd>q!<cr>", "Force Quit" },
 	["c"] = { "<cmd>BufferClose!<cr>", "Close Buffer" },
 	["s"] = { ":w ", "Save as" },
-	["n"] = { "<cmd>ene ", "New File" },
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["o"] = { "<c-w>o", "Fullscreen" },
 	["a"] = { "G=gg2<c-o>zz", "Style" },
@@ -108,6 +104,22 @@ lvim.builtin.which_key.mappings = {
 			"Sort by language",
 		},
 	},
+	-- d = {
+	-- 	name = "Debug",
+	-- 	t = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
+	-- 	b = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
+	-- 	c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
+	-- 	C = { "<cmd>lua require'dap'.run_to_cursor()<cr>", "Run To Cursor" },
+	-- 	d = { "<cmd>lua require'dap'.disconnect()<cr>", "Disconnect" },
+	-- 	g = { "<cmd>lua require'dap'.session()<cr>", "Get Session" },
+	-- 	i = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
+	-- 	o = { "<cmd>lua require'dap'.step_over()<cr>", "Step Over" },
+	-- 	u = { "<cmd>lua require'dap'.step_out()<cr>", "Step Out" },
+	-- 	p = { "<cmd>lua require'dap'.pause.toggle()<cr>", "Pause" },
+	-- 	r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl" },
+	-- 	s = { "<cmd>lua require'dap'.continue()<cr>", "Start" },
+	-- 	q = { "<cmd>lua require'dap'.close()<cr>", "Quit" },
+	-- },
 	p = {
 		name = "Packer",
 		c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -280,7 +292,6 @@ lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
 lvim.builtin.nvimtree.quit_on_open = 1
--- lvim.builtin.nvimtree.hijack_netrw = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -362,27 +373,27 @@ lvim.plugins = {
 	-- Themes
 	{"folke/tokyonight.nvim"},
 	{'morhetz/gruvbox'},
-	{'tomasr/molokai'},
-	{'sainnhe/sonokai'},
-	{'sainnhe/everforest'},
-	{'jnurmine/Zenburn'},
-	{'jacoborus/tender.vim'},
 	{'mhartington/oceanic-next'},
-	{'AlessandroYorba/Alduin'},
-	{'savq/melange'},
-	{'fcpg/vim-farout'},
-	{'Mangeshrex/uwu.vim'},
-	{'Mofiqul/dracula.nvim'},
+	{'mangeshrex/everblush.vim'},
 	{'bluz71/vim-nightfly-guicolors'},
 	{'EdenEast/nightfox.nvim'},
+	-- {'fcpg/vim-farout'},
+	-- {'jacoborus/tender.vim'},
+	-- {'savq/melange'},
+	-- {'sainnhe/everforest'},
+	-- {'tomasr/molokai'},
+	-- {'sainnhe/sonokai'},
+	-- {'jnurmine/Zenburn'},
+	-- {'Mofiqul/dracula.nvim'},
 
 	-- Other
 	{'ThePrimeagen/harpoon'},
 	{
-		"folke/trouble.nvim",
+		'folke/trouble.nvim',
 		cmd = "TroubleToggle",
 	},
 	{'norcalli/nvim-colorizer.lua'},
+	{'lukas-reineke/indent-blankline.nvim'},
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
@@ -390,5 +401,4 @@ lvim.plugins = {
 -- { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
 -- { "BufWinEnter", "*.lua", ":normal G=gg" },
 -- }
-
 
