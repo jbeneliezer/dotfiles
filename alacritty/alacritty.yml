@@ -9,16 +9,16 @@ window:
     y: 20
 # Colors
 colors:
-  name: TokyoNight Storm
+  name: TokyoNight Night
   author: Folke
   # Default colors
   primary:
-    background: '0x24283b'
+    background: '0x1a1b26'
     foreground: '0xc0caf5'
 
   # Normal colors
   normal:
-    black: '0x1D202F'
+    black: '0x15161E'
     red: '0xf7768e'
     green: '0x9ece6a'
     yellow: '0xe0af68'
@@ -38,6 +38,10 @@ colors:
     cyan: '0x7dcfff'
     white: '0xc0caf5'
 
+  indexed_colors:
+    - { index: 16, color: '0xff9e64' }
+    - { index: 17, color: '0xdb4b4b' }
+
 cursor:
   style:
     shape: Beam
@@ -53,9 +57,9 @@ key_bindings:
   - { key: C, mods: Alt, action: Copy }
   - { key: Up, mods: Control, action: IncreaseFontSize }
   - { key: Down, mods: Control, action: DecreaseFontSize }
-  - { key: Return, mods: shift, chars: "; \\\x0a" }
+  - { key: Return, mods: shift, chars: "; \\\n" }
 shell:
   program: /bin/zsh
   args:
     - --login
-theme: Tokyonight_Storm
+theme: Tokyonight_Night

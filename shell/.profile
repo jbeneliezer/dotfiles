@@ -11,7 +11,7 @@
 [ -d "$HOME/.npm-global/bin" ] && PATH="$HOME/.npm-global/bin:$PATH"
 
 BROWSER=chromium
-EDITOR=lvim
+EDITOR=nvim
 # "$HOME/.cargo/env"
 
 XDG_CONFIG_HOME=$HOME/.config
