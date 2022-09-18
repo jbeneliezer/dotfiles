@@ -128,6 +128,9 @@ return packer.startup(function(use)
 	use("nvim-telescope/telescope-dap.nvim")
 	use("Joakker/lua-json5")
 
+	-- Async
+	use("skywind3000/asyncrun.vim")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

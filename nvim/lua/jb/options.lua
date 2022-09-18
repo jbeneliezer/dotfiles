@@ -8,6 +8,7 @@ local options = {
 	incsearch = true,
 	hlsearch = false,
 	ignorecase = true,
+	laststatus = 0,
 	mouse = "a",
 	pumheight = 10,
 	showmode = false,
@@ -35,6 +36,7 @@ local options = {
 	wrap = false,
 	scrolloff = 8,
 	sidescrolloff = 8,
+	ruler = false,
 }
 
 for k, v in pairs(options) do

@@ -1,13 +1,37 @@
 font:
   normal:
     family: DejaVuSansMono Nerd Font
-  size: 11
+  size: 12
 window:
   opacity: 1.0
   padding:
     x: 10
     y: 20
-# Colors
+
+cursor:
+  style:
+    shape: Beam
+  vi_mode_style:
+    shape: Block
+
+  indexed_colors:
+    - { index: 16, color: '0xff9e64' }
+    - { index: 17, color: '0xdb4b4b' }
+
+key_bindings:
+  - { key: V, mods: Alt, action: Paste }
+  - { key: C, mods: Alt, action: Copy }
+  - { key: Up, mods: Control, action: IncreaseFontSize }
+  - { key: Down, mods: Control, action: DecreaseFontSize }
+  - { key: Return, mods: shift, chars: "; \\\n" }
+  - { key: F, mods: Control, chars: "tt\n" }
+  - { key: G, mods: Control, chars: "lazygit\n" }
+
+shell:
+  program: /bin/zsh
+  args:
+    - --login
+
 colors:
   name: TokyoNight Night
   author: Folke
@@ -41,25 +65,4 @@ colors:
   indexed_colors:
     - { index: 16, color: '0xff9e64' }
     - { index: 17, color: '0xdb4b4b' }
-
-cursor:
-  style:
-    shape: Beam
-  vi_mode_style:
-    shape: Block
-
-  indexed_colors:
-    - { index: 16, color: '0xff9e64' }
-    - { index: 17, color: '0xdb4b4b' }
-
-key_bindings:
-  - { key: V, mods: Alt, action: Paste }
-  - { key: C, mods: Alt, action: Copy }
-  - { key: Up, mods: Control, action: IncreaseFontSize }
-  - { key: Down, mods: Control, action: DecreaseFontSize }
-  - { key: Return, mods: shift, chars: "; \\\n" }
-shell:
-  program: /bin/zsh
-  args:
-    - --login
 theme: Tokyonight_Night

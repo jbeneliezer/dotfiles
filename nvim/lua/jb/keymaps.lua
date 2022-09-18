@@ -59,6 +59,9 @@ keymap("t", "<c-t>", "<cmd>ToggleTerm<cr>", opts)
 -- Git
 keymap("n", "<c-g>", "<cmd>lua _LAZYGIT_TOGGLE()<cr>", opts)
 
+-- T
+keymap("n", "<c-f>", "<cmd>!sh tt<cr>", opts)
+
 -- Dap
 keymap("n", "<leader>t", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
 keymap("n", "<F8>", "<cmd>lua require'dap'.continue()<cr>", opts)
