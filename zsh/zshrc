@@ -165,3 +165,5 @@ alacritty-themes Tokyonight_Night > /dev/null 2>&1
 [[ ! -f /opt/dotfiles/zsh/.p10k.zsh ]] || source /opt/dotfiles/zsh/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(zoxide init zsh)"
