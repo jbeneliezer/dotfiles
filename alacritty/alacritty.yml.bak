@@ -4,7 +4,6 @@ font:
   size: 12
 window:
   opacity: 1.0
-  # opacity: 0.9
   padding:
     x: 10
     y: 20
@@ -25,7 +24,8 @@ key_bindings:
   - { key: Up, mods: Control, action: IncreaseFontSize }
   - { key: Down, mods: Control, action: DecreaseFontSize }
   - { key: Return, mods: shift, chars: "; \\\n" }
-  - { key: T, mods: Control, chars: "_t\n" }
+  - { key: F, mods: Control, chars: "tt\n" }
+  - { key: T, mods: Control, chars: "tt\n" }
   - { key: G, mods: Control, chars: "lazygit\n" }
 
 shell:

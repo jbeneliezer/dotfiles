@@ -27,3 +27,6 @@ alias gp='git push'
 
 # Alacritty themes
 alias at='alacritty-themes'
+
+# lf
+alias lf='lfub'

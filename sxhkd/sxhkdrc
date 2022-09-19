@@ -39,7 +39,7 @@ alt + {_,shift + }q
  
 # change the window state
 alt + {t,ctrl + t,y,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+	bspc node -t {tiled,pseudo_tiled,\~floating,\~fullscreen}
  
 # expand a window by moving one of its side outward
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
@@ -47,10 +47,18 @@ alt + {t,ctrl + t,y,f}
 # focus a desktop
 alt + {1-9,0}
 	bspc desktop -f '^{1-9,10}'
+ 
+# cycle desktops
+alt + {n, p}
+	bspc desktop -f {next, prev}
 
 # send to a desktop and focus it
 alt + shift + {1-9,0}
 	bspc node -d '^{1-9,10}' --follow
+
+# send to {next, prev} desktop and focus it
+alt + shift + {n, p}
+	bspc node -d {next, prev} --follow
 
 # navigate nodes
 alt + {h, j, k, l}
