@@ -39,7 +39,7 @@ alt + {_,shift + }q
  
 # change the window state
 alt + {t,ctrl + t,y,f}
-	bspc node -t {tiled,pseudo_tiled,\~floating,\~fullscreen}
+	bspc node -t {tiled,\~pseudo_tiled,\~floating,\~fullscreen}
  
 # expand a window by moving one of its side outward
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
@@ -78,4 +78,3 @@ alt + ctrl + {Left,Down,Up,Right}
 	, d1=right;  d2=left;   dx=$n;  dy=0;   \
 	} \
 	bspc node --resize $d1 $dx $dy || bspc node --resize $d2 $dx $dy
-

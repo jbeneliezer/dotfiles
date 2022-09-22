@@ -14,6 +14,34 @@ FOLDER=$(basename $ZOXIDE_RESULT)
 SESSION=$(tmux list-sessions | grep $FOLDER | awk '{print $1}')
 SESSION=${SESSION//:/}
 
+# template
+create_session () {
+	if [ $# -eq 2 ]; then
+		tmux new-session -d -s $1 \; \
+			switch-client -t $1 \; \
+			new-window \; \
+			rename-window edit \; \
+			send-keys '$EDITOR' Enter \; \
+			new-window \; \
+			rename-window debug \; \
+			new-window \; \
+			rename-window git \; \
+			send-keys 'lazygit' Enter \; \
+			select-window -t 2
+	else
+		tmux new-session -s $1 \; \
+			new-window \; \
+			rename-window edit \; \
+			send-keys '$EDITOR' Enter \; \
+			new-window \; \
+			rename-window debug \; \
+			new-window \; \
+			rename-window git \; \
+			send-keys 'lazygit' Enter \; \
+			select-window -t 2
+	fi
+}
+
 # check if variable is empty 
 # if not currently in tmux
 if [ -z "$TMUX" ]; then
@@ -23,7 +51,8 @@ if [ -z "$TMUX" ]; then
     # jump to directory
     cd $ZOXIDE_RESULT
     # create session
-    tmux new-session -s $FOLDER
+    # tmux new-session -s $FOLDER
+		create_session $FOLDER
   else
     # session exists
     # attach to session
@@ -36,9 +65,10 @@ else
     # jump to directory
     cd $ZOXIDE_RESULT
     # create session
-    tmux new-session -d -s $FOLDER
+    # tmux new-session -d -s $FOLDER
+		create_session $FOLDER detached
     # attach to session
-    tmux switch-client -t $FOLDER
+    # tmux switch-client -t $FOLDER
   else
     # session exists
     # attach to session

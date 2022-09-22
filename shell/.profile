@@ -23,6 +23,7 @@ XDG_STATE_HOME=$HOME/.local/state
 XDG_CACHE_HOME=$HOME/.cache
 ZDOTDIR=$XDG_CONFIG_HOME/zsh
 LESSHISTFILE=-
-REPOS=/opt
+REPOS=~/repos
+STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 . "$HOME/.cargo/env"

@@ -54,15 +54,10 @@ return packer.startup(function(use)
 	use("akinsho/toggleterm.nvim")
 	use("ahmedkhalf/project.nvim")
 	use("lewis6991/impatient.nvim")
-	--[[ use("ggandor/lightspeed.nvim") ]]
-	--[[ use({ ]]
-	--[[ 	"ggandor/leap.nvim", ]]
-	--[[ 	config = require("leap").set_default_keymaps(), ]]
-	--[[ }) ]]
-	--[[ use("tpope/vim-repeat") ]]
 
 	-- Colors
 	use("folke/tokyonight.nvim")
+	use("xiyaowong/nvim-transparent")
 
 	-- Cmp
 	use("hrsh7th/nvim-cmp")
@@ -72,15 +67,6 @@ return packer.startup(function(use)
 	use("saadparwaiz1/cmp_luasnip")
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-nvim-lua")
-	--[[ use("github/copilot.vim") ]]
-	--[[ use("hrsh7th/cmp-copilot") ]]
-
-	--[[ use({ ]]
-	--[[ 	"tzachar/cmp-tabnine", ]]
-	--[[ 	run = "./install.sh", ]]
-	--[[ 	requires = "hrsh7th/nvim-cmp", ]]
-	--[[ 	config = require("cmp_tabnine").setup(), ]]
-	--[[ }) ]]
 
 	-- snippets
 	use("L3MON4D3/LuaSnip")
@@ -115,9 +101,6 @@ return packer.startup(function(use)
 	use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
 
-	-- Alpha
-	use("goolord/alpha-nvim")
-
 	-- Whichkey
 	use("folke/which-key.nvim")
 
@@ -130,6 +113,18 @@ return packer.startup(function(use)
 
 	-- Async
 	use("skywind3000/asyncrun.vim")
+
+	-- Sessions
+	use({
+		"rmagatti/auto-session",
+		config = require("auto-session").setup(),
+	})
+
+	-- Yuck
+	use("elkowar/yuck.vim")
+
+	-- Harpoon
+	use("ThePrimeagen/harpoon")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

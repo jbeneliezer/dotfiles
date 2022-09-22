@@ -3,8 +3,8 @@ font:
     family: DejaVuSansMono Nerd Font
   size: 12
 window:
-  opacity: 1.0
   # opacity: 0.9
+  opacity: 1.0
   padding:
     x: 10
     y: 20
