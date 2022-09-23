@@ -220,7 +220,6 @@ _comps=(
 'curl' '_curl'
 'cut' '_cut'
 'cvs' '_cvs'
-'d' '_dirs'
 'darcs' '_darcs'
 'dash' '_sh'
 'date' '_date'
@@ -381,7 +380,6 @@ _comps=(
 'gbasename' '_basename'
 'gcat' '_cat'
 'gcc' '_gcc'
-'gccd' '_git'
 'gccgo' '_go'
 'gchgrp' '_chown'
 'gchmod' '_chmod'
@@ -398,9 +396,7 @@ _comps=(
 'gdd' '_dd'
 'gdf' '_df'
 'gdiff' '_diff'
-'gdnolock' '_git'
 'gdu' '_du'
-'gdv' '_git'
 'geany' '_geany'
 'gegrep' '_grep'
 'gem' '_gem'
@@ -423,13 +419,7 @@ _comps=(
 'gfmt' '_fmt'
 'gfold' '_fold'
 'ggetopt' '_getopt'
-'ggf' '_git'
-'ggfl' '_git'
-'ggl' '_git'
-'ggp' '_git'
-'ggpnp' '_git'
 'ggrep' '_grep'
-'ggu' '_git'
 'ggv' '_gnome-gv'
 'ghead' '_head'
 'ghostscript' '_ghostscript'
@@ -439,7 +429,6 @@ _comps=(
 'git' '_git'
 'git-cvsserver' '_git'
 'gitk' '_git'
-'_git_log_prettily' '_git'
 'git-receive-pack' '_git'
 'git-shell' '_git'
 'git-upload-archive' '_git'
@@ -873,7 +862,6 @@ _comps=(
 'ogginfo' '_vorbis'
 'oksh' '_sh'
 'okular' '_okular'
-'omz' '_omz'
 'oomctl' '_oomctl'
 'openstack' '_openstack'
 'opera' '_webbrowser'
@@ -1556,18 +1544,8 @@ _comps=(
 
 _services=(
 'bzcat' 'bunzip2'
-'gccd' 'git-clone'
 'gchgrp' 'chgrp'
 'gchown' 'chown'
-'gdnolock' 'git-diff'
-'gdv' 'git-diff'
-'ggf' 'git-checkout'
-'ggfl' 'git-checkout'
-'ggl' 'git-checkout'
-'ggp' 'git-checkout'
-'ggpnp' 'git-checkout'
-'ggu' 'git-checkout'
-'_git_log_prettily' 'git-log'
 'gnupod_addsong.pl' 'gnupod_addsong'
 'gnupod_check.pl' 'gnupod_check'
 'gnupod_INIT.pl' 'gnupod_INIT'
@@ -1842,3 +1820,6 @@ autoload -Uz +X _call_program
 
 typeset -gUa _comp_assocs
 _comp_assocs=( '' )
+
+#omz revision: 7dcabbe6826073ef6069c8a4b6f9a943f00d2df0
+#omz fpath: /home/jb/.oh-my-zsh/plugins/vi-mode /home/jb/.config/zsh/plugins/zsh-autosuggestions /home/jb/.oh-my-zsh/plugins/web-search /home/jb/.oh-my-zsh/plugins/git /home/jb/.oh-my-zsh/plugins/fzf /home/jb/.oh-my-zsh/functions /home/jb/.oh-my-zsh/completions /home/jb/.oh-my-zsh/cache/completions /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/functions/Calendar /usr/share/zsh/functions/Chpwd /usr/share/zsh/functions/Completion /usr/share/zsh/functions/Completion/Base /usr/share/zsh/functions/Completion/Linux /usr/share/zsh/functions/Completion/Unix /usr/share/zsh/functions/Completion/X /usr/share/zsh/functions/Completion/Zsh /usr/share/zsh/functions/Exceptions /usr/share/zsh/functions/Math /usr/share/zsh/functions/MIME /usr/share/zsh/functions/Misc /usr/share/zsh/functions/Newuser /usr/share/zsh/functions/Prompts /usr/share/zsh/functions/TCP /usr/share/zsh/functions/VCS_Info /usr/share/zsh/functions/VCS_Info/Backends /usr/share/zsh/functions/Zftp /usr/share/zsh/functions/Zle

@@ -82,7 +82,7 @@ plugins=(
 	git
 	web-search
 	zsh-autosuggestions
-	zsh-vi-mode
+	vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -114,8 +114,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # source profile, aliases
-source ~/.config/shell/.aliases
-source ~/.config/shell/.profile
+# source ~/.config/shell/.aliases
+# source ~/.config/shell/.profile
 
 autoload -U colors && colors
 
