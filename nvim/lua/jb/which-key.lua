@@ -80,7 +80,6 @@ local opts = {
 
 local mappings = {
 	["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" },
-	["."] = { "<cmd>Alpha<cr>", "Alpha" },
 	["j"] = { "<cmd>m .+1<cr>==", "which_key_ignore" },
 	["k"] = { "<cmd>m .-2<cr>==", "which_key_ignore" },
 	["s"] = { "G=gg2<c-o>zz", "Style" },

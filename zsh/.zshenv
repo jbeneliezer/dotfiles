@@ -28,3 +28,6 @@ REPOS=~/repos
 STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 . "$HOME/.cargo/env"
+
+source $ZDOTDIR/.zprofile
+source $ZDOTDIR/.zshrc
