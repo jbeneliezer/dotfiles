@@ -156,7 +156,7 @@ export NVM_DIR="$HOME/.nvm"
 bindkey -v
 
 # set theme for alacritty
-alacritty-themes Tokyonight_Night > /dev/null 2>&1
+# alacritty-themes Tokyonight_Night > /dev/null 2>&1
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 # [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

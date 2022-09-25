@@ -27,7 +27,7 @@ create_session () {
 			new-window \; \
 			rename-window git \; \
 			send-keys 'lazygit' Enter \; \
-			select-window -t 2
+			select-window -t 1
 	else
 		tmux new-session -s $1 \; \
 			new-window \; \
@@ -38,7 +38,7 @@ create_session () {
 			new-window \; \
 			rename-window git \; \
 			send-keys 'lazygit' Enter \; \
-			select-window -t 2
+			select-window -t 1
 	fi
 }
 
