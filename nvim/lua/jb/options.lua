@@ -1,5 +1,6 @@
 local options = {
 	backup = false,
+	background = "dark",
 	cmdheight = 2,
 	completeopt = { "menuone", "noselect" },
 	conceallevel = 0,

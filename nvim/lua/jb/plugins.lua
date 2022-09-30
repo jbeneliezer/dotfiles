@@ -47,16 +47,17 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("numToStr/Comment.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
-	use({
-		"norcalli/nvim-colorizer.lua",
-		config = require("colorizer").setup(),
-	})
+	use("norcalli/nvim-colorizer.lua")
 	use("akinsho/toggleterm.nvim")
 	use("ahmedkhalf/project.nvim")
 	use("lewis6991/impatient.nvim")
+	use("karb94/neoscroll.nvim")
 
 	-- Colors
 	use("folke/tokyonight.nvim")
+	use("rose-pine/neovim")
+	use({ "Everblush/everblush.nvim", as = "everblush" })
+	use("catppuccin/nvim")
 	use("xiyaowong/nvim-transparent")
 
 	-- Cmp
@@ -115,10 +116,7 @@ return packer.startup(function(use)
 	use("skywind3000/asyncrun.vim")
 
 	-- Sessions
-	use({
-		"rmagatti/auto-session",
-		config = require("auto-session").setup(),
-	})
+	use("rmagatti/auto-session")
 
 	-- Yuck
 	use("elkowar/yuck.vim")

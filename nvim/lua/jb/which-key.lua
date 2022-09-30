@@ -80,7 +80,6 @@ local opts = {
 
 local mappings = {
 	["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" },
-	["."] = { "<cmd>Alpha<cr>", "Alpha" },
 	["j"] = { "<cmd>m .+1<cr>==", "which_key_ignore" },
 	["k"] = { "<cmd>m .-2<cr>==", "which_key_ignore" },
 	["s"] = { "G=gg2<c-o>zz", "Style" },
@@ -96,12 +95,11 @@ local mappings = {
 		g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
 		p = { "<cmd>Telescope projects<cr>", "Projects" },
 		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-		c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
-		h = { "<cmd>Telescope highlights<cr>", "Help" },
-		j = {
+		c = {
 			"<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
-			"Colorscheme with Preview",
+			"Colorscheme",
 		},
+		h = { "<cmd>Telescope highlights<cr>", "Highlights" },
 		m = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
 		o = { "<cmd>Telescope oldfiles<cr>", "Recent" },
 		r = { "<cmd>Telescope registers<cr>", "Registers" },

@@ -3,4 +3,4 @@ if not status_ok then
 	return
 end
 
-vim.cmd([[ colorscheme tokyonight-night ]])
+vim.cmd("colorscheme tokyonight-night")
