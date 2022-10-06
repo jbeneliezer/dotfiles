@@ -37,6 +37,8 @@ key_bindings:
     # Vi mode bindings
   - { key: V, mode: Vi, action: ToggleNormalSelection }
   - { key: V, mode: Vi, mods: Shift, action: ToggleLineSelection }
+  - { key: J, mode: Vi, mods: Shift, action: ScrollLineDown }
+  - { key: K, mode: Vi, mods: Shift, action: ScrollLineUp }
 
 shell:
   program: /bin/zsh

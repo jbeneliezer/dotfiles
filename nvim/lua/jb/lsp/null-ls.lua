@@ -24,5 +24,8 @@ null_ls.setup({
 		diagnostics.cppcheck.with({
 			extra_args = { "--enable=warning,style,performance,portability", "--template=gcc", "$FILENAME" },
 		}),
+		--[[ diagnostics.gccdiag.with({ ]]
+		--[[ 	extra_args = { "--default-args", "-S -x $FILEEXT", "-i", "-fdiagnostics-color", "--", "$FILENAME" }, ]]
+		--[[ }), ]]
 	},
 })
