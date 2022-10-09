@@ -1,24 +1,61 @@
 font:
   normal:
     family: DejaVuSansMono Nerd Font
-  size: 9
+  size: 12
 window:
   opacity: 1.0
   padding:
     x: 10
     y: 20
-# Colors
+
+cursor:
+  style:
+    shape: Beam
+  vi_mode_style:
+    shape: Block
+
+hints:
+  enabled:
+    - regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)\
+            [^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+      hyperlinks: true
+      command: xdg-open
+      mouse:
+        enabled: true
+        mods: None
+
+key_bindings:
+  - { key: J, mods: Control|Shift, action: ScrollLineDown }
+  - { key: K, mods: Control|Shift, action: ScrollLineUp }
+  - { key: V, mods: Alt, action: Paste }
+  - { key: C, mods: Alt, action: Copy }
+  - { key: Up, mods: Control, action: IncreaseFontSize }
+  - { key: Down, mods: Control, action: DecreaseFontSize }
+  - { key: Return, mods: Shift, chars: "; \\\n" }
+  - { key: T, mods: Control, chars: "_t\n" }
+
+    # Vi mode bindings
+  - { key: V, mode: Vi, action: ToggleNormalSelection }
+  - { key: V, mode: Vi, mods: Shift, action: ToggleLineSelection }
+  - { key: J, mode: Vi, mods: Shift, action: ScrollLineDown }
+  - { key: K, mode: Vi, mods: Shift, action: ScrollLineUp }
+
+shell:
+  program: /bin/zsh
+  args:
+    - --login
+
 colors:
-  name: TokyoNight Storm
+  name: TokyoNight Night
   author: Folke
   # Default colors
   primary:
-    background: '0x24283b'
+    background: '0x1a1b26'
     foreground: '0xc0caf5'
 
   # Normal colors
   normal:
-    black: '0x1D202F'
+    black: '0x15161E'
     red: '0xf7768e'
     green: '0x9ece6a'
     yellow: '0xe0af68'
@@ -38,24 +75,7 @@ colors:
     cyan: '0x7dcfff'
     white: '0xc0caf5'
 
-cursor:
-  style:
-    shape: Beam
-  vi_mode_style:
-    shape: Block
-
   indexed_colors:
     - { index: 16, color: '0xff9e64' }
     - { index: 17, color: '0xdb4b4b' }
-
-key_bindings:
-  - { key: V, mods: Alt, action: Paste }
-  - { key: C, mods: Alt, action: Copy }
-  - { key: Up, mods: Control, action: IncreaseFontSize }
-  - { key: Down, mods: Control, action: DecreaseFontSize }
-  - { key: Return, mods: shift, chars: "; \\\x0a" }
-shell:
-  program: /bin/zsh
-  args:
-    - --login
-theme: Tokyonight_Storm
+theme: Tokyonight_Night

@@ -17,12 +17,12 @@ bspc config pointer_follows_focus true
 bspc config pointer_follows_monitor true
 bspc config pointer_modifier mod1
 bspc config pointer_action1 move
-bspc config pointer_action2 resize_corner
-bspc config pointer_action3 resize_side
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
 bspc config automatic_scheme longest_first
 
 # set wallpaper
-feh --bg-fill --no-fehbg ~/.config/wallpapers/pang-yuhao-7f_DhSd55JY-unsplash.jpg &
+feh --bg-fill --no-fehbg ~/.config/wallpapers/planet-ga638e28ce_1920.jpg &
 
 # start polybar
 ~/.config/polybar/launch.sh &
