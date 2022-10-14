@@ -26,6 +26,7 @@ ZSH_CUSTOM=$ZDOTDIR
 LESSHISTFILE=-
 REPOS=~/repos
 STARSHIP_CONFIG=~/.config/starship/starship.toml
+GIT_EDITOR=nvim
 
 . "$HOME/.cargo/env"
 
