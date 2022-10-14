@@ -12,7 +12,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 		install_path,
 	})
 	print("Installing packer close and reopen Neovim...")
-	vim.cmd([[packadd packer.nvim]])
+	vim.cmd("packadd packer.nvim")
 end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
@@ -47,16 +47,18 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("numToStr/Comment.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
-	use({
-		"norcalli/nvim-colorizer.lua",
-		config = require("colorizer").setup(),
-	})
+	use("norcalli/nvim-colorizer.lua")
 	use("akinsho/toggleterm.nvim")
 	use("ahmedkhalf/project.nvim")
 	use("lewis6991/impatient.nvim")
+	use("karb94/neoscroll.nvim")
+	use("lambdalisue/suda.vim")
 
 	-- Colors
 	use("folke/tokyonight.nvim")
+	use("rose-pine/neovim")
+	use({ "Everblush/everblush.nvim", as = "everblush" })
+	use("catppuccin/nvim")
 	use("xiyaowong/nvim-transparent")
 
 	-- Cmp
@@ -77,6 +79,8 @@ return packer.startup(function(use)
 	use("williamboman/nvim-lsp-installer")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("WhoIsSethDaniel/toggle-lsp-diagnostics.nvim")
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
@@ -115,10 +119,7 @@ return packer.startup(function(use)
 	use("skywind3000/asyncrun.vim")
 
 	-- Sessions
-	use({
-		"rmagatti/auto-session",
-		config = require("auto-session").setup(),
-	})
+	use("rmagatti/auto-session")
 
 	-- Yuck
 	use("elkowar/yuck.vim")

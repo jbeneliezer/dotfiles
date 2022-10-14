@@ -1,6 +1,6 @@
 font:
   normal:
-    family: DejaVuSansMono Nerd Font
+    family: DejaVuSans Mono Nerd Font
   size: 12
 window:
   opacity: 1.0
@@ -25,10 +25,8 @@ hints:
         mods: None
 
 key_bindings:
-  - { key: J, mods: Control|Shift, action: ScrollLineDown }
-  - { key: K, mods: Control|Shift, action: ScrollLineUp }
-  - { key: V, mods: Alt, action: Paste }
-  - { key: C, mods: Alt, action: Copy }
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
   - { key: Up, mods: Control, action: IncreaseFontSize }
   - { key: Down, mods: Control, action: DecreaseFontSize }
   - { key: Return, mods: Shift, chars: "; \\\n" }

@@ -19,6 +19,7 @@ create_session () {
 	if [ $# -eq 2 ]; then
 		tmux new-session -d -s $1 \; \
 			switch-client -t $1 \; \
+			rename-window main \; \
 			new-window \; \
 			rename-window edit \; \
 			send-keys '$EDITOR' Enter \; \
@@ -30,6 +31,7 @@ create_session () {
 			select-window -t 1
 	else
 		tmux new-session -s $1 \; \
+			rename-window main \; \
 			new-window \; \
 			rename-window edit \; \
 			send-keys '$EDITOR' Enter \; \

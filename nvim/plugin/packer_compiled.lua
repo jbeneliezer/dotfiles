@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/jb/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  everblush = {
+    loaded = true,
+    path = "/home/jb/.local/share/nvim/site/pack/packer/start/everblush",
+    url = "https://github.com/Everblush/everblush.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/jb/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -159,10 +164,35 @@ _G.packer_plugins = {
     path = "/home/jb/.local/share/nvim/site/pack/packer/start/lua-json5",
     url = "https://github.com/Joakker/lua-json5"
   },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/home/jb/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/jb/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "/home/jb/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
+  },
+  neovim = {
+    loaded = true,
+    path = "/home/jb/.local/share/nvim/site/pack/packer/start/neovim",
+    url = "https://github.com/rose-pine/neovim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/home/jb/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
+  nvim = {
+    loaded = true,
+    path = "/home/jb/.local/share/nvim/site/pack/packer/start/nvim",
+    url = "https://github.com/catppuccin/nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -258,6 +288,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jb/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
+  },
+  ["suda.vim"] = {
+    loaded = true,
+    path = "/home/jb/.local/share/nvim/site/pack/packer/start/suda.vim",
+    url = "https://github.com/lambdalisue/suda.vim"
   },
   ["telescope-dap.nvim"] = {
     loaded = true,

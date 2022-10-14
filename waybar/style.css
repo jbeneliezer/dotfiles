@@ -24,7 +24,7 @@ window#waybar.hidden {
 
 #workspaces button {
     transition: none;
-    color: #9eca6a;
+    color: #7c818c;
     background: transparent;
     padding: 5px;
     font-size: 18px;
@@ -46,7 +46,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.focused {
-    color: #9eca6a;
+    color: #bb9af7;
 }
 
 #workspaces button.visible {
@@ -54,7 +54,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.urgent {
-    color: #7c818c;
+    color: #1a1b26;
 		background: #f7768e;
 }
 
