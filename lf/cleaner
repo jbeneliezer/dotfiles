@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+cat <<-EOF | paste -sd '' > "$LFP_TMPDIR/fifo"
+{
+"action": "remove",
+"identifier": "lf-preview"
+}
+EOF

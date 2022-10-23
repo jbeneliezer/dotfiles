@@ -22,6 +22,7 @@ XDG_DATA_HOME=$HOME/.local/share
 XDG_STATE_HOME=$HOME/.local/state
 XDG_CACHE_HOME=$HOME/.cache
 ZDOTDIR=$XDG_CONFIG_HOME/zsh
+ZSH=$XDG_CONFIG_HOME/oh-my-zsh
 LESSHISTFILE=-
 REPOS=~/repos
 STARSHIP_CONFIG=~/.config/starship/starship.toml

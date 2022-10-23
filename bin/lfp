@@ -1,0 +1,14 @@
+#!/usr/bin/env zsh
+
+clean(){ cleaner >/dev/null 2>&1 ; kill "$LFPID"  >/dev/null 2>&1 ; 
+  pkill -f "tail -f $LFP_TMPDIR/fifo" >/dev/null 2>&1 ;
+  rm -rf "$LFP_TMPDIR" >/dev/null 2>&1 ; }
+
+trap 'clean >/dev/null 2>&1' INT HUP
+export LFP_TMPDIR="$(mktemp -dt lfp-XXXXXX)"
+source "${0:A:h}/lfp-icons" ; mkfifo "$LFP_TMPDIR/fifo"; 
+export PATH="$PATH:${0:A:h}" ; export LFP_DIR="$(dirname "$0")"
+
+tail -f "$LFP_TMPDIR/fifo" | ueberzug layer --silent & LFPID=$!
+lf -config "${0:A:h}/lfprc" "${1:-"${PWD}"}" ; clean
+

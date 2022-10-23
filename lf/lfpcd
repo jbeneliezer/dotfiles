@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+lfp(){ local tmp=$(mktemp) ; /usr/bin/lfp -last-dir-path="$tmp" "$@"
+  [ -f "$tmp" ] && dir="$(cat "$tmp")" && rm -f "$tmp" >/dev/null 2>&1 
+  [ -d "$dir" ] && [[ "$dir" != "$(pwd)" ]] && cd "$dir" || return 0
+}
+

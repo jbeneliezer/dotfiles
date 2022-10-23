@@ -1,0 +1,350 @@
+# Basic Variables:
+
+set icons
+set period 1
+set shell bash
+set scrolloff 10
+set drawbox true
+set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
+set shellopts '-eu'
+set ifs "\n"
+
+
+# Environment Variables:
+
+$lf -remote "send $id set previewer $HOME/.config/lf/scope"
+$lf -remote "send $id set cleaner $HOME/.config/lf/cleaner"
+
+# Functions:
+
+cmd open ${{
+    case $(file --mime-type $f -b) in
+	image/vnd.djvu|application/pdf|application/octet-stream) setsid -f zathura $fx >/dev/null 2>&1 ;;
+        text/*) nvim $fx;;
+	image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
+	image/svg+xml) display -- $f ;;
+	image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|tif\|ico\)\(_large\)*$" | nsxiv -aio 2>/dev/null | lf-select ;;
+	audio/*) mpv --audio-display=no $f ;;
+	video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+	application/pdf|application/vnd*|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
+	application/pgp-encrypted) nvim $fx ;;
+        *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
+    esac
+}}
+
+cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
+cmd edit $${EDITOR:-nvim} $*
+
+
+cmd delete ${{
+	clear; tput cup $(($(tput lines)/1)); tput bold
+	set -f ; clear ; echo -e "\\n\\n" ; printf "%s\n\t" "$fx" ;
+  echo -en \\n\\n"$(tput bold; tput setaf 6)   Delete selected items?$(tput setaf 6) $(tput setaf 1)($(tput setaf 3)Y/n$(tput setaf 1)) $(tput setaf 6): "$(tput setaf 1)""; read ans
+    [[ $ans = "y" ]] || [[ $ans = Y ]] || [[ $ans = "" ]] || [[ $ans = yes ]] || 
+      [[ $ans = Yes ]] || [[ $ans = YES ]] && rm -rf -- $fx ; tput sgr0 || exit 0 ; tput sgr0   
+}}
+
+cmd rootdel ${{
+  clear; tput cup $(($(tput lines)/1)); tput bold
+	set -f ; clear ; echo -e "\\n\\n" ; printf "%s\n\t" "$fx" ;
+  echo -en \\n\\n"$(tput bold; tput setaf 6)   ARE YOU SURE YOU WANT TO DELETE THE SELECTED ITEMS?$(tput setaf 6) $(tput setaf 1)($(tput setaf 3)y/N$(tput setaf 1)) $(tput setaf 6): "$(tput setaf 1)""; read ans
+    [[ $ans = "y" ]] || [[ $ans = Y ]] || [[ $ans = yes ]] || [[ $ans = Yes ]] || 
+      [[ $ans = YES ]] && sudo rm -rf -- $fx ; tput sgr0 || exit 0 ; tput sgr0
+}}
+
+cmd symlink ${{
+	clear ; dest="$PWD" ; for x in $fx; do
+	  eval ln -sf \"$x\" \"$dest\"
+  done && lf -remote "send $id unselect" ; notify-send "🔗 File(s) symlinked".\
+  "File(s) symlinked to $dest."
+}}
+
+cmd symlink_rel ${{
+	clear ; dest="$PWD" ; for x in $fx; do
+	  eval ln -srf \"$x\" \"$dest\"
+  done && lf -remote "send $id unselect" ; notify-send "🔗 File(s) symlinked".\
+  "File(s) symlinked to $dest."
+}}
+
+cmd symlink_hard ${{
+	clear ; dest="$PWD" ; for x in $fx; do
+	  eval ln -f \"$x\" \"$dest\"
+  done && lf -remote "send $id unselect" ; notify-send "🔗 File(s) symlinked".\
+  "File(s) hard linked to $dest."
+}}
+
+cmd cloneRepo ${{
+  clear; tput cup $(($(tput lines)/3)); fullurl=$(mktemp) ; trap 'rm -f $fullurl' \
+  EXIT INT TERM QUIT STOP HUP ERR ; set -f ; url=$(dialog --title "Git Clone" --inputbox \
+  " Please enter the URL of the repo you would like to clone: " 10 65 3>&1 1>&2 2>&3 3>&1 &&
+  notify-send "📦Cloning repo" "You will be notified upon completion.") ; echo $url|read url 
+  echo "$(echo $url|sed 's/http:\/\///g;s/https:\/\///g')">$fullurl && url=$(cat $fullurl) && 
+  notify='📦Repo successfully cloned into' ; eval $(git clone git@$url >/dev/null 2>&1 && 
+  notify-send "$notify $(basename $url)" || git clone https://$url >/dev/null 2>&1 &&
+  notify-send "$notify $(basename $url .git)" || notify-send "📦 Repo clone failed.") & disown 
+}}
+
+
+cmd fzfp ${{
+  BAT="bat -pn --style=numbers,grid --color=always"
+  FROM=`echo ${*:-$PWD} | sed 's/\/$//'`
+
+  PREVIEW="file {} | grep -q 'ASCII text' || file {} | grep -q 'Unicode text' && $BAT {} 2>/dev/null && return 0 || 
+    echo {} | sed 's/\/$//' | xargs file | grep -q 'symbolic link' && lolcat <<< 'SYMBOLIC LINK.' && return 0 || 
+    file {} | grep -q 'directory' && lolcat <<< 'DIRECTORY - LISTING:' && ls -1 ${FROM}/{} 2>/dev/null | $BAT 2>/dev/null && return 0 || 
+    lolcat <<< 'BINARY FILE.'"
+
+    filePath(){ 
+      path=$(fzf --multi --ansi --no-sort \
+        --prompt="What are you looking for ? : " \
+        --header " " \
+        --height 99% \
+        --preview="$PREVIEW" \
+        --preview-window=60% | 
+        xargs realpath 2>/dev/null) || return 1
+    }
+
+    filePath || exit 0
+    echo $path | xsel -b && notify-send "✅File path coppied to clipboard" ||
+    [[ -f `xsel -bo` ]] && [[ -n ${EDITOR} ]] && $EDITOR `xsel -bo` || exit 0
+}}
+
+cmd modeChange ${{
+  sudo chmod -R $1 $fx && 
+    for x in ${fx[@]}; do
+      notify-send "🔒 Permission of $(basename ${x}) changed to $1"
+    done ; lf -remote "send $id unselect"
+}}
+
+cmd nodeAction ${{
+
+  clear ; echo -e "\n"  
+    
+  instructions(){
+
+    echo -e "\n        \e[33m(\e[31mY\e[33m)\n"
+    echo -e "   \e[33m(\e[31mH\e[33m)  \e[32m[\e[34m*\e[32m]\e[33m  (\e[31mU\e[33m)   \e[36mSelect Further Action:\e[0m\n"
+    echo -en "        \e[33m(\e[31mJ\e[33m)\n\n  "
+    
+    escape_char=$(printf "\u1b")
+    read -rsn1 mode # get 1 character
+    if [[ $mode == $escape_char ]]; then
+        read -rsn2 mode # read 2 more chars
+    fi
+
+  }
+
+  getPKGs(){
+    echo -en "\n\e[1,33m [+] \e[36m Enter package name(s): \e[0m" ; read pkgs
+  }
+
+  getSCR(){
+    echo -en "\n\e[1,33m [+] \e[36m Enter Script Name: \e[0m" ; read scr
+  }
+
+  getFile(){
+    clear ; echo "" ; file=$(echo -e "\nSelect Server File: \n\n`find . -maxdepth 1 -type f`"|sed 's|^\./||;s|^\s*||' |
+    fzf --header-lines 3 --preview "bat {} --color=always" --preview-window=60% --height 100%) || exit 0 ;
+
+    echo $file | read file
+
+  }
+
+NodeManager(){
+
+  instructions 
+
+  case $mode in
+      '[A'|'u'|'s') npm init -y && notify-send "📦 Package.json created" ;;  
+      '[D') clear && getSCR && notify-send "📦 Running $scr script..." && yarn $scr ;;
+      '[B'|'y') clear && getPKGs && for x in ${pkgs[@]}; do eval "yarn add $x >/dev/null 2>&1 && notify-send '✅ $x installed'" ; done ;;
+      '[C') clear && notify-send "📦 Starting Server..." && yarn start ;;
+      'h') notify-send "📦 Starting Server in Development Mode..." && yarn dev ;; 
+      'd'|'m') notify-send "📦 Starting Server in Development Mode..."&& yarn dev >/dev/null 2>&1 & disown ;; 
+      'b'|'n') notify-send "📦 Building Project..." && yarn build ;;
+      'i'|'I'|',') clear ; echo -e "\e[0m" && npm init ;;  
+      'r') clear && getPKGs && for x in ${pkgs[@]}; do yarn remove $x && notify-send "✅ $x removed" ; done ;;
+      '') notify-send "📦 Starting Server in Background..." && yarn start >/dev/null 2>&1 & disown ;;
+      '.') notify-send "📦 Updating Server..." && yarn && notify-send "📦 Package Base Updated" ;; 
+      '/') clear ; getFile && notify-send "📦 Serving $file" && node $file ;;
+      'q') exit 0 ;;
+     *) NodeManager ;;
+    esac
+  }
+
+  NodeManager
+
+}}
+
+
+cmd meChange ${{
+  ! sudo chown "nvx1:nvx1" -Rf ${*} && notify-send "🔧 Owning User Changed to nvx1 &&
+    notify-send "🔧 Ownership Change Failed"
+    lf -remote "send $id unselect"
+}}
+
+cmd mpvPlay ${{
+  mpv --audio-display=no $f >/dev/null 2>&1 &
+  notify-send "🎶  Playing $(basename $f)"
+}}
+
+cmd newFile ${{
+  file=$(dialog --title ' ~ New file ~ ' --inputbox \
+  " Enter a name for the file: " 10 60 3>&1 1>&2 2>&3 3>&1) && echo $file|read file
+  [ -e $file ] && notify-send "❌ Error, $file already exists in this directory."&& exit 1 ||
+  touch $file && notify-send "📝 File: \"${file}\"          Created successfully!"
+}}
+
+cmd pushTo ${{
+  dest="$(echo `git remote`|xargs -n1|fzf \
+    --no-extended \
+    --layout reverse \
+    --header " " \
+    --prompt " Push to :" \
+    --no-info \
+    --disabled \
+    --border rounded \
+    --bold)" || exit 1
+
+  git add . 
+  git commit -S -m "Auto-Commit Update `date '+%d.%m.%Y - %T'`" || true
+  git push $dest
+}}
+
+
+cmd sudoCP ${{
+dest=$PWD
+    for x in ${fx[@]}; do
+      sudo cp -r $x $dest &&
+      notify-send "📋 $(basename ${x}) copied to ${dest}" ||
+      notify-send "❌ $(basename ${x}) could not be copied to ${dest}." "Please ensure you sudo privileges."
+    done ; lf -remote "send $id unselect"
+}}
+
+cmd sudoMV ${{
+dest=$PWD
+    for x in ${fx[@]}; do
+      sudo mv $x $dest &&
+      notify-send "🚚 $(basename ${x}) moved to ${dest}" ||
+      notify-send "❌ $(basename ${x}) could not be moved to ${dest}." "Please ensure you sudo privileges."
+    done ; lf -remote "send $id unselect"
+}}
+
+cmd makeTemp ${{
+tmpd=$(echo $$) ; eval $(mkdir $tmpd && cd $tmpd && notify-send "🔧 Temp dir created." ||
+    notify-send "❌ Could not create temp dir.")
+}}
+
+cmd browserOpen ${{
+  ${BROWSER:-firefox} $fx >/dev/null 2>&1 || ${BROWSER:-firefox} $f || notify-send "❌No supported browser detected." \
+  "Please set the BROWSER env variable."
+}}
+
+cmd ext ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f ; printf "%s\n\t" "$fx"
+	printf "extract?[Y/n]"
+	read ans ; anss=( n N NO nO No )
+  SUCC(){ notify-send "🔧$(basename ${ARG}) extracted successfully!" ; }
+  FAIL(){ notify-send "❌ '$(basename ${ARG})' could not be extracted via $(basename $0)." ; }
+	[[ "${anss[*]}" != "$ans" ]] && 
+    for ARG in $fx ; do
+    [ -f ${ARG} ] && case ${ARG} in
+      *.bz2)       bunzip2 ${ARG} && SUCC || FAIL ;;
+      *.rar)       unrar x ${ARG} && SUCC || FAIL ;;
+      *.gz)        gunzip  ${ARG} && SUCC || FAIL ;;
+      *.tar)       tar xpf ${ARG} && SUCC || FAIL ;;
+      *.tar.*)     tar xpf ${ARG} && SUCC || FAIL ;;
+      *.tbz2)      tar xjf ${ARG} && SUCC || FAIL ;;
+      *.tgz)       tar xzf ${ARG} && SUCC || FAIL ;;
+      *.zip)       unzip ${ARG} && SUCC || FAIL ;;
+      *.Z)         uncompress ${ARG} && SUCC || FAIL ;;
+      *.7z)        7z x ${ARG} && SUCC || FAIL ;;
+      *.deb)       ar x ${ARG} && SUCC || FAIL ;;
+      *)           notify-send "❌ '$(basename ${ARG})' could not be extracted with lfp." ;
+    esac ; done
+    lf -remote "send $id unselect"
+}}
+
+cmd newTernPwd ${{
+  ${TERMINAL:-st} & disown
+}}
+
+
+cmd setbg "$1"
+cmd bulkrename $vidir
+
+
+
+
+  #-----------------------#
+ #  ~  B I N D I N G S  ~  #
+  #-----------------------#
+
+
+# Basic Bindings:
+
+map gh
+map g top
+map c cut
+map d delete
+map - delete
+map a rename 
+map <delete> delete
+map <c-r> reload
+map <backspace2> set hidden!
+map <enter> shell
+map o &mimeopen $f
+map O $mimeopen --ask $f
+
+
+# LFP-Custom Functions:
+
+map m mpvPlay
+map t newFile
+map b browserOpen
+map f fzfp
+map B bulkrename
+map E ext
+map C cloneRepo
+map M sudoMV
+map D rootdel
+map L symlink
+map R symlink_rel
+map H symlink_hard
+map P sudoCP
+map <c-g> pushTo
+map <c-b> !xwallpaper --stretch $f
+map <c-t> makeTemp
+map <c-^> modeChange 644 # Ctrl + 6
+map <c-_> modeChange 755 # Ctrl + 7
+map = meChange $fx
+map . nodeAction
+map I newTernPwd
+
+
+# Commmand Oriented Bindings:
+
+map x !$f
+map s !nvim $f
+map z !sxiv $f
+map Z !sxiv *
+map V !mpv *
+map S !sudo nvim $f
+map X !chmod +x $f ; !$f
+map <c-v> !mpv --shuffle *
+map <a-v> !mpv $f
+map <c-s> :!nvim $? 
+map <c-e> :!chmod +x $f
+map <c-y> :!mpv --shuffle $PWD
+map <c-y> :!mpv --shuffle $PWD
+map A !chmod +x *
+
+
+# Push Bindings:
+
+map e push :edit<space> 
+map n push :mkdir<space>
+map N push :sudo mkdir<space>
+
+

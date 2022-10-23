@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+
+# Prepare img snapshot:
+#---
+
+preview() {
+	cat <<-EOF | paste -sd '' >"$LFP_TMPDIR/fifo"
+	{
+	"action": "add", "identifier": "lf-preview",
+	"path": "$1", "x": $4, "y": $5, "width": $2, "height": $3,
+	"scaler": "contain"
+	}
+	EOF
+}
+
+
+# Methods of previewing different filetypes:
+#---
+
+FILE="$1"; shift
+
+case "$(basename "$FILE" | tr '[:upper:]' '[:lower:]')" in
+*.7z) 7z l "$FILE" ;; 
+*.svg) tb="$LFP_TMPDIR/tb.png"; gm convert "$FILE" "$tb"; preview "$tb" "$@" ;;
+*.gif) tb="$LFP_TMPDIR/tb.png"; gm convert "$FILE[0]" "$tb"; preview "$tb" "$@" ;;
+*.pdf) tb="$LFP_TMPDIR/tb.png"; gs -o "$tb" -sDEVICE=pngalpha -dLastPage=1 "$FILE" >/dev/null; preview "$tb" "$@" ;;
+*.mp4|*.mkv|*.webm|*.mpg|*.mpeg|*.wmv|*.part) tb="$LFP_TMPDIR/tb.png"; ffmpeg -y -i "$FILE" -vframes 1 "$tb"; preview "$tb" "$@" ;;
+*.jpg|*.jpeg|*.png|*.bmp|*.ico) preview "$FILE" "$@" ;;
+*.zip) unzip -l "$FILE" ;; 
+*.tar*) tar tf "$FILE" ;; 
+*.rar) unrar l "$FILE" ;;
+*) bat --style=grid,numbers -f "$FILE" ;;
+esac
+
+
+# Non-zero exit code required for script to reload
+#---
+
+return 1337
+
+
